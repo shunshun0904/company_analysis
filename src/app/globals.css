@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --page: #0d0e19;
+  --card: #151726;
+  --card-2: #1b1d30;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #8b8a99;
+  --neon-cyan: #5ce1ff;
+  --neon-pink: #ff7fb5;
+  --neon-amber: #ffc24d;
+  --neon-green: #3dff8a;
+  --good: #0ca30c;
+  --critical: #d03b3b;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-card-2: var(--card-2);
+  --color-line: var(--line);
+  --color-ink: var(--text-primary);
+  --color-ink-2: var(--text-secondary);
+  --color-ink-3: var(--text-muted);
+  --font-sans: "Space Grotesk", "Noto Sans JP", system-ui, sans-serif;
+}
+
+html {
+  background: var(--page);
+}
+
+body {
+  background: var(--page);
+  color: var(--text-primary);
+  font-family: "Space Grotesk", "Noto Sans JP", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 背景の装飾（データではない）：うっすらとしたグリッドとネオンの光 */
+.bg-stage {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 520px at 12% -8%, rgba(92, 225, 255, 0.13), transparent 60%),
+    radial-gradient(800px 520px at 92% 4%, rgba(255, 127, 181, 0.11), transparent 60%),
+    radial-gradient(900px 600px at 50% 110%, rgba(61, 255, 138, 0.06), transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    var(--page);
+  background-size: auto, auto, auto, 44px 44px, 44px 44px, auto;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(27, 29, 48, 0.92), rgba(21, 23, 38, 0.92));
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 20px 40px -24px rgba(0, 0, 0, 0.6);
+}
+
+.card-accent {
+  position: relative;
+  border-color: color-mix(in srgb, var(--accent, #5ce1ff) 35%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent, #5ce1ff) 10%, transparent) inset,
+    0 0 36px -10px color-mix(in srgb, var(--glow, #5ce1ff) 45%, transparent),
+    0 20px 40px -24px rgba(0, 0, 0, 0.6);
+}
+
+.neon-text {
+  background: linear-gradient(92deg, var(--neon-cyan) 0%, #a78bfa 45%, var(--neon-pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--glow, #5ce1ff), transparent);
+  box-shadow: 0 0 12px var(--glow, #5ce1ff);
+  opacity: 0.8;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--neon-cyan);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.pulse-glow {
+  animation: pulse-glow 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .pulse-glow {
+    animation: none;
+  }
+}

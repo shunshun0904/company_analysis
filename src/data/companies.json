@@ -1,0 +1,1323 @@
+[
+ {
+  "code": "9432",
+  "name": "NTT",
+  "short": "NTT",
+  "industry": "it",
+  "description": "国内最大手の通信グループ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "営業収益",
+  "revenue": 14409121,
+  "revenueApprox": false,
+  "netIncome": 1037032,
+  "equity": 9727623,
+  "marketCap": 13338928,
+  "price": 164.9,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 12156447,
+    "netIncome": 1181083
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 13136194,
+    "netIncome": 1213116
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 13374569,
+    "netIncome": 1279521
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 13704727,
+    "netIncome": 1000016
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 14409121,
+    "netIncome": 1037032
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "9433",
+  "name": "KDDI",
+  "short": "KDDI",
+  "industry": "it",
+  "description": "「au」ブランドを展開する通信大手",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 6071915,
+  "revenueApprox": false,
+  "netIncome": 707112,
+  "equity": 5076738,
+  "marketCap": 10864240,
+  "price": 2940,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 5446708,
+    "netIncome": 672486
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 5671762,
+    "netIncome": 679113
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 5754047,
+    "netIncome": 637874
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 5917953,
+    "netIncome": 685677
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 6071915,
+    "netIncome": 707112
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "9434",
+  "name": "ソフトバンク",
+  "short": "ソフトバンク",
+  "industry": "it",
+  "description": "「SoftBank」「Y!mobile」「LINEMO」を展開",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 7038680,
+  "revenueApprox": false,
+  "netIncome": 550759,
+  "equity": 2957859,
+  "marketCap": 11676211,
+  "price": 244.1,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 5690606,
+    "netIncome": 517075
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 5911999,
+    "netIncome": 531366
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 6084002,
+    "netIncome": 489074
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 6544349,
+    "netIncome": 519977
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 7038680,
+    "netIncome": 550759
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "6701",
+  "name": "NEC",
+  "short": "NEC",
+  "industry": "it",
+  "description": "ITサービス・社会インフラ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 3582733,
+  "revenueApprox": false,
+  "netIncome": 270228,
+  "equity": 2196578,
+  "marketCap": 6268144,
+  "price": 4722,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 3014095,
+    "netIncome": 141277
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 3313018,
+    "netIncome": 114500
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 3477262,
+    "netIncome": 149521
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 3423431,
+    "netIncome": 175183
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 3582733,
+    "netIncome": 270228
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "6702",
+  "name": "富士通",
+  "short": "富士通",
+  "industry": "it",
+  "description": "ITサービス大手",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 3502971,
+  "revenueApprox": false,
+  "netIncome": 449408,
+  "equity": 2024915,
+  "marketCap": 5922306,
+  "price": 3430,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 3586839,
+    "netIncome": 182691
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 3713767,
+    "netIncome": 215182
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 3756059,
+    "netIncome": 254478
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 3550116,
+    "netIncome": 219807
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 3502971,
+    "netIncome": 449408
+   }
+  ],
+  "notes": [
+   "2026年3月期の純利益には新光電気工業などの株式売却益（非継続事業）を含む"
+  ],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "4689",
+  "name": "LINEヤフー",
+  "short": "LINEヤフー",
+  "industry": "it",
+  "description": "「LINE」「Yahoo! JAPAN」を運営",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 2036366,
+  "revenueApprox": false,
+  "netIncome": 193693,
+  "equity": 2998805,
+  "marketCap": 3737711,
+  "price": 544.6,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 1567421,
+    "netIncome": 77317
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 1672377,
+    "netIncome": 178868
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 1814663,
+    "netIncome": 113200
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 1917478,
+    "netIncome": 153465
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 2036366,
+    "netIncome": 193693
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "4307",
+  "name": "野村総合研究所",
+  "short": "NRI",
+  "industry": "it",
+  "description": "コンサルティング・ITソリューション",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 814708,
+  "revenueApprox": false,
+  "netIncome": 15257,
+  "equity": 433905,
+  "marketCap": 3490550,
+  "price": 6232,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 611634,
+    "netIncome": 71445
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 692165,
+    "netIncome": 76307
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 736556,
+    "netIncome": 79643
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 764813,
+    "netIncome": 93762
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 814708,
+    "netIncome": 15257
+   }
+  ],
+  "notes": [
+   "2026年3月期は豪州・北米事業ののれん等の減損損失を計上し大幅減益"
+  ],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "4755",
+  "name": "楽天グループ",
+  "short": "楽天",
+  "industry": "it",
+  "description": "「楽天市場」・フィンテック・モバイル",
+  "fiscalPeriod": "2025年12月期",
+  "revenueLabel": "売上収益",
+  "revenue": 2496575,
+  "revenueApprox": false,
+  "netIncome": -177886,
+  "equity": 992402,
+  "marketCap": 1451893,
+  "price": 665.4,
+  "history": [
+   {
+    "fy": "2021年12月期",
+    "revenue": 1681757,
+    "netIncome": -133828
+   },
+   {
+    "fy": "2022年12月期",
+    "revenue": 1920894,
+    "netIncome": -377217
+   },
+   {
+    "fy": "2023年12月期",
+    "revenue": 2071315,
+    "netIncome": -339473
+   },
+   {
+    "fy": "2024年12月期",
+    "revenue": 2279233,
+    "netIncome": -162442
+   },
+   {
+    "fy": "2025年12月期",
+    "revenue": 2496575,
+    "netIncome": -177886
+   }
+  ],
+  "notes": [
+   "12月決算のため、最新期は2025年12月期"
+  ],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8058",
+  "name": "三菱商事",
+  "short": "三菱商事",
+  "industry": "trading",
+  "description": "五大商社の一角",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "収益",
+  "revenue": 18915995,
+  "revenueApprox": false,
+  "netIncome": 800460,
+  "equity": 9440567,
+  "marketCap": 19317049,
+  "price": 5274,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 17264828,
+    "netIncome": 937529
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 21571973,
+    "netIncome": 1180694
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 19567601,
+    "netIncome": 964034
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 18617601,
+    "netIncome": 950709
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 18915995,
+    "netIncome": 800460
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8031",
+  "name": "三井物産",
+  "short": "三井物産",
+  "industry": "trading",
+  "description": "五大商社の一角",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "収益",
+  "revenue": 13995222,
+  "revenueApprox": false,
+  "netIncome": 833971,
+  "equity": 8767744,
+  "marketCap": 14291266,
+  "price": 5039,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 11757559,
+    "netIncome": 914722
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 14306402,
+    "netIncome": 1130630
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 13324942,
+    "netIncome": 1063684
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 14662620,
+    "netIncome": 900342
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 13995222,
+    "netIncome": 833971
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8001",
+  "name": "伊藤忠商事",
+  "short": "伊藤忠",
+  "industry": "trading",
+  "description": "五大商社の一角",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "収益",
+  "revenue": 14823087,
+  "revenueApprox": false,
+  "netIncome": 900283,
+  "equity": 6589966,
+  "marketCap": 16542645,
+  "price": 2395.5,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 12293348,
+    "netIncome": 820269
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 13945633,
+    "netIncome": 800519
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 14029910,
+    "netIncome": 801770
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 14724234,
+    "netIncome": 880251
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 14823087,
+    "netIncome": 900283
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8053",
+  "name": "住友商事",
+  "short": "住友商事",
+  "industry": "trading",
+  "description": "五大商社の一角",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "収益",
+  "revenue": 7337259,
+  "revenueApprox": false,
+  "netIncome": 600334,
+  "equity": 4628555,
+  "marketCap": 8198828,
+  "price": 1735,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 5495015,
+    "netIncome": 463694
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 6817872,
+    "netIncome": 565333
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 6910302,
+    "netIncome": 386352
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 7292084,
+    "netIncome": 561859
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 7337259,
+    "netIncome": 600334
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8002",
+  "name": "丸紅",
+  "short": "丸紅",
+  "industry": "trading",
+  "description": "五大商社の一角",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "収益",
+  "revenue": 8265841,
+  "revenueApprox": false,
+  "netIncome": 543852,
+  "equity": 4363719,
+  "marketCap": 8283973,
+  "price": 5108,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 8508591,
+    "netIncome": 421349
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 9190472,
+    "netIncome": 540451
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 7250515,
+    "netIncome": 470460
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 7790168,
+    "netIncome": 502965
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 8265841,
+    "netIncome": 543852
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8015",
+  "name": "豊田通商",
+  "short": "豊田通商",
+  "industry": "trading",
+  "description": "トヨタグループの総合商社",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 11561935,
+  "revenueApprox": false,
+  "netIncome": 370516,
+  "equity": 3157521,
+  "marketCap": 6339658,
+  "price": 6761,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 6309303,
+    "netIncome": 134603
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 8028000,
+    "netIncome": 222236
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 9848560,
+    "netIncome": 284156
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 10188980,
+    "netIncome": 331444
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 11561935,
+    "netIncome": 370516
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "2768",
+  "name": "双日",
+  "short": "双日",
+  "industry": "trading",
+  "description": "日商岩井とニチメンの統合で誕生した総合商社",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "収益",
+  "revenue": 2757350,
+  "revenueApprox": false,
+  "netIncome": 103612,
+  "equity": 1090370,
+  "marketCap": 1070470,
+  "price": 5145,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 2100752,
+    "netIncome": 82333
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 2479840,
+    "netIncome": 111247
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 2414649,
+    "netIncome": 100766
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 2509714,
+    "netIncome": 110637
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 2757350,
+    "netIncome": 103612
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "7203",
+  "name": "トヨタ自動車",
+  "short": "トヨタ",
+  "industry": "auto",
+  "description": "「トヨタ」「レクサス」ブランドを展開",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "営業収益",
+  "revenue": 50684952,
+  "revenueApprox": false,
+  "netIncome": 3848097,
+  "equity": 39918854,
+  "marketCap": 41837243,
+  "price": 3533,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 31379507,
+    "netIncome": 2850110
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 37154298,
+    "netIncome": 2451317
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 45095325,
+    "netIncome": 4944933
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 48036704,
+    "netIncome": 4765085
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 50684952,
+    "netIncome": 3848097
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "7267",
+  "name": "本田技研工業",
+  "short": "ホンダ",
+  "industry": "auto",
+  "description": "四輪・二輪・パワープロダクツ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 21796610,
+  "revenueApprox": false,
+  "netIncome": -423941,
+  "equity": 11817512,
+  "marketCap": 7558292,
+  "price": 1941.5,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 14552696,
+    "netIncome": 707067
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 16907725,
+    "netIncome": 651416
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 20428802,
+    "netIncome": 1107174
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 21688767,
+    "netIncome": 835837
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 21796610,
+    "netIncome": -423941
+   }
+  ],
+  "notes": [
+   "2026年3月期はEV関連損失の計上により最終赤字（1957年の上場以来初と報道）"
+  ],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "7201",
+  "name": "日産自動車",
+  "short": "日産",
+  "industry": "auto",
+  "description": "「日産」「インフィニティ」ブランドを展開",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 12007888,
+  "revenueApprox": false,
+  "netIncome": -533095,
+  "equity": 4798981,
+  "marketCap": 1023391,
+  "price": 292.7,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 8424585,
+    "netIncome": 215533
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 10596695,
+    "netIncome": 221900
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 12685716,
+    "netIncome": 426649
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 12633214,
+    "netIncome": -670898
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 12007888,
+    "netIncome": -533095
+   }
+  ],
+  "notes": [
+   "2025年3月期・2026年3月期と2期連続の最終赤字"
+  ],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "7269",
+  "name": "スズキ",
+  "short": "スズキ",
+  "industry": "auto",
+  "description": "軽自動車とインド市場に強み",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 6292967,
+  "revenueApprox": false,
+  "netIncome": 439267,
+  "equity": 3382083,
+  "marketCap": 4386204,
+  "price": 2273.5,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 3568380,
+    "netIncome": 160345
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 4641644,
+    "netIncome": 221107
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 5374255,
+    "netIncome": 267717
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 5825161,
+    "netIncome": 416050
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 6292967,
+    "netIncome": 439267
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "7270",
+  "name": "SUBARU",
+  "short": "SUBARU",
+  "industry": "auto",
+  "description": "水平対向エンジンとAWDが特徴",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 4784965,
+  "revenueApprox": false,
+  "netIncome": 90842,
+  "equity": 2780407,
+  "marketCap": 2031291,
+  "price": 2883,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 2744520,
+    "netIncome": 70007
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 3774468,
+    "netIncome": 200431
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 4702947,
+    "netIncome": 385084
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 4685763,
+    "netIncome": 338062
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 4784965,
+    "netIncome": 90842
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "7261",
+  "name": "マツダ",
+  "short": "マツダ",
+  "industry": "auto",
+  "description": "「魂動」デザインとSKYACTIV技術",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 4918172,
+  "revenueApprox": false,
+  "netIncome": 35086,
+  "equity": 1905899,
+  "marketCap": 750345,
+  "price": 1189.5,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 3120349,
+    "netIncome": 81557
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 3826752,
+    "netIncome": 142814
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 4827662,
+    "netIncome": 207696
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 5018893,
+    "netIncome": 114079
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 4918172,
+    "netIncome": 35086
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "7211",
+  "name": "三菱自動車工業",
+  "short": "三菱自動車",
+  "industry": "auto",
+  "description": "SUV・PHEVに強み",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 2896536,
+  "revenueApprox": false,
+  "netIncome": 10015,
+  "equity": 919469,
+  "marketCap": 510448,
+  "price": 381.4,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 2038909,
+    "netIncome": 74037
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 2458141,
+    "netIncome": 168730
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 2789589,
+    "netIncome": 154709
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 2788232,
+    "netIncome": 40987
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 2896536,
+    "netIncome": 10015
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8306",
+  "name": "三菱UFJフィナンシャル・グループ",
+  "short": "三菱UFJ",
+  "industry": "finance",
+  "description": "国内最大の金融グループ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "経常収益",
+  "revenue": 14620843,
+  "revenueApprox": false,
+  "netIncome": 2427229,
+  "equity": 22274041,
+  "marketCap": 38821133,
+  "price": 3449,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": null,
+    "netIncome": 1130840
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": null,
+    "netIncome": 1116496
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": null,
+    "netIncome": 1490781
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": null,
+    "netIncome": 1862946
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 14620843,
+    "netIncome": 2427229
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8316",
+  "name": "三井住友フィナンシャルグループ",
+  "short": "三井住友FG",
+  "industry": "finance",
+  "description": "三井住友銀行を中核とする金融グループ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "経常収益",
+  "revenue": 10790853,
+  "revenueApprox": false,
+  "netIncome": 1582974,
+  "equity": 15786052,
+  "marketCap": 24017622,
+  "price": 3191,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": null,
+    "netIncome": 706631
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": null,
+    "netIncome": 805842
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": null,
+    "netIncome": 962946
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 10174894,
+    "netIncome": 1177996
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 10790853,
+    "netIncome": 1582974
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8411",
+  "name": "みずほフィナンシャルグループ",
+  "short": "みずほ",
+  "industry": "finance",
+  "description": "みずほ銀行を中核とする金融グループ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "経常収益",
+  "revenue": 11315320,
+  "revenueApprox": false,
+  "netIncome": 1248632,
+  "equity": 11316529,
+  "marketCap": 18690488,
+  "price": 7741,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": null,
+    "netIncome": 530479
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": null,
+    "netIncome": 555527
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": null,
+    "netIncome": 678993
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 10442211,
+    "netIncome": 885433
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 11315320,
+    "netIncome": 1248632
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8308",
+  "name": "りそなホールディングス",
+  "short": "りそな",
+  "industry": "finance",
+  "description": "りそな銀行・埼玉りそな銀行などを傘下に持つ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "経常収益",
+  "revenue": 1357200,
+  "revenueApprox": true,
+  "netIncome": 258718,
+  "equity": 2905270,
+  "marketCap": 5044010,
+  "price": 2248,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": null,
+    "netIncome": 109974
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": null,
+    "netIncome": 160400
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": null,
+    "netIncome": 158930
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": null,
+    "netIncome": 213324
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 1357200,
+    "netIncome": 258718
+   }
+  ],
+  "notes": [
+   "売上相当の経常収益は報道値（億円単位）から換算"
+  ],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8309",
+  "name": "三井住友トラストグループ",
+  "short": "三井住友トラスト",
+  "industry": "finance",
+  "description": "三井住友信託銀行を中核とする信託グループ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "経常収益",
+  "revenue": 2983544,
+  "revenueApprox": false,
+  "netIncome": 317567,
+  "equity": 3558202,
+  "marketCap": 4545389,
+  "price": 1650.5,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": null,
+    "netIncome": 169078
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": null,
+    "netIncome": 191000
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": null,
+    "netIncome": 79199
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": null,
+    "netIncome": 257635
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 2983544,
+    "netIncome": 317567
+   }
+  ],
+  "notes": [],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8604",
+  "name": "野村ホールディングス",
+  "short": "野村HD",
+  "industry": "finance",
+  "description": "国内最大の証券グループ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "収益合計（金融費用控除後）",
+  "revenue": 2167700,
+  "revenueApprox": true,
+  "netIncome": 362129,
+  "equity": 3707868,
+  "marketCap": 4614767,
+  "price": 1579,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": null,
+    "netIncome": 142996
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": null,
+    "netIncome": 92786
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": null,
+    "netIncome": 165863
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": null,
+    "netIncome": 340736
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 2167700,
+    "netIncome": 362129
+   }
+  ],
+  "notes": [
+   "米国会計基準。売上相当として「収益合計（金融費用控除後）」を表示"
+  ],
+  "avgSalary": null,
+  "employees": null
+ },
+ {
+  "code": "8766",
+  "name": "東京海上ホールディングス",
+  "short": "東京海上",
+  "industry": "finance",
+  "description": "東京海上日動を中核とする損害保険グループ",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "経常収益",
+  "revenue": 8872200,
+  "revenueApprox": true,
+  "netIncome": 980428,
+  "equity": 5420348,
+  "marketCap": 17270947,
+  "price": null,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": null,
+    "netIncome": 420484
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": null,
+    "netIncome": 374604
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": null,
+    "netIncome": 695808
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": null,
+    "netIncome": 1055276
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 8872200,
+    "netIncome": 980428
+   }
+  ],
+  "notes": [
+   "売上相当の経常収益は報道値（億円単位）から換算"
+  ],
+  "avgSalary": null,
+  "employees": null
+ }
+]
