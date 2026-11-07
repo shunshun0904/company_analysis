@@ -49,11 +49,10 @@ npm run lint
 
 `main` ブランチに push すると、`.github/workflows/deploy-pages.yml` がビルドして `https://shunshun0904.github.io/company_analysis/` に公開します。Actions タブの「Deploy to GitHub Pages」から手動実行もできます。
 
-初回だけ、GitHub のリポジトリ設定で次を行ってください。
+公開が失敗するときは、GitHub のリポジトリ設定で次を確認してください。
 
-1. **Settings → General → Default branch** を `main` に変更
-2. **Settings → Pages → Build and deployment → Source** を「GitHub Actions」に変更
-3. 公開が「environment protection rules」で止まる場合は、**Settings → Environments → github-pages → Deployment branches** に `main` を追加
+1. **Settings → Pages → Build and deployment → Source** が「GitHub Actions」になっている
+2. 「environment protection rules」で止まる場合は、**Settings → Environments → github-pages → Deployment branches** に `main` が含まれている
 
 サブパス（`/company_analysis/`）で配信するため、ワークフローではビルド時に `NEXT_PUBLIC_BASE_PATH=/company_analysis` を指定しています。手元で同じものを作るときは `NEXT_PUBLIC_BASE_PATH=/company_analysis npm run build` です。
 
