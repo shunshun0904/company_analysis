@@ -45,10 +45,21 @@ npm run lint
 
 ## 公開
 
-`npm run build` で生成される `out/` を任意の静的ホスティングに置くだけで動きます。
+### GitHub Pages（設定済み）
 
-- **Vercel / Netlify / Cloudflare Pages**: そのままデプロイ可能（ビルドコマンド `npm run build`、出力 `out`）。
-- **GitHub Pages**（`https://<user>.github.io/company_analysis/`）: サブパスで配信されるため、ビルド時に `NEXT_PUBLIC_BASE_PATH=/company_analysis npm run build` を指定してください。
+`main` ブランチに push すると、`.github/workflows/deploy-pages.yml` がビルドして `https://shunshun0904.github.io/company_analysis/` に公開します。Actions タブの「Deploy to GitHub Pages」から手動実行もできます。
+
+初回だけ、GitHub のリポジトリ設定で次を行ってください。
+
+1. **Settings → General → Default branch** を `main` に変更
+2. **Settings → Pages → Build and deployment → Source** を「GitHub Actions」に変更
+3. 公開が「environment protection rules」で止まる場合は、**Settings → Environments → github-pages → Deployment branches** に `main` を追加
+
+サブパス（`/company_analysis/`）で配信するため、ワークフローではビルド時に `NEXT_PUBLIC_BASE_PATH=/company_analysis` を指定しています。手元で同じものを作るときは `NEXT_PUBLIC_BASE_PATH=/company_analysis npm run build` です。
+
+### そのほかの静的ホスティング
+
+`npm run build` で生成される `out/` を置くだけで動きます。Vercel / Netlify / Cloudflare Pages ならビルドコマンド `npm run build`、出力 `out` でそのままデプロイできます（ルート配信なので `NEXT_PUBLIC_BASE_PATH` は不要）。
 
 ## 配色について
 
