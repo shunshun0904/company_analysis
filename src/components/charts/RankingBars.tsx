@@ -4,9 +4,21 @@ import { useMemo } from "react";
 import { useRouter } from "next/navigation";
 import EChart from "@/components/EChart";
 import { T, tooltipBase, axisLabel, splitLine, hexA, dot } from "@/lib/chartTheme";
-import { fmtYen, fmtPct, fmtTimes } from "@/lib/format";
+import { fmtYen, fmtPct, fmtTimes, fmtMan, fmtMonthly, fmtAge, fmtYears, fmtPeople } from "@/lib/format";
 
-export type ValueFormat = "yen" | "pct" | "times";
+export type ValueFormat = "yen" | "pct" | "times" | "man" | "monthly" | "age" | "years" | "people";
+
+/** 軸の単位変換と目盛りの書式 */
+const SCALE: Record<ValueFormat, { div: number; tick: (v: number) => string }> = {
+  yen: { div: 1_000_000, tick: (v) => `${v}兆` },
+  pct: { div: 1, tick: (v) => `${v}%` },
+  times: { div: 1, tick: (v) => `${v}倍` },
+  man: { div: 10_000, tick: (v) => `${v}万` },
+  monthly: { div: 10_000, tick: (v) => `${v}万` },
+  age: { div: 1, tick: (v) => `${v}歳` },
+  years: { div: 1, tick: (v) => `${v}年` },
+  people: { div: 1, tick: (v) => (v >= 10000 ? `${v / 10000}万` : `${v}`) },
+};
 
 export interface BarItem {
   code: string;
@@ -22,6 +34,11 @@ export interface BarItem {
 export function formatValue(v: number, f: ValueFormat): string {
   if (f === "yen") return fmtYen(v);
   if (f === "pct") return fmtPct(v);
+  if (f === "man") return fmtMan(v);
+  if (f === "monthly") return fmtMonthly(v);
+  if (f === "age") return fmtAge(v);
+  if (f === "years") return fmtYears(v);
+  if (f === "people") return fmtPeople(v);
   return fmtTimes(v, Math.abs(v) < 10 ? 2 : 1);
 }
 
@@ -51,7 +68,7 @@ export default function RankingBars({
   const height = Math.max(compact ? 120 : 160, items.length * rowHeight + (compact ? 16 : 40));
 
   const option = useMemo(() => {
-    const scale = format === "yen" ? 1_000_000 : 1;
+    const scale = SCALE[format].div;
     return {
       grid: { left: 8, right: 86, top: 8, bottom: 8, containLabel: true },
       tooltip: {
@@ -68,7 +85,7 @@ export default function RankingBars({
         axisLabel: {
           show: !compact,
           ...axisLabel,
-          formatter: (v: number) => (format === "yen" ? `${v}兆` : format === "pct" ? `${v}%` : `${v}倍`),
+          formatter: (v: number) => SCALE[format].tick(v),
         },
         axisLine: { show: hasNeg, lineStyle: { color: T.axis } },
       },

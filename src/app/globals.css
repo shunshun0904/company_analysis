@@ -59,6 +59,7 @@ body {
 }
 
 .card {
+  min-width: 0;
   background: linear-gradient(180deg, rgba(27, 29, 48, 0.92), rgba(21, 23, 38, 0.92));
   border: 1px solid var(--line);
   border-radius: 20px;

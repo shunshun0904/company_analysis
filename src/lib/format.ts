@@ -35,3 +35,31 @@ export function fmtTimes(v: number | null, digits = 1): string {
 export function fmtYenShort(millions: number): string {
   return fmtYen(millions, { compact: true });
 }
+
+/** 円 → 「1,006万円」 */
+export function fmtMan(yen: number | null): string {
+  if (yen === null || !Number.isFinite(yen)) return "—";
+  return `${Math.round(yen / 10000).toLocaleString("ja-JP")}万円`;
+}
+
+/** 月給（円）→ 「27.5万円」 */
+export function fmtMonthly(yen: number | null): string {
+  if (yen === null || !Number.isFinite(yen)) return "—";
+  const man = yen / 10000;
+  return `${Number.isInteger(man) ? man : man.toFixed(1)}万円`;
+}
+
+export function fmtPeople(n: number | null): string {
+  if (n === null || !Number.isFinite(n)) return "—";
+  return `${n.toLocaleString("ja-JP")}人`;
+}
+
+export function fmtAge(v: number | null): string {
+  if (v === null || !Number.isFinite(v)) return "—";
+  return `${v.toFixed(1)}歳`;
+}
+
+export function fmtYears(v: number | null): string {
+  if (v === null || !Number.isFinite(v)) return "—";
+  return `${v.toFixed(1)}年`;
+}

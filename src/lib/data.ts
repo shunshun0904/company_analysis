@@ -35,18 +35,76 @@ export interface Company {
   netIncome: number;
   equity: number;
   marketCap: number;
-  price: number | null;
   history: HistoryPoint[];
   notes: string[];
-  avgSalary: number | null;
-  employees: number | null;
+  workforce: Workforce;
+  /** 初任給の掲載情報（metrics の startingSalary は金額のみ） */
+  startPay: StartingSalary | null;
+  startPayNote?: string | null;
+  hiring: Hiring[];
+  ceo: Ceo;
+}
+
+/** 有価証券報告書「従業員の状況」（提出会社） */
+export interface Workforce {
+  asOf: string;
+  employees: number;
+  avgAge: number;
+  avgTenure: number;
+  /** 円 */
+  avgSalary: number;
+  ageText: string | null;
+  tenureText: string | null;
+  /** 持株会社（提出会社）の数値か */
+  holding: boolean;
+  note: string | null;
+  sub: { name: string; employees: number; age: number; tenure: number; salary: number } | null;
+  edinetDoc: string;
+}
+
+/** 就職サイトに掲載された初任給（月給・円） */
+export interface StartingSalary {
+  entity: string;
+  amount: number;
+  amountMax: number | null;
+  grad: number | null;
+  year: string;
+  course: string;
+  url: string | null;
+  weak: boolean | null;
+  fixedOvertime: boolean | null;
+  check: string | null;
+}
+
+/** 大学通信「企業ごとの大学別就職者数」 */
+export interface Hiring {
+  entity: string;
+  year: number;
+  url: string | null;
+  top: [string, number][];
+  note: string | null;
+  univSide: [string, number][] | null;
+}
+
+export interface Ceo {
+  name: string;
+  title: string;
+  univ: string | null;
+  detail: string | null;
+  src: string | null;
+  url: string | null;
+  weak: boolean | null;
+  note: string | null;
 }
 
 export interface Metrics {
   roe: number;
-  per: number | null;
-  pbr: number;
   margin: number;
+  avgSalary: number;
+  startingSalary: number | null;
+  avgAge: number;
+  avgTenure: number;
+  employees: number;
   /** 成長性：非金融は売上の4年CAGR、金融は純利益の4年CAGR（%） */
   growth: number | null;
   growthBasis: "revenue" | "netIncome";
@@ -118,9 +176,12 @@ export function withMetrics(c: Company): CompanyWithMetrics {
   return {
     ...c,
     roe: (c.netIncome / c.equity) * 100,
-    per: c.netIncome > 0 ? c.marketCap / c.netIncome : null,
-    pbr: c.marketCap / c.equity,
     margin: (c.netIncome / c.revenue) * 100,
+    avgSalary: c.workforce.avgSalary,
+    startingSalary: c.startPay?.amount ?? null,
+    avgAge: c.workforce.avgAge,
+    avgTenure: c.workforce.avgTenure,
+    employees: c.workforce.employees,
     growth,
     growthBasis: isFinance ? "netIncome" : "revenue",
   };
@@ -164,7 +225,17 @@ export function industryTotals(id: IndustryId): IndustryTotals {
   };
 }
 
-export type MetricKey = "marketCap" | "revenue" | "netIncome" | "roe" | "margin" | "per";
+export type MetricKey =
+  | "marketCap"
+  | "revenue"
+  | "netIncome"
+  | "roe"
+  | "margin"
+  | "avgSalary"
+  | "startingSalary"
+  | "avgAge"
+  | "avgTenure"
+  | "employees";
 
 export const METRIC_LABEL: Record<MetricKey, string> = {
   marketCap: "時価総額",
@@ -172,18 +243,71 @@ export const METRIC_LABEL: Record<MetricKey, string> = {
   netIncome: "純利益",
   roe: "ROE",
   margin: "純利益率",
-  per: "PER",
+  avgSalary: "平均年収",
+  startingSalary: "初任給",
+  avgAge: "平均年齢",
+  avgTenure: "平均勤続年数",
+  employees: "従業員数",
 };
 
-/** 業界内の順位（1始まり）。PERは低い順、それ以外は高い順。値が無い場合は null */
+/** 低いほど上位とする指標（若い順） */
+export const ASCENDING: MetricKey[] = ["avgAge"];
+
+/** 業界内の順位（1始まり）。値が無い場合は null */
 export function rankIn(list: CompanyWithMetrics[], c: CompanyWithMetrics, key: MetricKey): number | null {
   const val = (x: CompanyWithMetrics) => x[key] as number | null;
   if (val(c) === null) return null;
+  const asc = ASCENDING.includes(key);
   const valid = list.filter((x) => val(x) !== null);
-  const sorted = [...valid].sort((a, b) =>
-    key === "per" ? (val(a)! - val(b)!) : (val(b)! - val(a)!),
-  );
+  const sorted = [...valid].sort((a, b) => (asc ? val(a)! - val(b)! : val(b)! - val(a)!));
   return sorted.findIndex((x) => x.code === c.code) + 1;
+}
+
+/** 大学名の表記ゆれをそろえる（大学通信の「早稲田大」→「早稲田大学」） */
+export function normUniv(name: string): string {
+  return name.endsWith("大") ? name + "学" : name;
+}
+
+export interface UnivHire {
+  code: string;
+  entity: string;
+  count: number;
+  url: string | null;
+  year: number;
+  /** 企業別ページではなく大学側のページの値 */
+  univSide: boolean;
+}
+
+/** 大学 → 各社への就職者数（大学通信の上位掲載分のみ） */
+export function univIndex(): Map<string, UnivHire[]> {
+  const m = new Map<string, UnivHire[]>();
+  for (const c of ALL) {
+    for (const h of c.hiring) {
+      const rows: [string, number, boolean][] = [
+        ...h.top.map(([u, n]) => [u, n, false] as [string, number, boolean]),
+        ...(h.univSide ?? []).map(([u, n]) => [u, n, true] as [string, number, boolean]),
+      ];
+      for (const [u, n, side] of rows) {
+        const key = normUniv(u);
+        const arr = m.get(key) ?? [];
+        if (!arr.some((x) => x.code === c.code && x.entity === h.entity)) {
+          arr.push({ code: c.code, entity: h.entity, count: n, url: h.url, year: h.year, univSide: side });
+        }
+        m.set(key, arr);
+      }
+    }
+  }
+  return m;
+}
+
+/** 社長の出身大学ごとの人数（確認できた人のみ） */
+export function ceoUnivCounts(): { univ: string; codes: string[] }[] {
+  const m = new Map<string, string[]>();
+  for (const c of ALL) {
+    if (!c.ceo.univ) continue;
+    m.set(c.ceo.univ, [...(m.get(c.ceo.univ) ?? []), c.code]);
+  }
+  return [...m.entries()].map(([univ, codes]) => ({ univ, codes })).sort((a, b) => b.codes.length - a.codes.length);
 }
 
 /** 全掲載企業の中でのパーセンタイル（0-100）。レーダーチャート用 */
@@ -205,4 +329,22 @@ export const RADAR_AXES: { name: string; key: (c: CompanyWithMetrics) => number 
 
 export function radarScores(c: CompanyWithMetrics): number[] {
   return RADAR_AXES.map((a) => percentile(a.key, c));
+}
+
+export function median(values: number[]): number | null {
+  const v = values.filter((x) => Number.isFinite(x)).sort((a, b) => a - b);
+  if (v.length === 0) return null;
+  const m = Math.floor(v.length / 2);
+  return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2;
+}
+
+/** 大学ごとの就職者数の合計（大学通信の上位掲載分・企業別ページの値のみ） */
+export function univTotals(): { univ: string; total: number; companies: number }[] {
+  return [...univIndex().entries()]
+    .map(([univ, rows]) => {
+      const r = rows.filter((x) => !x.univSide);
+      return { univ, total: r.reduce((s, x) => s + x.count, 0), companies: new Set(r.map((x) => x.code)).size };
+    })
+    .filter((x) => x.total > 0)
+    .sort((a, b) => b.total - a.total);
 }

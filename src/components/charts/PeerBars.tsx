@@ -3,28 +3,29 @@
 import { useMemo, useState } from "react";
 import RankingBars, { type ValueFormat } from "./RankingBars";
 import MetricTabs from "./MetricTabs";
-import { companiesOf, getCompany, getIndustry, type MetricKey } from "@/lib/data";
+import { ASCENDING, companiesOf, getCompany, getIndustry, type MetricKey } from "@/lib/data";
 
 const TABS: { key: MetricKey; label: string; format: ValueFormat }[] = [
+  { key: "avgSalary", label: "平均年収", format: "man" },
+  { key: "startingSalary", label: "初任給", format: "monthly" },
+  { key: "avgAge", label: "平均年齢", format: "age" },
   { key: "marketCap", label: "時価総額", format: "yen" },
-  { key: "revenue", label: "売上", format: "yen" },
   { key: "netIncome", label: "純利益", format: "yen" },
-  { key: "roe", label: "ROE", format: "pct" },
 ];
 
 /** 同業他社の中での位置。対象企業だけ業界色、他社はグレー（強調による比較） */
 export default function PeerBars({ code }: { code: string }) {
   const c = getCompany(code)!;
   const ind = getIndustry(c.industry)!;
-  const [key, setKey] = useState<MetricKey>("marketCap");
+  const [key, setKey] = useState<MetricKey>("avgSalary");
   const tab = TABS.find((t) => t.key === key)!;
-  const items = useMemo(
-    () =>
-      [...companiesOf(c.industry)]
-        .sort((a, b) => (b[key] as number) - (a[key] as number))
-        .map((x) => ({ code: x.code, label: x.short, value: x[key] as number, color: ind.color, dim: x.code !== code })),
-    [c.industry, key, code, ind.color],
-  );
+  const items = useMemo(() => {
+    const asc = ASCENDING.includes(key);
+    return companiesOf(c.industry)
+      .filter((x) => x[key] !== null)
+      .sort((a, b) => (asc ? (a[key] as number) - (b[key] as number) : (b[key] as number) - (a[key] as number)))
+      .map((x) => ({ code: x.code, label: x.short, value: x[key] as number, color: ind.color, dim: x.code !== code }));
+  }, [c.industry, key, code, ind.color]);
   return (
     <div>
       <div className="mb-3">

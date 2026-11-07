@@ -7,6 +7,7 @@ import { INDUSTRIES } from "@/lib/data";
 const NAV = [
   { href: "/", label: "ホーム" },
   ...INDUSTRIES.map((i) => ({ href: `/industry/${i.id}/`, label: i.name, color: i.color, glow: i.glow })),
+  { href: "/university/", label: "大学から探す" },
   { href: "/compare/", label: "企業を比較" },
   { href: "/about/", label: "データについて" },
 ] as { href: string; label: string; color?: string; glow?: string }[];

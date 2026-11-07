@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { INDUSTRIES, companiesOf, getIndustry, industryTotals, type IndustryId } from "@/lib/data";
-import { fmtYen, fmtPct, splitYen } from "@/lib/format";
+import { INDUSTRIES, companiesOf, getIndustry, industryTotals, median, type IndustryId } from "@/lib/data";
+import { fmtYen, fmtPct, fmtMan, fmtMonthly, fmtAge } from "@/lib/format";
 import { SectionTitle } from "@/components/ui";
 import IndustryRanking from "@/components/charts/IndustryRanking";
 import MarketCapTreemap from "@/components/charts/MarketCapTreemap";
-import BubbleChart from "@/components/charts/BubbleChart";
+import SalaryAgeScatter from "@/components/charts/SalaryAgeScatter";
+import HiringHeatmap from "@/components/charts/HiringHeatmap";
 import TrendChart from "@/components/charts/TrendChart";
 import CompanyTable from "@/components/CompanyTable";
 
@@ -31,19 +32,18 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
   const list = companiesOf(iid);
   const equity = list.reduce((s, c) => s + c.equity, 0);
   const industryRoe = (t.netIncome / equity) * 100;
-  const by = <K extends "marketCap" | "netIncome" | "roe" | "growth">(k: K) =>
+  const by = <K extends "marketCap" | "netIncome" | "avgSalary" | "startingSalary">(k: K) =>
     [...list].filter((c) => c[k] !== null).sort((a, b) => (b[k] as number) - (a[k] as number))[0];
+  const youngest = [...list].sort((a, b) => a.avgAge - b.avgAge)[0];
   const highlights = [
+    { label: "平均年収 No.1", c: by("avgSalary"), v: fmtMan(by("avgSalary").avgSalary) },
+    { label: "初任給 No.1", c: by("startingSalary"), v: fmtMonthly(by("startingSalary").startingSalary) },
+    { label: "平均年齢が最も若い", c: youngest, v: fmtAge(youngest.avgAge) },
     { label: "時価総額 No.1", c: by("marketCap"), v: fmtYen(by("marketCap").marketCap) },
-    { label: "純利益 No.1", c: by("netIncome"), v: fmtYen(by("netIncome").netIncome) },
-    { label: "ROE No.1", c: by("roe"), v: fmtPct(by("roe").roe) },
-    {
-      label: iid === "finance" ? "純利益成長 No.1" : "売上成長 No.1",
-      c: by("growth"),
-      v: `年率${fmtPct(by("growth").growth)}`,
-    },
   ];
-  const mc = splitYen(t.marketCap);
+  const salMed = median(list.map((c) => c.avgSalary));
+  const startMed = median(list.map((c) => c.startingSalary).filter((x): x is number => x !== null));
+  const holdingCount = list.filter((c) => c.workforce.holding).length;
   const style = { ["--accent" as string]: ind.color, ["--glow" as string]: ind.glow };
 
   return (
@@ -66,22 +66,24 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
 
       <section className="grid gap-3 sm:grid-cols-4">
         <div className="card card-accent p-5 sm:col-span-2" style={style}>
-          <p className="text-xs text-ink-3">時価総額合計</p>
-          <p className="mt-1 flex items-baseline gap-1">
-            <span className="text-5xl font-bold tracking-tight">{mc.value}</span>
-            <span className="text-lg text-ink-2">{mc.unit}</span>
+          <p className="text-xs text-ink-3">平均年収（{t.count}社の中央値）</p>
+          <p className="mt-1 text-5xl font-bold tracking-tight">{fmtMan(salMed)}</p>
+          <p className="mt-2 text-[11px] text-ink-3">
+            有価証券報告書の平均年間給与（提出会社）。{holdingCount > 0 ? `うち${holdingCount}社は持株会社の値。` : ""}
           </p>
-          <div className="glow-line mt-4" aria-hidden />
+          <div className="glow-line mt-3" aria-hidden />
+        </div>
+        <div className="card p-5">
+          <p className="text-xs text-ink-3">大卒初任給（中央値）</p>
+          <p className="mt-1 text-2xl font-bold">{fmtMonthly(startMed)}</p>
+          <p className="mt-1 text-[11px] text-ink-3">就職サイト掲載の月給</p>
         </div>
         <div className="card p-5">
           <p className="text-xs text-ink-3">業界規模（売上合計）</p>
           <p className="mt-1 text-2xl font-bold">{fmtYen(t.revenue)}</p>
-          <p className="mt-1 text-[11px] text-ink-3">掲載企業の合計{iid === "finance" ? "（経常収益等）" : ""}</p>
-        </div>
-        <div className="card p-5">
-          <p className="text-xs text-ink-3">純利益合計 ／ 業界ROE</p>
-          <p className="mt-1 text-2xl font-bold">{fmtYen(t.netIncome)}</p>
-          <p className="mt-1 text-[11px] text-ink-3">ROE {fmtPct(industryRoe)}（合計純利益÷合計自己資本）</p>
+          <p className="mt-1 text-[11px] text-ink-3">
+            純利益合計 {fmtYen(t.netIncome)}・業界ROE {fmtPct(industryRoe)}
+          </p>
         </div>
       </section>
 
@@ -101,25 +103,37 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
           <IndustryRanking industry={iid} />
         </div>
         <div className="card p-4 sm:p-5 lg:col-span-2">
-          <SectionTitle eyebrow="SHARE" title="時価総額シェア" lead="面積が時価総額。掲載企業の中での割合です。" accent={ind.color} />
+          <SectionTitle eyebrow="SCALE" title="会社の規模（時価総額）" lead="面積が時価総額。掲載企業の中での割合です。" accent={ind.color} />
           <MarketCapTreemap industry={iid} height={400} />
         </div>
       </section>
 
       <section className="mt-10">
         <SectionTitle
-          eyebrow="POSITIONING"
-          title="規模 × 収益性マップ"
-          lead={`横が${iid === "finance" ? "経常収益等" : "売上"}、縦が純利益率、円の大きさが時価総額。右上ほど「大きくて、よく稼ぐ」会社です。`}
+          eyebrow="UNIVERSITY"
+          title="どの大学から入っている？"
+          lead="大学通信の2025年春の就職者数（各社の上位に掲載された大学）。色が濃いほど人数が多く、空欄は上位に掲載がないことを示します（0人とは限りません）。"
           accent={ind.color}
         />
         <div className="card p-4 sm:p-5">
-          <BubbleChart industry={iid} />
+          <HiringHeatmap industry={iid} />
         </div>
       </section>
 
       <section className="mt-10">
-        <SectionTitle eyebrow="TREND" title="5期の推移" lead="企業名を押すと、その会社の線が強調されます。" accent={ind.color} />
+        <SectionTitle
+          eyebrow="SALARY × AGE"
+          title="平均年収 × 平均年齢マップ"
+          lead="横が平均年齢、縦が平均年収、円の大きさが従業員数（提出会社）。左上ほど「若いのに年収が高い」会社です。"
+          accent={ind.color}
+        />
+        <div className="card p-4 sm:p-5">
+          <SalaryAgeScatter industry={iid} />
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <SectionTitle eyebrow="TREND" title="業績の推移（5期）" lead="会社が伸びているかを確認しましょう。企業名を押すと、その会社の線が強調されます。" accent={ind.color} />
         <div className="card p-4 sm:p-5">
           <TrendChart industry={iid} />
         </div>
@@ -136,7 +150,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
         <SectionTitle eyebrow="COMPANIES" title="企業ページへ" accent={ind.color} />
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {[...list]
-            .sort((a, b) => b.marketCap - a.marketCap)
+            .sort((a, b) => b.avgSalary - a.avgSalary)
             .map((c) => (
               <Link
                 key={c.code}
@@ -146,8 +160,10 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
               >
                 <p className="text-[11px] text-ink-3">{c.code}</p>
                 <p className="truncate font-bold group-hover:underline">{c.short}</p>
-                <p className="mt-2 text-xs text-ink-3">時価総額</p>
-                <p className="text-sm font-semibold">{fmtYen(c.marketCap)}</p>
+                <p className="mt-2 text-xs text-ink-3">平均年収 ／ 初任給</p>
+                <p className="text-sm font-semibold">
+                  {fmtMan(c.avgSalary)} ／ {fmtMonthly(c.startingSalary)}
+                </p>
               </Link>
             ))}
         </div>

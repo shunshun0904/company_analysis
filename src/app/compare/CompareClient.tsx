@@ -5,7 +5,7 @@ import { useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ALL, INDUSTRIES, getCompany, getIndustry, radarScores, RADAR_AXES, type CompanyWithMetrics } from "@/lib/data";
 import { COMPARE_COLORS } from "@/lib/chartTheme";
-import { fmtYen, fmtPct, fmtTimes } from "@/lib/format";
+import { fmtYen, fmtPct, fmtMan, fmtMonthly, fmtAge, fmtYears, fmtPeople } from "@/lib/format";
 import RadarScore from "@/components/charts/RadarScore";
 import RankingBars, { type ValueFormat } from "@/components/charts/RankingBars";
 
@@ -13,12 +13,12 @@ const DEFAULT = ["7203", "8058", "8306"];
 const SLOTS = 3;
 
 const METRICS: { key: keyof CompanyWithMetrics; label: string; format: ValueFormat }[] = [
+  { key: "avgSalary", label: "平均年収（提出会社）", format: "man" },
+  { key: "startingSalary", label: "大卒初任給（月給）", format: "monthly" },
+  { key: "avgAge", label: "平均年齢", format: "age" },
+  { key: "avgTenure", label: "平均勤続年数", format: "years" },
   { key: "marketCap", label: "時価総額", format: "yen" },
-  { key: "revenue", label: "売上（金融は経常収益等）", format: "yen" },
   { key: "netIncome", label: "純利益", format: "yen" },
-  { key: "roe", label: "ROE", format: "pct" },
-  { key: "margin", label: "純利益率", format: "pct" },
-  { key: "pbr", label: "PBR", format: "times" },
 ];
 
 export default function CompareClient() {
@@ -88,8 +88,12 @@ export default function CompareClient() {
                     <span className="h-1.5 w-1.5 rounded-full" style={{ background: ind.color }} aria-hidden />
                     {ind.name} ／ {c.fiscalPeriod}
                   </p>
-                  <p className="mt-2 text-xs text-ink-3">時価総額</p>
-                  <p className="text-2xl font-bold">{fmtYen(c.marketCap)}</p>
+                  <p className="mt-2 text-xs text-ink-3">平均年収 ／ 初任給</p>
+                  <p className="text-2xl font-bold">
+                    {fmtMan(c.avgSalary)}
+                    <span className="mx-1 text-base text-ink-3">／</span>
+                    {fmtMonthly(c.startingSalary)}
+                  </p>
                 </div>
               )}
             </div>
@@ -140,13 +144,16 @@ export default function CompareClient() {
                 </thead>
                 <tbody className="tabular">
                   {[
+                    { label: "平均年収", f: (c: CompanyWithMetrics) => fmtMan(c.avgSalary) + (c.workforce.holding ? "†" : ""), v: (c: CompanyWithMetrics) => c.avgSalary },
+                    { label: "大卒初任給", f: (c: CompanyWithMetrics) => fmtMonthly(c.startingSalary), v: (c: CompanyWithMetrics) => c.startingSalary },
+                    { label: "平均年齢", f: (c: CompanyWithMetrics) => fmtAge(c.avgAge), v: () => null },
+                    { label: "平均勤続年数", f: (c: CompanyWithMetrics) => fmtYears(c.avgTenure), v: (c: CompanyWithMetrics) => c.avgTenure },
+                    { label: "従業員数（単体）", f: (c: CompanyWithMetrics) => fmtPeople(c.employees), v: (c: CompanyWithMetrics) => c.employees },
+                    { label: "社長の出身大学", f: (c: CompanyWithMetrics) => c.ceo.univ ?? "未確認", v: () => null },
                     { label: "時価総額", f: (c: CompanyWithMetrics) => fmtYen(c.marketCap), v: (c: CompanyWithMetrics) => c.marketCap },
                     { label: "売上", f: (c: CompanyWithMetrics) => fmtYen(c.revenue), v: (c: CompanyWithMetrics) => c.revenue },
                     { label: "純利益", f: (c: CompanyWithMetrics) => fmtYen(c.netIncome), v: (c: CompanyWithMetrics) => c.netIncome },
-                    { label: "純利益率", f: (c: CompanyWithMetrics) => fmtPct(c.margin), v: (c: CompanyWithMetrics) => c.margin },
                     { label: "ROE", f: (c: CompanyWithMetrics) => fmtPct(c.roe), v: (c: CompanyWithMetrics) => c.roe },
-                    { label: "PER", f: (c: CompanyWithMetrics) => fmtTimes(c.per), v: () => null },
-                    { label: "PBR", f: (c: CompanyWithMetrics) => fmtTimes(c.pbr, 2), v: () => null },
                     {
                       label: "成長率（4年・年率）",
                       f: (c: CompanyWithMetrics) => `${fmtPct(c.growth)}${c.growthBasis === "netIncome" ? "（純利益）" : ""}`,
@@ -169,7 +176,7 @@ export default function CompareClient() {
                   })}
                 </tbody>
               </table>
-              <p className="mt-2 text-[11px] text-ink-3">★は選んだ企業の中で最も大きい値。決算期：{picked.map((p) => `${p.c.short} ${p.c.fiscalPeriod}`).join("、")}</p>
+              <p className="mt-2 text-[11px] text-ink-3">★は選んだ企業の中で最も大きい値。†は持株会社（本社の少人数の社員）の値。決算期：{picked.map((p) => `${p.c.short} ${p.c.fiscalPeriod}`).join("、")}</p>
             </div>
           </div>
 

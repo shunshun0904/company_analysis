@@ -12,7 +12,6 @@
   "netIncome": 1037032,
   "equity": 9727623,
   "marketCap": 13338928,
-  "price": 164.9,
   "history": [
    {
     "fy": "2022年3月期",
@@ -41,8 +40,106 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 2606,
+   "avgAge": 41.4,
+   "avgTenure": 15.6,
+   "avgSalary": 10562434,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値。最大人員会社のNTTデータは従業員13,189人・平均年齢37.8歳・平均年間給与958万円",
+   "sub": null,
+   "edinetDoc": "S100YCP3"
+  },
+  "hiring": [
+   {
+    "entity": "ドコモグループ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/communication/r1930343/",
+    "top": [
+     [
+      "早稲田大",
+      80
+     ],
+     [
+      "明治大",
+      48
+     ],
+     [
+      "慶應義塾大",
+      45
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   },
+   {
+    "entity": "NTTデータグループ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/communication/r1930342/",
+    "top": [
+     [
+      "早稲田大",
+      111
+     ],
+     [
+      "慶應義塾大",
+      72
+     ],
+     [
+      "東京理科大",
+      57
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   },
+   {
+    "entity": "NTT東日本",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/communication/r1930345/",
+    "top": [
+     [
+      "早稲田大",
+      24
+     ],
+     [
+      "明治大",
+      20
+     ],
+     [
+      "中央大",
+      13
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "島田 明",
+   "title": "代表取締役社長 社長執行役員 CEO",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず"
+  },
+  "startPay": {
+   "entity": "NTTドコモ",
+   "amount": 324000,
+   "amountMax": null,
+   "grad": 342000,
+   "year": "2027年卒",
+   "course": "学部卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp52405/recruiting_course27055258/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "9433",
@@ -57,7 +154,6 @@
   "netIncome": 707112,
   "equity": 5076738,
   "marketCap": 10864240,
-  "price": 2940,
   "history": [
    {
     "fy": "2022年3月期",
@@ -86,8 +182,84 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 9891,
+   "avgAge": 42.3,
+   "avgTenure": 16.4,
+   "avgSalary": 10510939,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YKG2"
+  },
+  "hiring": [
+   {
+    "entity": "KDDI",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/communication/r1930346/",
+    "top": [
+     [
+      "慶應義塾大",
+      16
+     ],
+     [
+      "京都大",
+      15
+     ],
+     [
+      "中央大",
+      13
+     ],
+     [
+      "早稲田大",
+      12
+     ],
+     [
+      "明治大",
+      11
+     ],
+     [
+      "大阪大",
+      10
+     ],
+     [
+      "横浜国立大",
+      9
+     ],
+     [
+      "法政大",
+      8
+     ]
+    ],
+    "note": "東京大学の人数は掲載なし",
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "松田 浩路",
+   "title": "代表取締役社長 CEO",
+   "univ": "京都大学",
+   "detail": "京都大学大学院工学研究科修士課程修了（学部は未確認）",
+   "src": "東洋経済オンライン",
+   "url": "https://toyokeizai.net/articles/-/858767",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "KDDI",
+   "amount": 305000,
+   "amountMax": 365000,
+   "grad": null,
+   "year": "2027年卒",
+   "course": "OPENコース 総合職（30.5万〜36.5万円で設定）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp6708/recruiting_course27034100/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "9434",
@@ -102,7 +274,6 @@
   "netIncome": 550759,
   "equity": 2957859,
   "marketCap": 11676211,
-  "price": 244.1,
   "history": [
    {
     "fy": "2022年3月期",
@@ -131,8 +302,76 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 19150,
+   "avgAge": 42.0,
+   "avgTenure": 14.8,
+   "avgSalary": 8713000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YE76"
+  },
+  "hiring": [
+   {
+    "entity": "ソフトバンク",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/communication/r1930348/",
+    "top": [
+     [
+      "早稲田大",
+      34
+     ],
+     [
+      "明治大",
+      20
+     ],
+     [
+      "東京大",
+      19
+     ],
+     [
+      "慶應義塾大",
+      17
+     ],
+     [
+      "中央大",
+      17
+     ],
+     [
+      "立教大",
+      17
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "宮川 潤一",
+   "title": "代表取締役社長執行役員 兼 CEO",
+   "univ": "花園大学",
+   "detail": "花園大学文学部仏教学科",
+   "src": "現代ビジネス・ニュースイッチ",
+   "url": "https://newswitch.jp/p/25820",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "ソフトバンク",
+   "amount": 273000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2025年4月実績",
+   "course": "総合職 大卒（障がい者採用窓口の掲載）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp91457/employment.html",
+   "weak": true,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "6701",
@@ -147,7 +386,6 @@
   "netIncome": 270228,
   "equity": 2196578,
   "marketCap": 6268144,
-  "price": 4722,
   "history": [
    {
     "fy": "2022年3月期",
@@ -176,8 +414,72 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 21934,
+   "avgAge": 43.1,
+   "avgTenure": 17.3,
+   "avgSalary": 9939349,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": "当期より平均年間給与の算定方法を変更（有報注記）",
+   "sub": null,
+   "edinetDoc": "S100YBFV"
+  },
+  "hiring": [
+   {
+    "entity": "NEC",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/electronics/r1930147/",
+    "top": [
+     [
+      "早稲田大",
+      66
+     ],
+     [
+      "明治大",
+      45
+     ],
+     [
+      "中央大",
+      35
+     ],
+     [
+      "法政大",
+      33
+     ],
+     [
+      "慶應義塾大",
+      29
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "森田 隆之",
+   "title": "取締役 代表執行役社長 兼 CEO",
+   "univ": "東京大学",
+   "detail": "東京大学法学部（1983年卒）",
+   "src": "NECプレスリリース（2018年2月）",
+   "url": "https://jpn.nec.com/press/201802/20180227_02.html",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "NEC",
+   "amount": 294000,
+   "amountMax": null,
+   "grad": 314000,
+   "year": "2027年卒",
+   "course": "学部卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp20/recruiting_course27042296/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "6702",
@@ -192,7 +494,6 @@
   "netIncome": 449408,
   "equity": 2024915,
   "marketCap": 5922306,
-  "price": 3430,
   "history": [
    {
     "fy": "2022年3月期",
@@ -223,8 +524,76 @@
   "notes": [
    "2026年3月期の純利益には新光電気工業などの株式売却益（非継続事業）を含む"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 32224,
+   "avgAge": 42.7,
+   "avgTenure": 17.6,
+   "avgSalary": 10122665,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YM3K"
+  },
+  "hiring": [
+   {
+    "entity": "富士通",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/electronics/r1930174/",
+    "top": [
+     [
+      "早稲田大",
+      69
+     ],
+     [
+      "明治大",
+      38
+     ],
+     [
+      "慶應義塾大",
+      36
+     ],
+     [
+      "東京理科大",
+      31
+     ],
+     [
+      "横浜国立大",
+      28
+     ],
+     [
+      "大阪大",
+      24
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "時田 隆仁",
+   "title": "代表取締役社長 CEO",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず"
+  },
+  "startPay": {
+   "entity": "富士通",
+   "amount": 284000,
+   "amountMax": 315000,
+   "grad": null,
+   "year": "2026年卒",
+   "course": "大学卒（職務により28.4万円または31.5万円）",
+   "url": "https://job.mynavi.jp/26/pc/corpinfo/displayEmployment/index/?corpId=12&recruitingCourseId=26039044",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "4689",
@@ -239,7 +608,6 @@
   "netIncome": 193693,
   "equity": 2998805,
   "marketCap": 3737711,
-  "price": 544.6,
   "history": [
    {
     "fy": "2022年3月期",
@@ -268,8 +636,66 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 10577,
+   "avgAge": 39.0,
+   "avgTenure": 9.6,
+   "avgSalary": 9023870,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YBXD"
+  },
+  "hiring": [
+   {
+    "entity": "LINEヤフー",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930418/",
+    "top": [
+     [
+      "東京大",
+      12
+     ],
+     [
+      "早稲田大",
+      11
+     ],
+     [
+      "大阪大",
+      7
+     ],
+     [
+      "明治大",
+      6
+     ],
+     [
+      "筑波大",
+      5
+     ],
+     [
+      "東京科学大",
+      5
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "出澤 剛",
+   "title": "代表取締役社長 CEO",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず"
+  },
+  "startPay": null,
+  "startPayNote": "就職サイトで本体の初任給を確認できず"
  },
  {
   "code": "4307",
@@ -284,7 +710,6 @@
   "netIncome": 15257,
   "equity": 433905,
   "marketCap": 3490550,
-  "price": 6232,
   "history": [
    {
     "fy": "2022年3月期",
@@ -315,8 +740,88 @@
   "notes": [
    "2026年3月期は豪州・北米事業ののれん等の減損損失を計上し大幅減益"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 7982,
+   "avgAge": 39.7,
+   "avgTenure": 13.7,
+   "avgSalary": 13326000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YBM8"
+  },
+  "hiring": [
+   {
+    "entity": "野村総合研究所",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930411/",
+    "top": [
+     [
+      "早稲田大",
+      68
+     ],
+     [
+      "慶應義塾大",
+      47
+     ],
+     [
+      "東京大",
+      41
+     ],
+     [
+      "東京科学大",
+      23
+     ],
+     [
+      "京都大",
+      20
+     ],
+     [
+      "大阪大",
+      18
+     ],
+     [
+      "北海道大",
+      17
+     ],
+     [
+      "東京理科大",
+      17
+     ],
+     [
+      "明治大",
+      17
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "柳澤 花芽",
+   "title": "代表取締役社長",
+   "univ": "東京大学",
+   "detail": "東京大学文学部（報道記事1件による）",
+   "src": "マネーポスト",
+   "url": "https://www.moneypost.jp/1308195/2/",
+   "weak": true,
+   "note": null
+  },
+  "startPay": {
+   "entity": "野村総合研究所",
+   "amount": 336500,
+   "amountMax": null,
+   "grad": 364500,
+   "year": "2025年4月実績",
+   "course": "総合職 大学卒（全員一律の住宅手当6万円を含む）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp961/recruiting_course27044476/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "4755",
@@ -331,7 +836,6 @@
   "netIncome": -177886,
   "equity": 992402,
   "marketCap": 1451893,
-  "price": 665.4,
   "history": [
    {
     "fy": "2021年12月期",
@@ -362,8 +866,80 @@
   "notes": [
    "12月決算のため、最新期は2025年12月期"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2025-12-31",
+   "employees": 9989,
+   "avgAge": 36.0,
+   "avgTenure": 6.3,
+   "avgSalary": 8508495,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100XTNW"
+  },
+  "hiring": [
+   {
+    "entity": "楽天グループ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930419/",
+    "top": [
+     [
+      "早稲田大",
+      46
+     ],
+     [
+      "慶應義塾大",
+      38
+     ],
+     [
+      "上智大",
+      29
+     ],
+     [
+      "立教大",
+      27
+     ],
+     [
+      "東京大",
+      21
+     ],
+     [
+      "明治大",
+      20
+     ],
+     [
+      "同志社大",
+      18
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "三木谷 浩史",
+   "title": "代表取締役会長兼社長 最高執行役員",
+   "univ": "一橋大学",
+   "detail": "一橋大学商学部（1988年卒）、ハーバード大学経営大学院MBA",
+   "src": "一橋大学 令和3年度入学式 祝辞",
+   "url": "https://www.hit-u.ac.jp/1284wp/wp-content/uploads/2021/04/Nyugaku-shukuji_Mikitani.pdf",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "楽天グループ",
+   "amount": 350000,
+   "amountMax": null,
+   "grad": 360000,
+   "year": "2025年4月実績（据え置き）",
+   "course": "ビジネス職 大卒（基本給265,823円＋40時間分の固定残業代84,177円）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp70317/recruiting_course27049929/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": true,
+   "check": null
+  }
  },
  {
   "code": "8058",
@@ -378,7 +954,6 @@
   "netIncome": 800460,
   "equity": 9440567,
   "marketCap": 19317049,
-  "price": 5274,
   "history": [
    {
     "fy": "2022年3月期",
@@ -407,8 +982,72 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 5328,
+   "avgAge": 42.3,
+   "avgTenure": 17.6,
+   "avgSalary": 21125472,
+   "ageText": null,
+   "tenureText": "17年7ヶ月",
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YB25"
+  },
+  "hiring": [
+   {
+    "entity": "三菱商事",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/trading-company/r1930247/",
+    "top": [
+     [
+      "東京大",
+      32
+     ],
+     [
+      "早稲田大",
+      24
+     ],
+     [
+      "慶應義塾大",
+      19
+     ],
+     [
+      "京都大",
+      8
+     ],
+     [
+      "一橋大",
+      6
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "中西 勝也",
+   "title": "代表取締役 社長",
+   "univ": "東京大学",
+   "detail": "東京大学教養学部（1985年卒）",
+   "src": "東洋経済オンライン",
+   "url": "https://toyokeizai.net/articles/-/843260",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "三菱商事",
+   "amount": 350000,
+   "amountMax": null,
+   "grad": 385000,
+   "year": "2027年卒",
+   "course": "総合職 学士卒",
+   "url": "https://job.mynavi.jp/27/pc/corpinfo/displayEmployment/index/?corpId=128&recruitingCourseId=27046782",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8031",
@@ -423,7 +1062,6 @@
   "netIncome": 833971,
   "equity": 8767744,
   "marketCap": 14291266,
-  "price": 5039,
   "history": [
    {
     "fy": "2022年3月期",
@@ -452,8 +1090,64 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 5333,
+   "avgAge": 42.0,
+   "avgTenure": 17.4,
+   "avgSalary": 20589000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YAVT"
+  },
+  "hiring": [
+   {
+    "entity": "三井物産",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/trading-company/r1930246/",
+    "top": [
+     [
+      "慶應義塾大",
+      33
+     ],
+     [
+      "東京大",
+      31
+     ],
+     [
+      "早稲田大",
+      20
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "堀 健一",
+   "title": "代表取締役社長",
+   "univ": "慶應義塾大学",
+   "detail": "慶應義塾大学経済学部（1984年卒）",
+   "src": "三井物産 社長人事資料（2020年12月23日）",
+   "url": "https://www.mitsui.com/jp/ja/release/2020/pdf/ja_201223.pdf",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "三井物産",
+   "amount": 320000,
+   "amountMax": null,
+   "grad": 360000,
+   "year": "2026年卒",
+   "course": "Global枠 学卒",
+   "url": "https://job.mynavi.jp/26/pc/search/corp129/recruiting_course26051856/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8001",
@@ -468,7 +1162,6 @@
   "netIncome": 900283,
   "equity": 6589966,
   "marketCap": 16542645,
-  "price": 2395.5,
   "history": [
    {
     "fy": "2022年3月期",
@@ -497,8 +1190,68 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 4125,
+   "avgAge": 42.0,
+   "avgTenure": 17.8,
+   "avgSalary": 19911534,
+   "ageText": null,
+   "tenureText": "17年9か月",
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YA6H"
+  },
+  "hiring": [
+   {
+    "entity": "伊藤忠商事",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/trading-company/r1930235/",
+    "top": [
+     [
+      "早稲田大",
+      25
+     ],
+     [
+      "慶應義塾大",
+      22
+     ],
+     [
+      "東京大",
+      14
+     ],
+     [
+      "京都大",
+      14
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "石井 敬太",
+   "title": "代表取締役社長 COO",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "高校は早稲田大学高等学院と報道されているが、大学は確認できず"
+  },
+  "startPay": {
+   "entity": "伊藤忠商事",
+   "amount": 360000,
+   "amountMax": null,
+   "grad": 400000,
+   "year": "2025年4月実績",
+   "course": "総合職 学部卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp161/recruiting_course27053569/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "リクナビ27卒でも同額"
+  }
  },
  {
   "code": "8053",
@@ -513,7 +1266,6 @@
   "netIncome": 600334,
   "equity": 4628555,
   "marketCap": 8198828,
-  "price": 1735,
   "history": [
    {
     "fy": "2022年3月期",
@@ -542,8 +1294,72 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 4938,
+   "avgAge": 43.3,
+   "avgTenure": 18.3,
+   "avgSalary": 18402971,
+   "ageText": null,
+   "tenureText": "18年3ヶ月",
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YARD"
+  },
+  "hiring": [
+   {
+    "entity": "住友商事",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/trading-company/r1930239/",
+    "top": [
+     [
+      "慶應義塾大",
+      17
+     ],
+     [
+      "東京大",
+      16
+     ],
+     [
+      "早稲田大",
+      16
+     ],
+     [
+      "京都大",
+      10
+     ],
+     [
+      "大阪大",
+      7
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "上野 真吾",
+   "title": "代表取締役 社長執行役員 CEO",
+   "univ": "慶應義塾大学",
+   "detail": "慶應義塾大学商学部（1982年卒）",
+   "src": "住友商事 公式サイト（役員紹介）",
+   "url": "https://www.sumitomocorp.com/ja/jp/about/company/officer/43",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "住友商事",
+   "amount": 325000,
+   "amountMax": 360000,
+   "grad": null,
+   "year": "2027年卒",
+   "course": "プロフェッショナル職（月給32.5万〜36万円）",
+   "url": "https://job.rikunabi.com/selection/job_descriptions/ac151ec373fbd7a3/",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8002",
@@ -558,7 +1374,6 @@
   "netIncome": 543852,
   "equity": 4363719,
   "marketCap": 8283973,
-  "price": 5108,
   "history": [
    {
     "fy": "2022年3月期",
@@ -587,8 +1402,72 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 4225,
+   "avgAge": 42.5,
+   "avgTenure": 17.8,
+   "avgSalary": 17843699,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YAY4"
+  },
+  "hiring": [
+   {
+    "entity": "丸紅",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/trading-company/r1930245/",
+    "top": [
+     [
+      "慶應義塾大",
+      23
+     ],
+     [
+      "早稲田大",
+      23
+     ],
+     [
+      "京都大",
+      9
+     ],
+     [
+      "東京大",
+      8
+     ],
+     [
+      "大阪大",
+      7
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "大本 晶之",
+   "title": "取締役 代表執行役社長",
+   "univ": "早稲田大学",
+   "detail": "早稲田大学商学部（1992年卒）",
+   "src": "ニュースイッチ",
+   "url": "https://newswitch.jp/p/43807",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "丸紅",
+   "amount": 330000,
+   "amountMax": null,
+   "grad": 365000,
+   "year": "マイナビ2027掲載（基準年月の記載なし）",
+   "course": "グローバルコース 大卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp160/recruiting_course27030554/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8015",
@@ -603,7 +1482,6 @@
   "netIncome": 370516,
   "equity": 3157521,
   "marketCap": 6339658,
-  "price": 6761,
   "history": [
    {
     "fy": "2022年3月期",
@@ -632,8 +1510,51 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 2466,
+   "avgAge": 43.0,
+   "avgTenure": 16.7,
+   "avgSalary": 14213845,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YD8J"
+  },
+  "hiring": [
+   {
+    "entity": "豊田通商",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/trading-company/r1930242/",
+    "top": [],
+    "note": "ページはあるが数値を取得できず",
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "今井 斗志光",
+   "title": "代表取締役 社長",
+   "univ": "早稲田大学",
+   "detail": "早稲田大学商学部（報道記事1件による）",
+   "src": "FASHIONSNAP",
+   "url": "https://www.fashionsnap.com/article/2025-01-31/toyota-tsusho-ceo/",
+   "weak": true,
+   "note": null
+  },
+  "startPay": {
+   "entity": "豊田通商",
+   "amount": 330000,
+   "amountMax": null,
+   "grad": 350000,
+   "year": "2025年7月実績",
+   "course": "総合職 大学卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp39235/recruiting_course27043478/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "2768",
@@ -648,7 +1569,6 @@
   "netIncome": 103612,
   "equity": 1090370,
   "marketCap": 1070470,
-  "price": 5145,
   "history": [
    {
     "fy": "2022年3月期",
@@ -677,8 +1597,64 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 2519,
+   "avgAge": 40.5,
+   "avgTenure": 14.7,
+   "avgSalary": 12571801,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100Y9EI"
+  },
+  "hiring": [
+   {
+    "entity": "双日",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/trading-company/r1930240/",
+    "top": [
+     [
+      "早稲田大",
+      22
+     ],
+     [
+      "慶應義塾大",
+      14
+     ],
+     [
+      "上智大",
+      11
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "植村 幸祐",
+   "title": "代表取締役 社長 CEO",
+   "univ": "東京大学",
+   "detail": "東京大学農学部（1993年卒）",
+   "src": "ニュースイッチ",
+   "url": "https://newswitch.jp/p/39463",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "双日",
+   "amount": 305000,
+   "amountMax": null,
+   "grad": 340000,
+   "year": "2024年4月実績",
+   "course": "総合職 大卒",
+   "url": "https://job.rikunabi.com/selection/job_descriptions/db930b6ffa8e0615/",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "リクナビ27卒は月給30.5万〜34万円"
+  }
  },
  {
   "code": "7203",
@@ -693,7 +1669,6 @@
   "netIncome": 3848097,
   "equity": 39918854,
   "marketCap": 41837243,
-  "price": 3533,
   "history": [
    {
     "fy": "2022年3月期",
@@ -722,8 +1697,76 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 73133,
+   "avgAge": 40.5,
+   "avgTenure": 15.1,
+   "avgSalary": 10060464,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100Y8NY"
+  },
+  "hiring": [
+   {
+    "entity": "トヨタ自動車",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/automobile/r1930212/",
+    "top": [
+     [
+      "名古屋大",
+      83
+     ],
+     [
+      "名古屋工業大",
+      64
+     ],
+     [
+      "同志社大",
+      41
+     ],
+     [
+      "京都大",
+      35
+     ],
+     [
+      "大阪大",
+      34
+     ],
+     [
+      "早稲田大",
+      34
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "近 健太",
+   "title": "代表取締役社長",
+   "univ": "東北大学",
+   "detail": "東北大学経済学部（1991年卒）",
+   "src": "東北大学経済学部 公式資料",
+   "url": "https://www.econ.tohoku.ac.jp/wp/wp-content/uploads/2022/11/c6155683fd3c5fa42a9321e0729b84ad.pdf",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "トヨタ自動車",
+   "amount": 275000,
+   "amountMax": null,
+   "grad": 300000,
+   "year": "2025年4月実績",
+   "course": "総合職（事務職・技術職）学部卒業相当",
+   "url": "https://job.mynavi.jp/27/pc/search/corp8/recruiting_course27039910/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "7267",
@@ -738,7 +1781,6 @@
   "netIncome": -423941,
   "equity": 11817512,
   "marketCap": 7558292,
-  "price": 1941.5,
   "history": [
    {
     "fy": "2022年3月期",
@@ -769,8 +1811,76 @@
   "notes": [
    "2026年3月期はEV関連損失の計上により最終赤字（1957年の上場以来初と報道）"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 32547,
+   "avgAge": 43.9,
+   "avgTenure": 21.0,
+   "avgSalary": 9326000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YDD9"
+  },
+  "hiring": [
+   {
+    "entity": "本田技研工業",
+    "year": 2025,
+    "url": null,
+    "top": [],
+    "note": "企業別ページの数値は取得できず。各大学の「主な就職先」ページに掲載された人数",
+    "univSide": [
+     [
+      "東京理科大",
+      29
+     ],
+     [
+      "東京科学大",
+      19
+     ],
+     [
+      "東京都市大",
+      13
+     ],
+     [
+      "上智大",
+      12
+     ],
+     [
+      "横浜国立大",
+      11
+     ],
+     [
+      "東京電機大",
+      11
+     ]
+    ]
+   }
+  ],
+  "ceo": {
+   "name": "三部 敏宏",
+   "title": "取締役 代表執行役社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず"
+  },
+  "startPay": {
+   "entity": "本田技研工業",
+   "amount": 262300,
+   "amountMax": null,
+   "grad": 287800,
+   "year": "2025年4月実績",
+   "course": "職種別／ポテンシャル採用コース 学部卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp38687/employment.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "リクナビ27卒でも同額"
+  }
  },
  {
   "code": "7201",
@@ -785,7 +1895,6 @@
   "netIncome": -533095,
   "equity": 4798981,
   "marketCap": 1023391,
-  "price": 292.7,
   "history": [
    {
     "fy": "2022年3月期",
@@ -816,8 +1925,68 @@
   "notes": [
    "2025年3月期・2026年3月期と2期連続の最終赤字"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 23174,
+   "avgAge": 40.9,
+   "avgTenure": 14.9,
+   "avgSalary": 8571467,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YH2B"
+  },
+  "hiring": [
+   {
+    "entity": "日産自動車",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/automobile/r1930213/",
+    "top": [
+     [
+      "明治大",
+      33
+     ],
+     [
+      "東京科学大",
+      22
+     ],
+     [
+      "早稲田大",
+      22
+     ],
+     [
+      "九州大",
+      17
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "イヴァン・エスピノーサ",
+   "title": "代表執行役社長 兼 CEO",
+   "univ": "モンテレイ工科大学",
+   "detail": "モンテレイ工科大学（メキシコ）機械工学部（2001年卒）",
+   "src": "日産 公式プロフィール",
+   "url": "https://global.nissannews.com/ja-JP/releases/ivan_espinosa_ja",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "日産自動車",
+   "amount": 260000,
+   "amountMax": null,
+   "grad": 280000,
+   "year": "マイナビ2027掲載（技術系）",
+   "course": "学部卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp11/employment.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "7269",
@@ -832,7 +2001,6 @@
   "netIncome": 439267,
   "equity": 3382083,
   "marketCap": 4386204,
-  "price": 2273.5,
   "history": [
    {
     "fy": "2022年3月期",
@@ -861,8 +2029,80 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 17871,
+   "avgAge": 41.5,
+   "avgTenure": 18.5,
+   "avgSalary": 8276061,
+   "ageText": "41歳6ヶ月",
+   "tenureText": "18年6ヶ月",
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YFG2"
+  },
+  "hiring": [
+   {
+    "entity": "スズキ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/automobile/r1930208/",
+    "top": [
+     [
+      "静岡大",
+      28
+     ],
+     [
+      "日本大",
+      17
+     ],
+     [
+      "立命館大",
+      10
+     ],
+     [
+      "中央大",
+      9
+     ],
+     [
+      "東京電機大",
+      9
+     ],
+     [
+      "明治大",
+      9
+     ],
+     [
+      "愛知工業大",
+      9
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "鈴木 俊宏",
+   "title": "代表取締役社長",
+   "univ": "東京理科大学",
+   "detail": "東京理科大学大学院（1983年修了、学部は未確認）",
+   "src": "東洋経済オンライン",
+   "url": "https://toyokeizai.net/articles/-/561543",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "スズキ",
+   "amount": 294000,
+   "amountMax": null,
+   "grad": 317700,
+   "year": "2025年4月実績",
+   "course": "理工系 学部卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp50111/recruiting_course27019275/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "7270",
@@ -877,7 +2117,6 @@
   "netIncome": 90842,
   "equity": 2780407,
   "marketCap": 2031291,
-  "price": 2883,
   "history": [
    {
     "fy": "2022年3月期",
@@ -906,8 +2145,64 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 17948,
+   "avgAge": 40.0,
+   "avgTenure": 15.7,
+   "avgSalary": 7643520,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YFKZ"
+  },
+  "hiring": [
+   {
+    "entity": "SUBARU",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/automobile/r1930209/",
+    "top": [
+     [
+      "日本大",
+      28
+     ],
+     [
+      "千葉工業大",
+      15
+     ],
+     [
+      "東京電機大",
+      13
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "大崎 篤",
+   "title": "代表取締役社長 CEO",
+   "univ": "東京農工大学",
+   "detail": "東京農工大学工学部、同大学院工学研究科修了（1988年）",
+   "src": "SUBARU 社長人事発表資料（2023年3月）",
+   "url": "https://www.subaru.co.jp/pdf/news/2023_0303_1_2023-03-02-211831.pdf",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "SUBARU",
+   "amount": 267000,
+   "amountMax": null,
+   "grad": 288000,
+   "year": "2026年度見込",
+   "course": "総合職 学部卒",
+   "url": "https://job.mynavi.jp/26/pc/corpinfo/displayEmployment/index/?corpId=40420&recruitingCourseId=26049955",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "7261",
@@ -922,7 +2217,6 @@
   "netIncome": 35086,
   "equity": 1905899,
   "marketCap": 750345,
-  "price": 1189.5,
   "history": [
    {
     "fy": "2022年3月期",
@@ -951,8 +2245,64 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 22857,
+   "avgAge": 42.5,
+   "avgTenure": 17.7,
+   "avgSalary": 7112000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YDZ1"
+  },
+  "hiring": [
+   {
+    "entity": "マツダ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/automobile/r1930216/",
+    "top": [
+     [
+      "広島大",
+      29
+     ],
+     [
+      "山口大",
+      10
+     ],
+     [
+      "近畿大",
+      9
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "毛籠 勝弘",
+   "title": "代表取締役社長 兼 CEO",
+   "univ": "京都産業大学",
+   "detail": "京都産業大学（1983年卒、投資情報サイトの経歴紹介による）",
+   "src": "ニュースイッチ・投資情報サイト",
+   "url": "https://newswitch.jp/p/36302",
+   "weak": true,
+   "note": null
+  },
+  "startPay": {
+   "entity": "マツダ",
+   "amount": 241000,
+   "amountMax": null,
+   "grad": 263000,
+   "year": "マイナビ2027掲載（更新時期が古い可能性）",
+   "course": "大卒 総合職",
+   "url": "https://job.mynavi.jp/27/pc/search/corp40315/employment.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "7211",
@@ -967,7 +2317,6 @@
   "netIncome": 10015,
   "equity": 919469,
   "marketCap": 510448,
-  "price": 381.4,
   "history": [
    {
     "fy": "2022年3月期",
@@ -996,8 +2345,68 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 13498,
+   "avgAge": 42.4,
+   "avgTenure": 16.0,
+   "avgSalary": 7895000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YCMC"
+  },
+  "hiring": [
+   {
+    "entity": "三菱自動車工業",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/automobile/r1930217/",
+    "top": [
+     [
+      "日本大",
+      17
+     ],
+     [
+      "明治大",
+      7
+     ],
+     [
+      "名城大",
+      7
+     ],
+     [
+      "近畿大",
+      7
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "岸浦 恵介",
+   "title": "取締役 代表執行役社長 兼 COO",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず（CEOは加藤隆雄氏）"
+  },
+  "startPay": {
+   "entity": "三菱自動車工業",
+   "amount": 260000,
+   "amountMax": null,
+   "grad": 280000,
+   "year": "2025年4月実績",
+   "course": "エリア総合職 学部卒",
+   "url": "https://job.mynavi.jp/27/pc/corpinfo/displayEmployment/index/?corpId=33&recruitingCourseId=27046481",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "リクナビ27卒（事務系総合職）でも26万円"
+  }
  },
  {
   "code": "8306",
@@ -1012,7 +2421,6 @@
   "netIncome": 2427229,
   "equity": 22274041,
   "marketCap": 38821133,
-  "price": 3449,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1041,8 +2449,72 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 3637,
+   "avgAge": 40.3,
+   "avgTenure": 13.5,
+   "avgSalary": 11702000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値。従業員は三菱UFJ銀行等からの出向者で、勤続年数は出向元を通算",
+   "sub": null,
+   "edinetDoc": "S100YJQO"
+  },
+  "hiring": [
+   {
+    "entity": "三菱UFJ銀行",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/bank/r1930281/",
+    "top": [
+     [
+      "慶應義塾大",
+      95
+     ],
+     [
+      "早稲田大",
+      88
+     ],
+     [
+      "中央大",
+      29
+     ],
+     [
+      "京都大",
+      28
+     ],
+     [
+      "明治大",
+      27
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "半沢 淳一",
+   "title": "取締役 代表執行役社長 グループCEO",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず"
+  },
+  "startPay": {
+   "entity": "三菱UFJ銀行",
+   "amount": 300000,
+   "amountMax": null,
+   "grad": 310000,
+   "year": "2027年卒",
+   "course": "大学卒（基本給27万円＋シニアライフプラン支援金3万円）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp58/recruiting_course27036044/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "リクナビ27卒でも大卒30万円"
+  }
  },
  {
   "code": "8316",
@@ -1057,7 +2529,6 @@
   "netIncome": 1582974,
   "equity": 15786052,
   "marketCap": 24017622,
-  "price": 3191,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1086,8 +2557,72 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 1678,
+   "avgAge": 39.3,
+   "avgTenure": 14.6,
+   "avgSalary": 11803000,
+   "ageText": "39歳4月",
+   "tenureText": "14年7月",
+   "holding": true,
+   "note": "持株会社（提出会社）の数値。従業員は全員が三井住友銀行等からの出向者",
+   "sub": null,
+   "edinetDoc": "S100YERK"
+  },
+  "hiring": [
+   {
+    "entity": "三井住友銀行",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/bank/r1930279/",
+    "top": [
+     [
+      "慶應義塾大",
+      65
+     ],
+     [
+      "早稲田大",
+      64
+     ],
+     [
+      "大阪大",
+      31
+     ],
+     [
+      "神戸大",
+      25
+     ],
+     [
+      "東京大",
+      24
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "中島 達",
+   "title": "取締役 執行役社長 グループCEO",
+   "univ": "東京大学",
+   "detail": "東京大学工学部（1986年卒）",
+   "src": "東洋経済オンライン",
+   "url": "https://toyokeizai.net/articles/-/737794",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "三井住友銀行",
+   "amount": 300000,
+   "amountMax": null,
+   "grad": 300000,
+   "year": "2027年卒",
+   "course": "四年制大学卒 総合職",
+   "url": "https://job.mynavi.jp/27/pc/search/corp58237/recruiting_course27048450/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8411",
@@ -1102,7 +2637,6 @@
   "netIncome": 1248632,
   "equity": 11316529,
   "marketCap": 18690488,
-  "price": 7741,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1131,8 +2665,78 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 2867,
+   "avgAge": 42.5,
+   "avgTenure": 16.9,
+   "avgSalary": 11665000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値",
+   "sub": {
+    "name": "みずほ銀行",
+    "employees": 23356,
+    "age": 40.7,
+    "tenure": 16.3,
+    "salary": 8701000
+   },
+   "edinetDoc": "S100YF8Y"
+  },
+  "hiring": [
+   {
+    "entity": "みずほフィナンシャルグループ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/bank/r1930278/",
+    "top": [
+     [
+      "早稲田大",
+      115
+     ],
+     [
+      "慶應義塾大",
+      112
+     ],
+     [
+      "明治大",
+      59
+     ],
+     [
+      "同志社大",
+      55
+     ],
+     [
+      "青山学院大",
+      42
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "木原 正裕",
+   "title": "取締役 執行役社長 グループCEO",
+   "univ": "一橋大学",
+   "detail": "一橋大学法学部（1989年卒）",
+   "src": "東洋経済オンライン・マネーポスト",
+   "url": "https://toyokeizai.net/articles/-/576578",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "みずほ銀行",
+   "amount": 280000,
+   "amountMax": null,
+   "grad": 300000,
+   "year": "2027年卒",
+   "course": "オーダーメイド型 四年制大学卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp55/recruiting_course27030162/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8308",
@@ -1147,7 +2751,6 @@
   "netIncome": 258718,
   "equity": 2905270,
   "marketCap": 5044010,
-  "price": 2248,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1178,8 +2781,74 @@
   "notes": [
    "売上相当の経常収益は報道値（億円単位）から換算"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 2105,
+   "avgAge": 45.1,
+   "avgTenure": 14.4,
+   "avgSalary": 9069000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値",
+   "sub": {
+    "name": "りそな銀行",
+    "employees": 8374,
+    "age": 41.1,
+    "tenure": 16.5,
+    "salary": 7413000
+   },
+   "edinetDoc": "S100YDP3"
+  },
+  "hiring": [
+   {
+    "entity": "りそなグループ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/bank/r1930285/",
+    "top": [
+     [
+      "関西学院大",
+      45
+     ],
+     [
+      "法政大",
+      36
+     ],
+     [
+      "明治大",
+      34
+     ],
+     [
+      "早稲田大",
+      29
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "南 昌宏",
+   "title": "取締役 代表執行役社長 兼 グループCEO",
+   "univ": "関西学院大学",
+   "detail": "関西学院大学（1989年卒）",
+   "src": "東洋経済オンライン",
+   "url": "https://toyokeizai.net/articles/-/328408",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "りそな銀行",
+   "amount": 280000,
+   "amountMax": null,
+   "grad": null,
+   "year": "リクナビ掲載（年度の明記なし）",
+   "course": "四年制大学卒（給与例）",
+   "url": "https://job.rikunabi.com/selection/job_descriptions/a15f10b4c40722ad/",
+   "weak": true,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8309",
@@ -1194,7 +2863,6 @@
   "netIncome": 317567,
   "equity": 3558202,
   "marketCap": 4545389,
-  "price": 1650.5,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1223,8 +2891,80 @@
    }
   ],
   "notes": [],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 194,
+   "avgAge": 46.5,
+   "avgTenure": 19.9,
+   "avgSalary": 13927000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値。従業員は三井住友信託銀行からの出向者等",
+   "sub": null,
+   "edinetDoc": "S100YBGM"
+  },
+  "hiring": [
+   {
+    "entity": "三井住友信託銀行",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/bank/r1930280/",
+    "top": [
+     [
+      "慶應義塾大",
+      62
+     ],
+     [
+      "早稲田大",
+      41
+     ],
+     [
+      "明治大",
+      27
+     ],
+     [
+      "神戸大",
+      25
+     ],
+     [
+      "同志社大",
+      19
+     ],
+     [
+      "一橋大",
+      17
+     ],
+     [
+      "関西学院大",
+      17
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "大山 一也",
+   "title": "取締役 執行役社長（代表執行役）CEO",
+   "univ": "京都大学",
+   "detail": "京都大学法学部",
+   "src": "時事通信（2021年の人事記事）",
+   "url": "https://www.sbbit.jp/article/refers/52169",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "三井住友信託銀行",
+   "amount": 300000,
+   "amountMax": null,
+   "grad": 325000,
+   "year": "2024年度実績（マイナビ2027も同額）",
+   "course": "オープンコース（総合職）学部卒",
+   "url": "https://job.mynavi.jp/27/pc/search/corp208/recruiting_course27053364/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8604",
@@ -1239,7 +2979,6 @@
   "netIncome": 362129,
   "equity": 3707868,
   "marketCap": 4614767,
-  "price": 1579,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1270,8 +3009,74 @@
   "notes": [
    "米国会計基準。売上相当として「収益合計（金融費用控除後）」を表示"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 204,
+   "avgAge": 45.1,
+   "avgTenure": 4.3,
+   "avgSalary": 14208790,
+   "ageText": "45歳1月",
+   "tenureText": "4年4月",
+   "holding": true,
+   "note": "持株会社（提出会社）の数値",
+   "sub": {
+    "name": "野村證券",
+    "employees": 11076,
+    "age": 42.2,
+    "tenure": 15.8,
+    "salary": 13253240
+   },
+   "edinetDoc": "S100YC5C"
+  },
+  "hiring": [
+   {
+    "entity": "野村証券",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/securities/r1930290/",
+    "top": [
+     [
+      "慶應義塾大",
+      53
+     ],
+     [
+      "早稲田大",
+      28
+     ],
+     [
+      "明治大",
+      22
+     ],
+     [
+      "東京大",
+      17
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "奥田 健太郎",
+   "title": "代表執行役社長 グループCEO",
+   "univ": "慶應義塾大学",
+   "detail": "慶應義塾大学経済学部（1987年卒）、ペンシルベニア大学ウォートン校MBA",
+   "src": "野村ホールディングス プレスリリース",
+   "url": "https://www.nomuraholdings.com/jp/news/nr/news20210302102959.html",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "野村證券",
+   "amount": 300000,
+   "amountMax": null,
+   "grad": 300000,
+   "year": "2027年卒",
+   "course": "大卒（院了も同額）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp108/recruiting_course27043816/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  },
  {
   "code": "8766",
@@ -1286,7 +3091,6 @@
   "netIncome": 980428,
   "equity": 5420348,
   "marketCap": 17270947,
-  "price": null,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1317,7 +3121,50 @@
   "notes": [
    "売上相当の経常収益は報道値（億円単位）から換算"
   ],
-  "avgSalary": null,
-  "employees": null
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 1339,
+   "avgAge": 42.4,
+   "avgTenure": 14.8,
+   "avgSalary": 14871103,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値。従業員の大部分は子会社からの出向者",
+   "sub": null,
+   "edinetDoc": "S100YLS8"
+  },
+  "hiring": [
+   {
+    "entity": "東京海上日動火災保険",
+    "year": 2025,
+    "url": null,
+    "top": [],
+    "note": "企業別ページの数値は取得できず",
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "小池 昌洋",
+   "title": "取締役社長（代表取締役）グループCEO",
+   "univ": "慶應義塾大学",
+   "detail": "慶應義塾大学法学部（1994年卒）",
+   "src": "東洋経済オンライン",
+   "url": "https://toyokeizai.net/articles/-/898657",
+   "weak": null,
+   "note": null
+  },
+  "startPay": {
+   "entity": "東京海上日動火災保険",
+   "amount": 293780,
+   "amountMax": 427780,
+   "grad": null,
+   "year": "2027年卒向け掲載",
+   "course": "総合職 大卒（転居転勤なし。転居転勤ありの場合は39.4万〜42.8万円）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp97/employment.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": null
+  }
  }
 ]

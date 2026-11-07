@@ -1,12 +1,15 @@
 import Link from "next/link";
-import { industryTotals, type IndustryId } from "@/lib/data";
-import { fmtYen, splitYen } from "@/lib/format";
+import { companiesOf, industryTotals, median, type IndustryId } from "@/lib/data";
+import { fmtYen, fmtMan, fmtMonthly } from "@/lib/format";
 import { Sparkline } from "@/components/ui";
 
 export default function IndustryCard({ id }: { id: IndustryId }) {
   const t = industryTotals(id);
   const ind = t.industry;
-  const mc = splitYen(t.marketCap);
+  const list = companiesOf(id);
+  const salMed = median(list.map((c) => c.avgSalary));
+  const startMed = median(list.map((c) => c.startingSalary).filter((x): x is number => x !== null));
+  const topSal = [...list].sort((a, b) => b.avgSalary - a.avgSalary)[0];
   return (
     <Link
       href={`/industry/${id}/`}
@@ -30,12 +33,15 @@ export default function IndustryCard({ id }: { id: IndustryId }) {
         <span className="chip shrink-0">{t.count}社</span>
       </div>
 
-      <div className="relative mt-5">
-        <p className="text-xs text-ink-3">時価総額合計</p>
-        <p className="flex items-baseline gap-1">
-          <span className="text-4xl font-bold tracking-tight">{mc.value}</span>
-          <span className="text-sm text-ink-2">{mc.unit}</span>
-        </p>
+      <div className="relative mt-5 grid grid-cols-2 gap-3">
+        <div>
+          <p className="text-xs text-ink-3">平均年収（中央値）</p>
+          <p className="text-3xl font-bold tracking-tight">{fmtMan(salMed)}</p>
+        </div>
+        <div>
+          <p className="text-xs text-ink-3">大卒初任給（中央値）</p>
+          <p className="text-3xl font-bold tracking-tight">{fmtMonthly(startMed)}</p>
+        </div>
       </div>
 
       <dl className="relative mt-4 grid grid-cols-2 gap-3 text-sm">
@@ -44,8 +50,8 @@ export default function IndustryCard({ id }: { id: IndustryId }) {
           <dd className="font-semibold">{fmtYen(t.revenue)}</dd>
         </div>
         <div>
-          <dt className="text-xs text-ink-3">純利益合計</dt>
-          <dd className="font-semibold">{fmtYen(t.netIncome)}</dd>
+          <dt className="text-xs text-ink-3">時価総額合計</dt>
+          <dd className="font-semibold">{fmtYen(t.marketCap)}</dd>
         </div>
       </dl>
 
@@ -56,9 +62,9 @@ export default function IndustryCard({ id }: { id: IndustryId }) {
 
       <div className="relative mt-4 flex items-center justify-between border-t border-white/10 pt-3 text-xs">
         <span className="text-ink-3">
-          時価総額トップ <span className="ml-1 font-semibold text-ink">{t.top.short}</span>
+          平均年収トップ <span className="ml-1 font-semibold text-ink">{topSal.short}</span>
         </span>
-        <span className="text-ink-2 transition group-hover:translate-x-1 group-hover:text-ink">ランキングを見る →</span>
+        <span className="text-ink-2 transition group-hover:translate-x-1 group-hover:text-ink">業界を見る →</span>
       </div>
     </Link>
   );
