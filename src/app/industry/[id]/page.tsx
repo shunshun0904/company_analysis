@@ -10,6 +10,8 @@ import SalaryAgeScatter from "@/components/charts/SalaryAgeScatter";
 import HiringHeatmap from "@/components/charts/HiringHeatmap";
 import TrendChart from "@/components/charts/TrendChart";
 import CompanyTable from "@/components/CompanyTable";
+import PopularityMatrix from "@/components/PopularityMatrix";
+import { SURVEYS } from "@/lib/popularity";
 
 export const dynamicParams = false;
 
@@ -117,6 +119,29 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
         />
         <div className="card p-4 sm:p-5">
           <HiringHeatmap industry={iid} />
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <SectionTitle
+          eyebrow="REPUTATION"
+          title="世間ウケ"
+          lead="結婚相手（20〜59歳）・親世代・就活生（文系／理系）が選んだ人気ランキングでの順位。公開されている調査の順位で、サイト独自の点数ではありません。"
+          accent={ind.color}
+        />
+        <div className="card p-4 sm:p-5">
+          <PopularityMatrix companies={list} color={ind.color} />
+          <p className="mt-1 text-[11px] leading-relaxed text-ink-3">
+            出典：
+            {SURVEYS.map((s, i) => (
+              <span key={s.id}>
+                {i > 0 && "／"}
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
+                  {s.tab}：{s.name}（{s.publisher}・{s.published}発表）
+                </a>
+              </span>
+            ))}
+          </p>
         </div>
       </section>
 

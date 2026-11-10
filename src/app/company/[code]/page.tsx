@@ -8,6 +8,7 @@ import HistoryBars from "@/components/charts/HistoryBars";
 import RadarScore from "@/components/charts/RadarScore";
 import PeerBars from "@/components/charts/PeerBars";
 import UnivHiringBars from "@/components/charts/UnivHiringBars";
+import { LATEST_MARRY, SURVEYS, fmtPopValue, popOf } from "@/lib/popularity";
 
 export const dynamicParams = false;
 
@@ -46,6 +47,8 @@ export default async function CompanyPage({ params }: { params: Promise<{ code: 
   const w = c.workforce;
   const sp = c.startPay;
   const yuhoUrl = `https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/${w.edinetDoc}.pdf`;
+  const pop = popOf(c.code);
+  const latest = LATEST_MARRY.top.find((t) => t.code === c.code);
 
   const workTiles = [
     { label: "平均年齢", value: w.ageText ?? fmtAge(w.avgAge), sub: `業界${rankIn(peers, c, "avgAge")}位（若い順）` },
@@ -199,6 +202,54 @@ export default async function CompanyPage({ params }: { params: Promise<{ code: 
             取締役全員の出身大学は、有価証券報告書の経歴欄に学歴の記載がないため、現在確認を進めています。
           </p>
         </div>
+      </section>
+
+      {/* 世間ウケ */}
+      <section className="mt-10">
+        <SectionTitle
+          eyebrow="REPUTATION"
+          title="世間ウケ"
+          lead="結婚相手・親世代・就活生が選んだ人気ランキングでの順位です。公開されている調査の順位をそのまま載せています。"
+          accent={ind.color}
+        />
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {SURVEYS.map((s) => {
+            const r = pop[s.id];
+            return (
+              <div key={s.id} className="card p-4" style={r.rank !== null && r.rank <= 10 ? { borderColor: ind.color + "99" } : undefined}>
+                <p className="text-xs text-ink-3">{s.tab}</p>
+                <p className={`mt-1 text-2xl font-bold ${r.rank === null ? "text-ink-3" : ""}`}>
+                  {r.rank !== null ? `${r.rank}位` : "圏外"}
+                </p>
+                <p className="mt-0.5 text-[11px] leading-relaxed text-ink-3">
+                  {r.rank !== null && r.value !== undefined
+                    ? `${s.metric === "rate" ? "回答率" : "得票"} ${fmtPopValue(r.value, s.metric)}`
+                    : "上位100位に入っていない"}
+                  {r.entity && <span className="block">調査上の名前：{r.entity}</span>}
+                  {r.group && <span className="block">{r.group}</span>}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        {latest && (
+          <p className="mt-3 rounded-2xl border border-[#ff7fb5]/40 bg-[#ff7fb5]/10 px-4 py-3 text-sm">
+            <span className="mr-2 text-[11px] tracking-[0.18em] text-ink-3">LATEST</span>
+            最新の{LATEST_MARRY.name}（{LATEST_MARRY.published}発表）では<strong className="font-bold">{latest.rank}位</strong>
+            （回答率{latest.value.toFixed(1)}%）。
+          </p>
+        )}
+        <ul className="mt-3 space-y-1 text-[11px] leading-relaxed text-ink-3">
+          {SURVEYS.map((s) => (
+            <li key={s.id}>
+              {s.tab}：
+              <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
+                {s.name} ↗
+              </a>
+              （{s.publisher}・{s.published}発表、{s.target}、{s.sample}）
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* 会社の規模・業績 */}

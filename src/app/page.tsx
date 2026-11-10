@@ -10,6 +10,8 @@ import SalaryAgeScatter from "@/components/charts/SalaryAgeScatter";
 import IndustryScale from "@/components/charts/IndustryScale";
 import CeoUnivChart from "@/components/charts/CeoUnivChart";
 import UnivTotalsChart from "@/components/charts/UnivTotalsChart";
+import PopularityRanking from "@/components/charts/PopularityRanking";
+import { LATEST_MARRY } from "@/lib/popularity";
 
 export default function Home() {
   const topSalary = [...ALL].sort((a, b) => b.avgSalary - a.avgSalary)[0];
@@ -32,7 +34,7 @@ export default function Home() {
             <span className="neon-text">会社のリアル。</span>
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-ink-2">
-            年収・初任給・大学別の就職者数・社長の出身大学から、業績や会社の規模まで。
+            年収・初任給・大学別の就職者数・社長の出身大学・世間ウケから、業績や会社の規模まで。
             IT・通信、総合商社、自動車、メガバンク・金融の{ALL.length}社を、グラフでひと目で比べられます。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
@@ -44,6 +46,9 @@ export default function Home() {
             </Link>
             <a href="#ranking" className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-bold transition hover:border-white/50 hover:bg-white/5">
               年収・初任給ランキング
+            </a>
+            <a href="#reputation" className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-bold transition hover:border-white/50 hover:bg-white/5">
+              世間ウケ
             </a>
             <Link href="/compare/" className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-bold transition hover:border-white/50 hover:bg-white/5">
               企業を比較する →
@@ -111,6 +116,60 @@ export default function Home() {
             <h3 className="text-base font-bold">社長の出身大学</h3>
             <p className="mb-2 mt-1 text-xs text-ink-2">公式資料や報道で確認できた社長のみ。棒にカーソルを合わせると会社名が出ます。</p>
             <CeoUnivChart />
+          </div>
+        </div>
+      </section>
+
+      {/* REPUTATION */}
+      <section id="reputation" className="scroll-mt-24 py-8">
+        <SectionTitle
+          eyebrow="REPUTATION"
+          title="世間ウケがいい会社は？"
+          lead="「この会社の人と結婚したい」「子どもに勤めてほしい」「就職したい」——結婚相手・親・就活生、3つの目線の人気ランキングです。いずれも公開されている調査の順位をそのまま載せており、サイト独自の点数ではありません。"
+          accent="#ff7fb5"
+        />
+        <div className="grid gap-4 lg:grid-cols-5">
+          <div className="card p-4 sm:p-5 lg:col-span-3">
+            <PopularityRanking />
+          </div>
+          <div
+            className="card card-accent p-4 sm:p-5 lg:col-span-2"
+            style={{ ["--accent" as string]: "#ff7fb5", ["--glow" as string]: "#ff7fb5" }}
+          >
+            <p className="text-[11px] tracking-[0.18em] text-ink-3">LATEST</p>
+            <h3 className="mt-1 text-base font-bold">最新版「結婚したい」ランキング TOP8</h3>
+            <p className="mt-1 text-xs text-ink-2">
+              {LATEST_MARRY.name}（リスクモンスター・{LATEST_MARRY.published}発表、{LATEST_MARRY.sample}）。トヨタ自動車が公務員を抑えて1位になりました。
+            </p>
+            <ol className="mt-3 space-y-1.5">
+              {LATEST_MARRY.top.map((t) => {
+                const mine = t.code !== null;
+                const body = (
+                  <>
+                    <span className={`w-7 shrink-0 text-right font-bold tabular ${mine ? "text-ink" : "text-ink-3"}`}>{t.rank}位</span>
+                    <span className={`flex-1 ${mine ? "font-bold text-ink" : "text-ink-2"}`}>{t.name}</span>
+                    <span className="tabular text-xs text-ink-3">{t.value.toFixed(1)}%</span>
+                  </>
+                );
+                return (
+                  <li key={t.rank + t.name}>
+                    {mine ? (
+                      <Link href={`/company/${t.code}/`} className="flex items-center gap-3 rounded-lg border border-[#ff7fb5]/40 bg-[#ff7fb5]/10 px-2.5 py-1.5 text-sm hover:bg-[#ff7fb5]/20">
+                        {body}
+                      </Link>
+                    ) : (
+                      <div className="flex items-center gap-3 px-2.5 py-1.5 text-sm">{body}</div>
+                    )}
+                  </li>
+                );
+              })}
+            </ol>
+            <p className="mt-3 text-[11px] leading-relaxed text-ink-3">
+              色付きは掲載企業。回答率は複数回答。9位以下は文字で公開されていないため、グラフの「結婚相手として」は全順位がわかる第15回の結果です。
+              <a href={LATEST_MARRY.url} target="_blank" rel="noopener noreferrer" className="ml-1 underline underline-offset-4 hover:text-ink">
+                出典 ↗
+              </a>
+            </p>
           </div>
         </div>
       </section>
