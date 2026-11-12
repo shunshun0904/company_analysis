@@ -8,7 +8,7 @@ import { COMPARE_COLORS } from "@/lib/chartTheme";
 import { fmtYen, fmtPct, fmtMan, fmtMonthly, fmtAge, fmtYears, fmtPeople } from "@/lib/format";
 import RadarScore from "@/components/charts/RadarScore";
 import RankingBars, { type ValueFormat } from "@/components/charts/RankingBars";
-import { SURVEYS, popOf } from "@/lib/popularity";
+import { MOTE_SURVEYS, SURVEYS, popOf } from "@/lib/popularity";
 
 const DEFAULT = ["7203", "8058", "8306"];
 const SLOTS = 3;
@@ -151,8 +151,8 @@ export default function CompareClient() {
                     { label: "平均勤続年数", f: (c: CompanyWithMetrics) => fmtYears(c.avgTenure), v: (c: CompanyWithMetrics) => c.avgTenure },
                     { label: "従業員数（単体）", f: (c: CompanyWithMetrics) => fmtPeople(c.employees), v: (c: CompanyWithMetrics) => c.employees },
                     { label: "社長の出身大学", f: (c: CompanyWithMetrics) => c.ceo.univ ?? "未確認", v: () => null },
-                    ...SURVEYS.map((s) => ({
-                      label: `世間ウケ：${s.tab}`,
+                    ...[...SURVEYS, ...MOTE_SURVEYS].map((s) => ({
+                      label: `${s.group === "mote" ? "モテ" : "世間ウケ"}：${s.tab}`,
                       f: (c: CompanyWithMetrics) => {
                         const r = popOf(c.code)[s.id];
                         return r.rank !== null ? `${r.rank}位` : "圏外";

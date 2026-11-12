@@ -17,7 +17,9 @@
       },
       "url": "https://www.riskmonster.co.jp/study/research/pdf/20250611.pdf",
       "pressUrl": "https://www.riskmonster.co.jp/pressrelease/post-19371/",
-      "note": "最新の第16回（2026年10月発表）は上位8位までしか文字で公開されておらず、掲載各社の順位を確認できないため、トップ100が確認できる第15回の順位を掲載しています。"
+      "note": "最新の第16回（2026年10月発表）は上位8位までしか文字で公開されておらず、掲載各社の順位を確認できないため、トップ100が確認できる第15回の順位を掲載しています。",
+      "group": "reputation",
+      "depth": "トップ100"
     },
     {
       "id": "parent",
@@ -36,7 +38,9 @@
       },
       "url": "https://www.riskmonster.co.jp/study/research/pdf/20260421.pdf",
       "pressUrl": "https://www.riskmonster.co.jp/pressrelease/post-20934/",
-      "note": null
+      "note": null,
+      "group": "reputation",
+      "depth": "トップ100"
     },
     {
       "id": "bun",
@@ -55,7 +59,9 @@
       },
       "url": "https://career-research.mynavi.jp/reserch/20260420_109950/",
       "pressUrl": "https://career-research.mynavi.jp/wp-content/uploads/2026/04/mynavi_nikkei_ranking_2027.pdf",
-      "note": "就職人気ランキングは調査会社によって結果が大きく異なります。たとえばダイヤモンド・ヒューマンリソースの調査（2027年卒・後半戦、回答5,520人）では、文系男子の上位5社を総合商社が占めています。"
+      "note": "就職人気ランキングは調査会社によって結果が大きく異なります。たとえばダイヤモンド・ヒューマンリソースの調査（2027年卒・後半戦、回答5,520人）では、文系男子の上位5社を総合商社が占めています。",
+      "group": "reputation",
+      "depth": "トップ100"
     },
     {
       "id": "ri",
@@ -74,7 +80,72 @@
       },
       "url": "https://career-research.mynavi.jp/reserch/20260420_109950/",
       "pressUrl": "https://career-research.mynavi.jp/wp-content/uploads/2026/04/mynavi_nikkei_ranking_2027.pdf",
-      "note": null
+      "note": null,
+      "group": "reputation",
+      "depth": "トップ100"
+    },
+    {
+      "id": "female",
+      "group": "mote",
+      "tab": "女性が選んだ",
+      "who": "女性（20〜59歳）",
+      "name": "第15回「この企業に勤める人と結婚したいランキング」男女別（女性回答者）",
+      "publisher": "リスクモンスター",
+      "published": "2025年6月11日",
+      "period": "2025年3月3日〜5日",
+      "target": "全国の20〜59歳の女性が、結婚相手（パートナー）の勤務先として望む企業（各業界の大手企業・組織200社から複数回答）",
+      "sample": "400人",
+      "metric": "rate",
+      "top1": {
+        "name": "地方公務員",
+        "value": 9.8
+      },
+      "url": "https://www.riskmonster.co.jp/study/research/pdf/20250611.pdf",
+      "pressUrl": "https://www.riskmonster.co.jp/pressrelease/post-19371/",
+      "depth": "上位19位",
+      "note": "男女別は上位19〜20社のみ公表されているため、それより下の順位はわかりません（「圏外」）。"
+    },
+    {
+      "id": "male",
+      "group": "mote",
+      "tab": "男性が選んだ",
+      "who": "男性（20〜59歳）",
+      "name": "第15回「この企業に勤める人と結婚したいランキング」男女別（男性回答者）",
+      "publisher": "リスクモンスター",
+      "published": "2025年6月11日",
+      "period": "2025年3月3日〜5日",
+      "target": "全国の20〜59歳の男性が、結婚相手（パートナー）の勤務先として望む企業（各業界の大手企業・組織200社から複数回答）",
+      "sample": "400人",
+      "metric": "rate",
+      "top1": {
+        "name": "トヨタ自動車",
+        "value": 7.5
+      },
+      "url": "https://www.riskmonster.co.jp/study/research/pdf/20250611.pdf",
+      "pressUrl": "https://www.riskmonster.co.jp/pressrelease/post-19371/",
+      "depth": "上位20社",
+      "note": "男女別は上位19〜20社のみ公表されているため、それより下の順位はわかりません（「圏外」）。"
+    },
+    {
+      "id": "gokon",
+      "group": "mote",
+      "tab": "合コンしたい（2019年）",
+      "who": "20〜49歳の未婚の男女",
+      "name": "第3回「合コンしたいと思う企業ランキング」",
+      "publisher": "リスクモンスター",
+      "published": "2019年12月25日",
+      "period": "2019年9月10日〜12日",
+      "target": "全国の20〜49歳の未婚男女（インターネット調査、各業界の大手企業・組織200社から複数回答）",
+      "sample": "900人",
+      "metric": "rate",
+      "top1": {
+        "name": "国家公務員",
+        "value": 6.3
+      },
+      "url": "https://www.riskmonster.co.jp/study/research/pdf/201912.pdf",
+      "pressUrl": "https://www.atpress.ne.jp/news/201756",
+      "depth": "トップ100",
+      "note": "合コンをテーマにした大規模な調査はこれが最新です（2019年調査）。社名は調査当時のもので、「楽天」は現在の楽天グループ、「ヤフー」は2023年の合併で現在のLINEヤフーです。"
     }
   ],
   "latestMarry": {
@@ -155,6 +226,14 @@
       "ri": {
         "rank": null,
         "group": "グループのNTTデータは11位、NTTドコモは45位"
+      },
+      "male": {
+        "rank": null,
+        "group": "グループのNTTドコモとNTTデータはともに10位"
+      },
+      "gokon": {
+        "rank": null,
+        "group": "グループのNTTドコモは13位"
       }
     },
     "9433": {
@@ -173,6 +252,10 @@
       "ri": {
         "rank": 3,
         "value": 270
+      },
+      "gokon": {
+        "rank": 43,
+        "value": 1.3
       }
     },
     "9434": {
@@ -183,6 +266,10 @@
       "parent": {
         "rank": 78,
         "value": 1.0
+      },
+      "gokon": {
+        "rank": 22,
+        "value": 1.8
       }
     },
     "6701": {
@@ -204,12 +291,21 @@
       "ri": {
         "rank": 32,
         "value": 83
+      },
+      "gokon": {
+        "rank": 61,
+        "value": 0.9
       }
     },
     "4689": {
       "parent": {
         "rank": 89,
         "value": 0.9
+      },
+      "gokon": {
+        "rank": 35,
+        "value": 1.6,
+        "entity": "ヤフー（調査当時）"
       }
     },
     "4307": {
@@ -221,6 +317,11 @@
       "ri": {
         "rank": 97,
         "value": 41
+      },
+      "gokon": {
+        "rank": 91,
+        "value": 0.6,
+        "entity": "野村総研"
       }
     },
     "4755": {
@@ -233,6 +334,21 @@
         "rank": 78,
         "value": 1.0,
         "entity": "楽天"
+      },
+      "female": {
+        "rank": 18,
+        "value": 3.0,
+        "entity": "楽天グループ"
+      },
+      "male": {
+        "rank": 17,
+        "value": 2.5,
+        "entity": "楽天グループ"
+      },
+      "gokon": {
+        "rank": 9,
+        "value": 3.4,
+        "entity": "楽天（調査当時）"
       }
     },
     "8058": {
@@ -243,6 +359,18 @@
       "parent": {
         "rank": 14,
         "value": 3.3
+      },
+      "female": {
+        "rank": 9,
+        "value": 5.3
+      },
+      "male": {
+        "rank": 14,
+        "value": 3.0
+      },
+      "gokon": {
+        "rank": 40,
+        "value": 1.4
       }
     },
     "8031": {
@@ -253,6 +381,18 @@
       "parent": {
         "rank": 10,
         "value": 3.6
+      },
+      "female": {
+        "rank": 12,
+        "value": 3.8
+      },
+      "male": {
+        "rank": 13,
+        "value": 3.3
+      },
+      "gokon": {
+        "rank": 91,
+        "value": 0.6
       }
     },
     "8001": {
@@ -271,6 +411,18 @@
       "ri": {
         "rank": 35,
         "value": 78
+      },
+      "female": {
+        "rank": 11,
+        "value": 4.0
+      },
+      "male": {
+        "rank": 8,
+        "value": 4.3
+      },
+      "gokon": {
+        "rank": 11,
+        "value": 2.9
       }
     },
     "8053": {
@@ -281,6 +433,10 @@
       "parent": {
         "rank": 20,
         "value": 2.4
+      },
+      "gokon": {
+        "rank": 55,
+        "value": 1.0
       }
     },
     "8002": {
@@ -309,6 +465,18 @@
       "ri": {
         "rank": 8,
         "value": 210
+      },
+      "female": {
+        "rank": 3,
+        "value": 8.3
+      },
+      "male": {
+        "rank": 1,
+        "value": 7.5
+      },
+      "gokon": {
+        "rank": 3,
+        "value": 5.1
       }
     },
     "7267": {
@@ -327,6 +495,11 @@
       "ri": {
         "rank": 4,
         "value": 252
+      },
+      "gokon": {
+        "rank": 28,
+        "value": 1.7,
+        "entity": "本田技研工業（ホンダ）"
       }
     },
     "7269": {
@@ -366,6 +539,12 @@
         "value": 40,
         "entity": "三菱UFJ銀行",
         "sub": true
+      },
+      "gokon": {
+        "rank": 28,
+        "value": 1.7,
+        "entity": "三菱UFJ銀行",
+        "sub": true
       }
     },
     "8316": {
@@ -384,6 +563,18 @@
       "bun": {
         "rank": 77,
         "value": 134,
+        "entity": "三井住友銀行",
+        "sub": true
+      },
+      "female": {
+        "rank": 19,
+        "value": 2.8,
+        "entity": "三井住友銀行",
+        "sub": true
+      },
+      "gokon": {
+        "rank": 61,
+        "value": 0.9,
         "entity": "三井住友銀行",
         "sub": true
       }
@@ -410,6 +601,12 @@
         "rank": 66,
         "value": 54,
         "entity": "みずほフィナンシャルグループ"
+      },
+      "gokon": {
+        "rank": 14,
+        "value": 2.6,
+        "entity": "みずほ銀行",
+        "sub": true
       }
     },
     "8308": {
@@ -436,6 +633,12 @@
         "rank": 50,
         "value": 193,
         "entity": "野村グループ"
+      },
+      "gokon": {
+        "rank": 71,
+        "value": 0.8,
+        "entity": "野村證券",
+        "sub": true
       }
     },
     "8766": {
@@ -456,7 +659,82 @@
         "value": 173,
         "entity": "東京海上日動",
         "sub": true
+      },
+      "gokon": {
+        "rank": 71,
+        "value": 0.8,
+        "entity": "東京海上日動",
+        "sub": true
+      }
+    },
+    "7201": {
+      "gokon": {
+        "rank": 81,
+        "value": 0.7
       }
     }
+  },
+  "latestByGender": {
+    "name": "第16回「この企業に勤める人と結婚したいランキング」男女別",
+    "published": "2026年10月20日",
+    "url": "https://www.riskmonster.co.jp/pressrelease/post-21781/",
+    "female": [
+      {
+        "rank": 1,
+        "name": "トヨタ自動車",
+        "value": 11.3,
+        "code": "7203"
+      },
+      {
+        "rank": 2,
+        "name": "地方公務員",
+        "value": 8.0,
+        "code": null
+      },
+      {
+        "rank": 3,
+        "name": "国家公務員",
+        "value": 7.8,
+        "code": null
+      },
+      {
+        "rank": 4,
+        "name": "パナソニック",
+        "value": 6.3,
+        "code": null
+      },
+      {
+        "rank": 5,
+        "name": "伊藤忠商事",
+        "value": 5.5,
+        "code": "8001"
+      }
+    ],
+    "male": [
+      {
+        "rank": 1,
+        "name": "地方公務員",
+        "value": 8.0,
+        "code": null
+      },
+      {
+        "rank": 2,
+        "name": "国家公務員",
+        "value": 7.5,
+        "code": null
+      },
+      {
+        "rank": 3,
+        "name": "トヨタ自動車",
+        "value": 5.8,
+        "code": "7203"
+      },
+      {
+        "rank": 4,
+        "name": "イオン",
+        "value": 4.3,
+        "code": null
+      }
+    ]
   }
 }

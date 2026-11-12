@@ -11,7 +11,7 @@ import HiringHeatmap from "@/components/charts/HiringHeatmap";
 import TrendChart from "@/components/charts/TrendChart";
 import CompanyTable from "@/components/CompanyTable";
 import PopularityMatrix from "@/components/PopularityMatrix";
-import { SURVEYS } from "@/lib/popularity";
+import { MOTE_SURVEYS, SURVEYS } from "@/lib/popularity";
 
 export const dynamicParams = false;
 
@@ -134,6 +134,29 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
           <p className="mt-1 text-[11px] leading-relaxed text-ink-3">
             出典：
             {SURVEYS.map((s, i) => (
+              <span key={s.id}>
+                {i > 0 && "／"}
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
+                  {s.tab}：{s.name}（{s.publisher}・{s.published}発表）
+                </a>
+              </span>
+            ))}
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <SectionTitle
+          eyebrow="MOTE"
+          title="モテる会社"
+          lead="女性・男性それぞれが「結婚相手の勤務先」に選んだ順位（2025年調査）と、「合コンしたい会社」の順位（2019年調査）。公開されている調査の順位です。"
+          accent={ind.color}
+        />
+        <div className="card p-4 sm:p-5">
+          <PopularityMatrix companies={list} color={ind.color} surveys={MOTE_SURVEYS} caption="各社のモテる会社ランキングでの順位" />
+          <p className="mt-1 text-[11px] leading-relaxed text-ink-3">
+            出典：
+            {MOTE_SURVEYS.map((s, i) => (
               <span key={s.id}>
                 {i > 0 && "／"}
                 <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">

@@ -1,11 +1,15 @@
 import popJson from "@/data/popularity.json";
 import { ALL, type CompanyWithMetrics } from "@/lib/data";
 
-/** 世間ウケ：公開されている調査の順位（サイト独自の点数ではない） */
-export type SurveyId = "marry" | "parent" | "bun" | "ri";
+/** 世間ウケ・モテる会社：公開されている調査の順位（サイト独自の点数ではない） */
+export type SurveyId = "marry" | "parent" | "bun" | "ri" | "female" | "male" | "gokon";
 
 export interface Survey {
   id: SurveyId;
+  /** reputation=世間ウケ、mote=モテる会社 */
+  group: "reputation" | "mote";
+  /** 公表されている順位の範囲（「圏外」の意味） */
+  depth: string;
   /** タブなどに出す短い名前 */
   tab: string;
   /** 誰が選んだか */
@@ -25,7 +29,7 @@ export interface Survey {
 }
 
 export interface PopRank {
-  /** null = 公表された上位100位に入っていない */
+  /** null = 公表された順位の範囲（Survey.depth）に入っていない */
   rank: number | null;
   value?: number;
   /** 調査上の名前が掲載企業名と違う場合（銀行・証券など主要子会社） */
@@ -46,25 +50,38 @@ const data = popJson as {
     url: string;
     top: { rank: number; name: string; value: number; code: string | null }[];
   };
+  latestByGender: {
+    name: string;
+    published: string;
+    url: string;
+    female: GenderTop[];
+    male: GenderTop[];
+  };
   ranks: Record<string, Partial<Record<SurveyId, PopRank>>>;
 };
 
-export const SURVEYS = data.surveys;
-export const LATEST_MARRY = data.latestMarry;
-
-export function getSurvey(id: SurveyId): Survey {
-  return SURVEYS.find((s) => s.id === id)!;
+interface GenderTop {
+  rank: number;
+  name: string;
+  value: number;
+  code: string | null;
 }
 
-/** 企業の調査ごとの順位（上位100位に入っていない調査は rank: null） */
+/** 世間ウケ（結婚相手・親・就活生） */
+export const SURVEYS = data.surveys.filter((s) => s.group === "reputation");
+/** モテる会社（女性・男性が選んだ、合コン） */
+export const MOTE_SURVEYS = data.surveys.filter((s) => s.group === "mote");
+export const LATEST_MARRY = data.latestMarry;
+export const LATEST_BY_GENDER = data.latestByGender;
+
+export function getSurvey(id: SurveyId): Survey {
+  return data.surveys.find((s) => s.id === id)!;
+}
+
+/** 企業の調査ごとの順位（公表された範囲に入っていない調査は rank: null） */
 export function popOf(code: string): Record<SurveyId, PopRank> {
   const r = data.ranks[code] ?? {};
-  return {
-    marry: r.marry ?? { rank: null },
-    parent: r.parent ?? { rank: null },
-    bun: r.bun ?? { rank: null },
-    ri: r.ri ?? { rank: null },
-  };
+  return Object.fromEntries(data.surveys.map((s) => [s.id, r[s.id] ?? { rank: null }])) as Record<SurveyId, PopRank>;
 }
 
 export function fmtPopValue(v: number, metric: Survey["metric"]): string {

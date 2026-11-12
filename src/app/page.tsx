@@ -11,7 +11,7 @@ import IndustryScale from "@/components/charts/IndustryScale";
 import CeoUnivChart from "@/components/charts/CeoUnivChart";
 import UnivTotalsChart from "@/components/charts/UnivTotalsChart";
 import PopularityRanking from "@/components/charts/PopularityRanking";
-import { LATEST_MARRY } from "@/lib/popularity";
+import { LATEST_BY_GENDER, LATEST_MARRY, MOTE_SURVEYS } from "@/lib/popularity";
 
 export default function Home() {
   const topSalary = [...ALL].sort((a, b) => b.avgSalary - a.avgSalary)[0];
@@ -34,7 +34,7 @@ export default function Home() {
             <span className="neon-text">会社のリアル。</span>
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-ink-2">
-            年収・初任給・大学別の就職者数・社長の出身大学・世間ウケから、業績や会社の規模まで。
+            年収・初任給・大学別の就職者数・社長の出身大学・世間ウケ・モテる会社から、業績や会社の規模まで。
             IT・通信、総合商社、自動車、メガバンク・金融の{ALL.length}社を、グラフでひと目で比べられます。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
@@ -49,6 +49,9 @@ export default function Home() {
             </a>
             <a href="#reputation" className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-bold transition hover:border-white/50 hover:bg-white/5">
               世間ウケ
+            </a>
+            <a href="#mote" className="rounded-full border border-[#c084fc]/50 px-5 py-2.5 text-sm font-bold transition hover:border-[#c084fc] hover:bg-[#c084fc]/10">
+              モテる会社
             </a>
             <Link href="/compare/" className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-bold transition hover:border-white/50 hover:bg-white/5">
               企業を比較する →
@@ -174,6 +177,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* MOTE */}
+      <section id="mote" className="scroll-mt-24 py-8">
+        <SectionTitle
+          eyebrow="MOTE"
+          title="モテる会社はどこ？"
+          lead="異性から「この会社の人と結婚したい」「合コンしたい」と思われている会社です。女性・男性それぞれが結婚相手の勤務先に選んだ会社（2025年調査）と、合コンしたい会社（2019年調査）の順位を、公開調査のまま載せています。"
+          accent="#c084fc"
+        />
+        <div className="grid gap-4 lg:grid-cols-5">
+          <div className="card p-4 sm:p-5 lg:col-span-3">
+            <PopularityRanking surveys={MOTE_SURVEYS} accent="#c084fc" />
+          </div>
+          <div
+            className="card card-accent p-4 sm:p-5 lg:col-span-2"
+            style={{ ["--accent" as string]: "#c084fc", ["--glow" as string]: "#c084fc" }}
+          >
+            <p className="text-[11px] tracking-[0.18em] text-ink-3">LATEST</p>
+            <h3 className="mt-1 text-base font-bold">最新版：男女別の上位</h3>
+            <p className="mt-1 text-xs text-ink-2">
+              {LATEST_BY_GENDER.name}（リスクモンスター・{LATEST_BY_GENDER.published}発表）。女性が選んだ1位はトヨタ自動車でした。
+            </p>
+            <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <GenderTop title="女性が選んだ" rows={LATEST_BY_GENDER.female} />
+              <GenderTop title="男性が選んだ" rows={LATEST_BY_GENDER.male} />
+            </div>
+            <p className="mt-3 text-[11px] leading-relaxed text-ink-3">
+              色付きは掲載企業。回答率は複数回答。男女別は上位4〜5位までしか文字で公開されていないため、グラフの「女性が選んだ」「男性が選んだ」は上位約20社がわかる第15回の結果です。
+              <a href={LATEST_BY_GENDER.url} target="_blank" rel="noopener noreferrer" className="ml-1 underline underline-offset-4 hover:text-ink">
+                出典 ↗
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* INDUSTRIES */}
       <section id="industries" className="scroll-mt-24 py-8">
         <SectionTitle eyebrow="INDUSTRIES" title="4つの業界をのぞいてみる" lead="カードを選ぶと、業界内の年収・初任給・大学別の就職者数・業績を詳しく見られます。" />
@@ -233,5 +271,35 @@ export default function Home() {
         </p>
       </section>
     </>
+  );
+}
+
+function GenderTop({ title, rows }: { title: string; rows: { rank: number; name: string; value: number; code: string | null }[] }) {
+  return (
+    <div>
+      <p className="mb-1.5 text-xs font-bold text-ink-2">{title}</p>
+      <ol className="space-y-1">
+        {rows.map((t) => {
+          const body = (
+            <>
+              <span className={`w-7 shrink-0 text-right font-bold tabular ${t.code ? "text-ink" : "text-ink-3"}`}>{t.rank}位</span>
+              <span className={`flex-1 ${t.code ? "font-bold text-ink" : "text-ink-2"}`}>{t.name}</span>
+              <span className="tabular text-xs text-ink-3">{t.value.toFixed(1)}%</span>
+            </>
+          );
+          return (
+            <li key={t.rank + t.name}>
+              {t.code ? (
+                <Link href={`/company/${t.code}/`} className="flex items-center gap-3 rounded-lg border border-[#c084fc]/40 bg-[#c084fc]/10 px-2.5 py-1.5 text-sm hover:bg-[#c084fc]/20">
+                  {body}
+                </Link>
+              ) : (
+                <div className="flex items-center gap-3 px-2.5 py-1.5 text-sm">{body}</div>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </div>
   );
 }

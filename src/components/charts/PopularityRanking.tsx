@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import EChart from "@/components/EChart";
 import MetricTabs from "./MetricTabs";
 import { ALL, INDUSTRIES, getIndustry } from "@/lib/data";
-import { SURVEYS, fmtPopValue, getSurvey, surveyRanking, type SurveyId } from "@/lib/popularity";
+import { SURVEYS, fmtPopValue, getSurvey, surveyRanking, type Survey, type SurveyId } from "@/lib/popularity";
 import { T, tooltipBase, axisLabel, hexA, dot } from "@/lib/chartTheme";
 import { IndustryDot } from "@/components/ui";
 
@@ -21,12 +21,12 @@ interface Row {
 }
 
 /**
- * 世間ウケ：調査ごとの順位（掲載企業のうち上位100位に入った会社）。
- * 棒の長さ＝その調査の回答率または得票数。先頭のグレーの棒は調査全体の1位（参考）。
+ * 世間ウケ・モテる会社：調査ごとの順位（掲載企業のうち公表された順位に入った会社）。
+ * 棒の長さ＝その調査の回答率または得票数。先頭の点線の棒は調査全体の1位（参考）。
  */
-export default function PopularityRanking() {
+export default function PopularityRanking({ surveys = SURVEYS, accent = "#ff7fb5" }: { surveys?: Survey[]; accent?: string }) {
   const router = useRouter();
-  const [id, setId] = useState<SurveyId>("marry");
+  const [id, setId] = useState<SurveyId>(surveys[0].id);
   const s = getSurvey(id);
 
   const rows = useMemo<Row[]>(() => {
@@ -119,7 +119,7 @@ export default function PopularityRanking() {
   return (
     <div>
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-        <MetricTabs tabs={SURVEYS.map((x) => ({ key: x.id, label: x.tab }))} value={id} onChange={setId} accent="#ff7fb5" label="調査の切り替え" />
+        <MetricTabs tabs={surveys.map((x) => ({ key: x.id, label: x.tab }))} value={id} onChange={setId} accent={accent} label="調査の切り替え" />
         <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-2" aria-label="凡例">
           {INDUSTRIES.map((i) => (
             <li key={i.id} className="flex items-center gap-1.5">
@@ -134,7 +134,7 @@ export default function PopularityRanking() {
         </ul>
       </div>
       <p className="mb-2 text-xs text-ink-2">
-        <b className="text-ink">{s.who}</b>が選んだ順位（{s.publisher}・{s.published}発表、{s.sample}）。棒は{s.metric === "rate" ? "回答率" : "得票数"}。掲載{ALL.length}社のうち上位100位に入った{rows.filter((r) => !r.reference).length}社を表示。
+        <b className="text-ink">{s.who}</b>が選んだ順位（{s.publisher}・{s.published}発表、調査{s.period}、{s.sample}）。棒は{s.metric === "rate" ? "回答率" : "得票数"}。掲載{ALL.length}社のうち公表された{s.depth}に入った{rows.filter((r) => !r.reference).length}社を表示。
       </p>
       <EChart
         option={option}
