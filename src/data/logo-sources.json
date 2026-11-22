@@ -1,0 +1,336 @@
+{
+ "9432": {
+  "wiki": [
+   "ja:日本電信電話",
+   "en:NTT (company)"
+  ]
+ },
+ "9433": {
+  "wiki": [
+   "ja:KDDI",
+   "en:KDDI"
+  ]
+ },
+ "9434": {
+  "wiki": [
+   "ja:ソフトバンク",
+   "en:SoftBank Corp."
+  ]
+ },
+ "6701": {
+  "wiki": [
+   "ja:日本電気",
+   "en:NEC"
+  ]
+ },
+ "6702": {
+  "wiki": [
+   "ja:富士通",
+   "en:Fujitsu"
+  ]
+ },
+ "4307": {
+  "wiki": [
+   "ja:野村総合研究所",
+   "en:Nomura Research Institute"
+  ]
+ },
+ "6501": {
+  "wiki": [
+   "ja:日立製作所",
+   "en:Hitachi"
+  ]
+ },
+ "3626": {
+  "wiki": [
+   "ja:TISI",
+   "ja:TIS (企業)",
+   "en:TIS Inc."
+  ]
+ },
+ "8056": {
+  "wiki": [
+   "ja:BIPROGY",
+   "en:BIPROGY"
+  ]
+ },
+ "9719": {
+  "wiki": [
+   "ja:SCSK",
+   "en:SCSK"
+  ]
+ },
+ "9613": {
+  "wiki": [
+   "ja:NTTデータ",
+   "ja:NTTデータグループ",
+   "en:NTT Data"
+  ]
+ },
+ "ibm": {
+  "wiki": [
+   "en:IBM"
+  ]
+ },
+ "google": {
+  "wiki": [
+   "en:Google"
+  ]
+ },
+ "microsoft": {
+  "wiki": [
+   "en:Microsoft"
+  ]
+ },
+ "amazon": {
+  "wiki": [
+   "en:Amazon (company)"
+  ]
+ },
+ "salesforce": {
+  "wiki": [
+   "en:Salesforce"
+  ]
+ },
+ "8058": {
+  "wiki": [
+   "ja:三菱商事",
+   "en:Mitsubishi Corporation"
+  ]
+ },
+ "8031": {
+  "wiki": [
+   "ja:三井物産",
+   "en:Mitsui & Co."
+  ]
+ },
+ "8001": {
+  "wiki": [
+   "ja:伊藤忠商事",
+   "en:Itochu"
+  ]
+ },
+ "8053": {
+  "wiki": [
+   "ja:住友商事",
+   "en:Sumitomo Corporation"
+  ]
+ },
+ "8002": {
+  "wiki": [
+   "ja:丸紅",
+   "en:Marubeni"
+  ]
+ },
+ "8015": {
+  "wiki": [
+   "ja:豊田通商",
+   "en:Toyota Tsusho"
+  ]
+ },
+ "2768": {
+  "wiki": [
+   "ja:双日",
+   "en:Sojitz"
+  ]
+ },
+ "7203": {
+  "wiki": [
+   "ja:トヨタ自動車",
+   "en:Toyota"
+  ]
+ },
+ "7267": {
+  "wiki": [
+   "ja:本田技研工業",
+   "en:Honda"
+  ]
+ },
+ "7201": {
+  "wiki": [
+   "ja:日産自動車",
+   "en:Nissan"
+  ]
+ },
+ "7269": {
+  "wiki": [
+   "ja:スズキ (企業)",
+   "en:Suzuki"
+  ]
+ },
+ "7270": {
+  "wiki": [
+   "ja:SUBARU",
+   "en:Subaru"
+  ]
+ },
+ "7261": {
+  "wiki": [
+   "ja:マツダ",
+   "en:Mazda"
+  ]
+ },
+ "7211": {
+  "wiki": [
+   "ja:三菱自動車工業",
+   "en:Mitsubishi Motors"
+  ]
+ },
+ "8306": {
+  "wiki": [
+   "ja:三菱UFJフィナンシャル・グループ",
+   "en:Mitsubishi UFJ Financial Group"
+  ]
+ },
+ "8316": {
+  "wiki": [
+   "ja:三井住友フィナンシャルグループ",
+   "en:Sumitomo Mitsui Financial Group"
+  ]
+ },
+ "8411": {
+  "wiki": [
+   "ja:みずほフィナンシャルグループ",
+   "en:Mizuho Financial Group"
+  ]
+ },
+ "8308": {
+  "wiki": [
+   "ja:りそなホールディングス",
+   "en:Resona Holdings"
+  ]
+ },
+ "8309": {
+  "wiki": [
+   "ja:三井住友トラストグループ",
+   "ja:三井住友トラスト・ホールディングス",
+   "en:Sumitomo Mitsui Trust Holdings"
+  ]
+ },
+ "8604": {
+  "wiki": [
+   "ja:野村ホールディングス",
+   "en:Nomura Holdings"
+  ]
+ },
+ "8766": {
+  "wiki": [
+   "ja:東京海上ホールディングス",
+   "en:Tokio Marine"
+  ]
+ },
+ "4689": {
+  "wiki": [
+   "ja:LINEヤフー",
+   "en:LY Corporation"
+  ]
+ },
+ "4755": {
+  "wiki": [
+   "ja:楽天グループ",
+   "en:Rakuten"
+  ]
+ },
+ "4751": {
+  "wiki": [
+   "ja:サイバーエージェント",
+   "en:CyberAgent"
+  ]
+ },
+ "2432": {
+  "wiki": [
+   "ja:ディー・エヌ・エー",
+   "en:DeNA"
+  ]
+ },
+ "4385": {
+  "wiki": [
+   "ja:メルカリ (企業)",
+   "ja:メルカリ",
+   "en:Mercari"
+  ]
+ },
+ "6098": {
+  "wiki": [
+   "ja:リクルートホールディングス",
+   "en:Recruit Holdings"
+  ]
+ },
+ "2413": {
+  "wiki": [
+   "ja:エムスリー",
+   "en:M3 (company)"
+  ]
+ },
+ "4194": {
+  "wiki": [
+   "ja:ビジョナル",
+   "ja:ビズリーチ"
+  ]
+ },
+ "3092": {
+  "wiki": [
+   "ja:ZOZO",
+   "en:Zozo (company)"
+  ]
+ },
+ "4443": {
+  "wiki": [
+   "ja:Sansan",
+   "en:Sansan (company)"
+  ]
+ },
+ "3994": {
+  "wiki": [
+   "ja:マネーフォワード",
+   "en:Money Forward"
+  ]
+ },
+ "4478": {
+  "wiki": [
+   "ja:freee",
+   "en:Freee"
+  ]
+ },
+ "mckinsey": {
+  "wiki": [
+   "en:McKinsey & Company"
+  ]
+ },
+ "bcg": {
+  "wiki": [
+   "en:Boston Consulting Group"
+  ]
+ },
+ "bain": {
+  "wiki": [
+   "en:Bain & Company"
+  ]
+ },
+ "accenture": {
+  "wiki": [
+   "en:Accenture"
+  ]
+ },
+ "deloitte": {
+  "wiki": [
+   "en:Deloitte"
+  ]
+ },
+ "pwc": {
+  "wiki": [
+   "en:PwC"
+  ]
+ },
+ "ey": {
+  "wiki": [
+   "en:EY (company)",
+   "en:Ernst & Young"
+  ]
+ },
+ "kpmg": {
+  "wiki": [
+   "en:KPMG"
+  ]
+ }
+}
