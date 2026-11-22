@@ -1,5 +1,6 @@
-/** 百万円単位の金額を「兆円 / 億円」で表示する */
-export function fmtYen(millions: number, opts: { compact?: boolean } = {}): string {
+/** 百万円単位の金額を「兆円 / 億円」で表示する（値が無い場合は「—」） */
+export function fmtYen(millions: number | null, opts: { compact?: boolean } = {}): string {
+  if (millions === null || !Number.isFinite(millions)) return "—";
   const abs = Math.abs(millions);
   const sign = millions < 0 ? "−" : "";
   if (abs >= 1_000_000) {
@@ -32,7 +33,7 @@ export function fmtTimes(v: number | null, digits = 1): string {
   return `${v.toFixed(digits)}倍`;
 }
 
-export function fmtYenShort(millions: number): string {
+export function fmtYenShort(millions: number | null): string {
   return fmtYen(millions, { compact: true });
 }
 

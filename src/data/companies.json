@@ -11,7 +11,7 @@
   "revenueApprox": false,
   "netIncome": 1037032,
   "equity": 9727623,
-  "marketCap": 13338928,
+  "marketCap": 13565423,
   "history": [
    {
     "fy": "2022年3月期",
@@ -76,27 +76,6 @@
     "univSide": null
    },
    {
-    "entity": "NTTデータグループ",
-    "year": 2025,
-    "url": "https://univ-online.com/rank3/y2025/communication/r1930342/",
-    "top": [
-     [
-      "早稲田大",
-      111
-     ],
-     [
-      "慶應義塾大",
-      72
-     ],
-     [
-      "東京理科大",
-      57
-     ]
-    ],
-    "note": null,
-    "univSide": null
-   },
-   {
     "entity": "NTT東日本",
     "year": 2025,
     "url": "https://univ-online.com/rank3/y2025/communication/r1930345/",
@@ -126,7 +105,9 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "出身大学は公開情報で確認できず"
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "NTTドコモ",
@@ -139,7 +120,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "9433",
@@ -153,7 +138,7 @@
   "revenueApprox": false,
   "netIncome": 707112,
   "equity": 5076738,
-  "marketCap": 10864240,
+  "marketCap": 10515577,
   "history": [
    {
     "fy": "2022年3月期",
@@ -246,7 +231,9 @@
    "src": "東洋経済オンライン",
    "url": "https://toyokeizai.net/articles/-/858767",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "KDDI",
@@ -259,7 +246,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "9434",
@@ -273,7 +264,7 @@
   "revenueApprox": false,
   "netIncome": 550759,
   "equity": 2957859,
-  "marketCap": 11676211,
+  "marketCap": 11696788,
   "history": [
    {
     "fy": "2022年3月期",
@@ -358,7 +349,9 @@
    "src": "現代ビジネス・ニュースイッチ",
    "url": "https://newswitch.jp/p/25820",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "ソフトバンク",
@@ -371,7 +364,11 @@
    "weak": true,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "6701",
@@ -385,7 +382,7 @@
   "revenueApprox": false,
   "netIncome": 270228,
   "equity": 2196578,
-  "marketCap": 6268144,
+  "marketCap": 5608409,
   "history": [
    {
     "fy": "2022年3月期",
@@ -466,7 +463,9 @@
    "src": "NECプレスリリース（2018年2月）",
    "url": "https://jpn.nec.com/press/201802/20180227_02.html",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "NEC",
@@ -479,7 +478,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "6702",
@@ -493,7 +496,7 @@
   "revenueApprox": false,
   "netIncome": 449408,
   "equity": 2024915,
-  "marketCap": 5922306,
+  "marketCap": 5753097,
   "history": [
    {
     "fy": "2022年3月期",
@@ -580,7 +583,9 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "出身大学は公開情報で確認できず"
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "富士通",
@@ -593,109 +598,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
- },
- {
-  "code": "4689",
-  "name": "LINEヤフー",
-  "short": "LINEヤフー",
-  "industry": "it",
-  "description": "「LINE」「Yahoo! JAPAN」を運営",
-  "fiscalPeriod": "2026年3月期",
-  "revenueLabel": "売上収益",
-  "revenue": 2036366,
-  "revenueApprox": false,
-  "netIncome": 193693,
-  "equity": 2998805,
-  "marketCap": 3737711,
-  "history": [
-   {
-    "fy": "2022年3月期",
-    "revenue": 1567421,
-    "netIncome": 77317
-   },
-   {
-    "fy": "2023年3月期",
-    "revenue": 1672377,
-    "netIncome": 178868
-   },
-   {
-    "fy": "2024年3月期",
-    "revenue": 1814663,
-    "netIncome": 113200
-   },
-   {
-    "fy": "2025年3月期",
-    "revenue": 1917478,
-    "netIncome": 153465
-   },
-   {
-    "fy": "2026年3月期",
-    "revenue": 2036366,
-    "netIncome": 193693
-   }
-  ],
-  "notes": [],
-  "workforce": {
-   "asOf": "2026-03-31",
-   "employees": 10577,
-   "avgAge": 39.0,
-   "avgTenure": 9.6,
-   "avgSalary": 9023870,
-   "ageText": null,
-   "tenureText": null,
-   "holding": false,
-   "note": null,
-   "sub": null,
-   "edinetDoc": "S100YBXD"
   },
-  "hiring": [
-   {
-    "entity": "LINEヤフー",
-    "year": 2025,
-    "url": "https://univ-online.com/rank3/y2025/service/r1930418/",
-    "top": [
-     [
-      "東京大",
-      12
-     ],
-     [
-      "早稲田大",
-      11
-     ],
-     [
-      "大阪大",
-      7
-     ],
-     [
-      "明治大",
-      6
-     ],
-     [
-      "筑波大",
-      5
-     ],
-     [
-      "東京科学大",
-      5
-     ]
-    ],
-    "note": null,
-    "univSide": null
-   }
-  ],
-  "ceo": {
-   "name": "出澤 剛",
-   "title": "代表取締役社長 CEO",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず"
-  },
-  "startPay": null,
-  "startPayNote": "就職サイトで本体の初任給を確認できず"
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "4307",
@@ -709,7 +616,7 @@
   "revenueApprox": false,
   "netIncome": 15257,
   "equity": 433905,
-  "marketCap": 3490550,
+  "marketCap": 3376746,
   "history": [
    {
     "fy": "2022年3月期",
@@ -808,7 +715,9 @@
    "src": "マネーポスト",
    "url": "https://www.moneypost.jp/1308195/2/",
    "weak": true,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "野村総合研究所",
@@ -821,97 +730,111 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
-  "code": "4755",
-  "name": "楽天グループ",
-  "short": "楽天",
+  "code": "6501",
+  "name": "日立製作所",
+  "short": "日立",
   "industry": "it",
-  "description": "「楽天市場」・フィンテック・モバイル",
-  "fiscalPeriod": "2025年12月期",
+  "description": "IT（デジタル）・エネルギー・鉄道などの社会インフラ",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年3月期",
   "revenueLabel": "売上収益",
-  "revenue": 2496575,
+  "revenue": 10586781,
   "revenueApprox": false,
-  "netIncome": -177886,
-  "equity": 992402,
-  "marketCap": 1451893,
+  "netIncome": 802368,
+  "equity": 6568369,
+  "marketCap": 21165254,
   "history": [
    {
-    "fy": "2021年12月期",
-    "revenue": 1681757,
-    "netIncome": -133828
+    "fy": "2022年3月期",
+    "revenue": 10264602,
+    "netIncome": 583470
    },
    {
-    "fy": "2022年12月期",
-    "revenue": 1920894,
-    "netIncome": -377217
+    "fy": "2023年3月期",
+    "revenue": 10881150,
+    "netIncome": 649124
    },
    {
-    "fy": "2023年12月期",
-    "revenue": 2071315,
-    "netIncome": -339473
+    "fy": "2024年3月期",
+    "revenue": 9728716,
+    "netIncome": 589896
    },
    {
-    "fy": "2024年12月期",
-    "revenue": 2279233,
-    "netIncome": -162442
+    "fy": "2025年3月期",
+    "revenue": 9783370,
+    "netIncome": 615724
    },
    {
-    "fy": "2025年12月期",
-    "revenue": 2496575,
-    "netIncome": -177886
+    "fy": "2026年3月期",
+    "revenue": 10586781,
+    "netIncome": 802368
    }
   ],
-  "notes": [
-   "12月決算のため、最新期は2025年12月期"
-  ],
+  "notes": [],
   "workforce": {
-   "asOf": "2025-12-31",
-   "employees": 9989,
-   "avgAge": 36.0,
-   "avgTenure": 6.3,
-   "avgSalary": 8508495,
+   "asOf": "2026-03-31",
+   "employees": 25934,
+   "avgAge": 42.2,
+   "avgTenure": 18.1,
+   "avgSalary": 9949714,
    "ageText": null,
    "tenureText": null,
    "holding": false,
    "note": null,
    "sub": null,
-   "edinetDoc": "S100XTNW"
+   "edinetDoc": "S100YGBO"
   },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "日立製作所",
+   "amount": 287000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2026年4月実績",
+   "course": "大学学部卒",
+   "url": "https://www.hitachi.co.jp/recruit/newgraduate/recruit_info/guideline.html",
+   "weak": null,
+   "fixedOvertime": false,
+   "check": null
+  },
+  "startPayNote": null,
   "hiring": [
    {
-    "entity": "楽天グループ",
+    "entity": "日立製作所",
     "year": 2025,
-    "url": "https://univ-online.com/rank3/y2025/service/r1930419/",
+    "url": "https://univ-online.com/rank3/y2025/electronics/r1930172/",
     "top": [
      [
       "早稲田大",
-      46
+      44
      ],
      [
-      "慶應義塾大",
-      38
-     ],
-     [
-      "上智大",
-      29
-     ],
-     [
-      "立教大",
-      27
-     ],
-     [
-      "東京大",
-      21
+      "東京理科大",
+      36
      ],
      [
       "明治大",
-      20
+      36
      ],
      [
-      "同志社大",
-      18
+      "大阪大",
+      33
+     ],
+     [
+      "東北大",
+      29
+     ],
+     [
+      "慶應義塾大",
+      29
      ]
     ],
     "note": null,
@@ -919,26 +842,620 @@
    }
   ],
   "ceo": {
-   "name": "三木谷 浩史",
-   "title": "代表取締役会長兼社長 最高執行役員",
-   "univ": "一橋大学",
-   "detail": "一橋大学商学部（1988年卒）、ハーバード大学経営大学院MBA",
-   "src": "一橋大学 令和3年度入学式 祝辞",
-   "url": "https://www.hit-u.ac.jp/1284wp/wp-content/uploads/2021/04/Nyugaku-shukuji_Mikitani.pdf",
+   "name": "德永 俊昭",
+   "title": "代表執行役 執行役社長兼CEO",
+   "univ": "東京大学",
+   "detail": "1990年東京大学工学部卒業",
+   "src": "MONOist・電波新聞ほか",
+   "url": "https://monoist.itmedia.co.jp/mn/articles/2412/18/news080.html",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "3626",
+  "name": "TISI（旧TIS）",
+  "short": "TISI",
+  "industry": "it",
+  "description": "システム開発大手。2026年7月にTISとインテックが合併",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 596479,
+  "revenueApprox": false,
+  "netIncome": 46624,
+  "equity": 324731,
+  "marketCap": 893460,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 482547,
+    "netIncome": 39462
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 508400,
+    "netIncome": 55461
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 549004,
+    "netIncome": 48873
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 571687,
+    "netIncome": 50012
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 596479,
+    "netIncome": 46624
+   }
+  ],
+  "notes": [
+   "2026年7月1日にインテックを吸収合併し、TIS株式会社からTISI株式会社に社名を変更。掲載の業績・平均年収などは合併前の2026年3月期（TIS）の値"
+  ],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 6066,
+   "avgAge": 40.7,
+   "avgTenure": 14.4,
+   "avgSalary": 8289000,
+   "ageText": "40歳8か月",
+   "tenureText": "14年5か月",
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YH5C"
   },
+  "jpEmployees": null,
   "startPay": {
-   "entity": "楽天グループ",
-   "amount": 350000,
+   "entity": "TISI",
+   "amount": 294600,
    "amountMax": null,
-   "grad": 360000,
-   "year": "2025年4月実績（据え置き）",
-   "course": "ビジネス職 大卒（基本給265,823円＋40時間分の固定残業代84,177円）",
-   "url": "https://job.mynavi.jp/27/pc/search/corp70317/recruiting_course27049929/recruiting_course.html",
+   "grad": null,
+   "year": "2027年卒",
+   "course": "学士卒（マイナビ27卒の掲載値）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp1143/recruiting_course27039012/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "合併後の予定額。リクナビ2026年卒の掲載では固定残業代を含む"
+  },
+  "startPayNote": null,
+  "hiring": [
+   {
+    "entity": "TIS",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930399/",
+    "top": [
+     [
+      "明治大",
+      32
+     ],
+     [
+      "法政大",
+      14
+     ],
+     [
+      "立教大",
+      13
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "岡本 安史",
+   "title": "代表取締役社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null,
+   "change": "2027年4月1日付で社長交代の予定（2026年11月4日発表。岡本氏は会長に）"
+  }
+ },
+ {
+  "code": "8056",
+  "name": "BIPROGY",
+  "short": "BIPROGY",
+  "industry": "it",
+  "description": "旧・日本ユニシス。金融・社会インフラ向けのシステム",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 433686,
+  "revenueApprox": false,
+  "netIncome": 31209,
+  "equity": 178988,
+  "marketCap": 468258,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 317600,
+    "netIncome": 20491
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 339898,
+    "netIncome": 20203
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 370142,
+    "netIncome": 25247
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 404010,
+    "netIncome": 26966
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 433686,
+    "netIncome": 31209
+   }
+  ],
+  "notes": [],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 4359,
+   "avgAge": 46.3,
+   "avgTenure": 20.4,
+   "avgSalary": 8846208,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YFCP"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "BIPROGY",
+   "amount": 284000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2027年卒",
+   "course": "学部卒（4年制）",
+   "url": "https://www.biprogy.com/recruit/recruiting/",
+   "weak": null,
+   "fixedOvertime": false,
+   "check": null
+  },
+  "startPayNote": null,
+  "hiring": [
+   {
+    "entity": "BIPROGY",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930409/",
+    "top": [
+     [
+      "明治大",
+      13
+     ],
+     [
+      "同志社大",
+      10
+     ],
+     [
+      "法政大",
+      7
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "齊藤 昇",
+   "title": "代表取締役社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "9719",
+  "name": "SCSK",
+  "short": "SCSK",
+  "industry": "it",
+  "description": "住友商事グループのシステム開発大手",
+  "listing": "delisted",
+  "listingNote": "2026年3月12日に上場廃止（住友商事の完全子会社に）",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 780326,
+  "revenueApprox": false,
+  "netIncome": 66870,
+  "equity": 331362,
+  "marketCap": null,
+  "history": [
+   {
+    "fy": "2026年3月期",
+    "revenue": 780326,
+    "netIncome": 66870
+   }
+  ],
+  "notes": [
+   "上場廃止のため時価総額はありません。業績は2026年3月期の有価証券報告書（連結）の値のみで、自己資本は純資産の値"
+  ],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 8493,
+   "avgAge": 42.7,
+   "avgTenure": 16.7,
+   "avgSalary": 7969000,
+   "ageText": "42歳8か月",
+   "tenureText": "16年8か月",
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YHDD"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "SCSK",
+   "amount": 330000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2027年度新卒",
+   "course": "大卒（業務手当46,900円・学び手当5,000円・リモートワーク推進手当5,000円を含む）",
+   "url": "https://www.scsk.jp/recruit/saiyo/recruit/recruit-info.html",
    "weak": null,
    "fixedOvertime": true,
-   "check": null
+   "check": "業務手当は固定残業代"
+  },
+  "startPayNote": null,
+  "hiring": [
+   {
+    "entity": "SCSK",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930387/",
+    "top": [
+     [
+      "明治大",
+      36
+     ],
+     [
+      "法政大",
+      22
+     ],
+     [
+      "早稲田大",
+      20
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "當麻 隆昭",
+   "title": "代表取締役 執行役員 社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "9613",
+  "name": "NTTデータ",
+  "short": "NTTデータ",
+  "industry": "it",
+  "description": "NTTグループのシステム開発最大手",
+  "listing": "delisted",
+  "listingNote": "NTTデータグループ（証券コード9613）は2025年9月26日に上場廃止（NTTの完全子会社に）。掲載の平均年収などは国内事業会社の株式会社NTTデータの値",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 13189,
+   "avgAge": 37.8,
+   "avgTenure": 13.0,
+   "avgSalary": 9583906,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YCP3",
+   "basis": "NTTの有価証券報告書に「最大人員会社」として記載された株式会社NTTデータの値"
+  },
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "株式会社NTTデータ本体の初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "NTTデータグループ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/communication/r1930342/",
+    "top": [
+     [
+      "早稲田大",
+      111
+     ],
+     [
+      "慶應義塾大",
+      72
+     ],
+     [
+      "東京理科大",
+      57
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "鈴木 正範",
+   "title": "代表取締役社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "株式会社NTTデータの役員人事の発表（2026年6月）",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "ibm",
+  "name": "日本アイ・ビー・エム",
+  "short": "日本IBM",
+  "industry": "it",
+  "description": "米IBMの日本法人",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（米国上場のIBMの日本法人）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "日本IBM",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/electronics/r1930166/",
+    "top": [
+     [
+      "慶應義塾大",
+      66
+     ],
+     [
+      "早稲田大",
+      60
+     ],
+     [
+      "明治大",
+      32
+     ],
+     [
+      "東京大",
+      23
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "村田 将輝",
+   "title": "代表取締役社長執行役員（2026年8月就任）",
+   "univ": "立教大学",
+   "detail": "2003年立教大学経済学部卒業",
+   "src": "共同通信配信記事（熊本日日新聞）・クラウドWatch",
+   "url": "https://kumanichi.com/articles/2018153",
+   "weak": false,
+   "note": null,
+   "basis": "報道（共同通信配信・クラウドWatch、2026年7月）",
+   "basisUrl": "https://cloud.watch.impress.co.jp/docs/news/2128303.html"
+  }
+ },
+ {
+  "code": "google",
+  "name": "グーグル",
+  "short": "Google",
+  "industry": "it",
+  "description": "米Google（Alphabet）の日本法人",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（米国上場のAlphabetの日本法人）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [],
+  "ceo": {
+   "name": "奥山 真司",
+   "title": "日本法人 代表",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "報道（Web担当者Forum、2026年2月）",
+   "basisUrl": "https://webtan.impress.co.jp/n/2026/02/17/52167"
+  }
+ },
+ {
+  "code": "microsoft",
+  "name": "日本マイクロソフト",
+  "short": "マイクロソフト",
+  "industry": "it",
+  "description": "米Microsoftの日本法人",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（米国上場のMicrosoftの日本法人）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [],
+  "ceo": {
+   "name": "津坂 美樹",
+   "title": "代表取締役 社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "日本マイクロソフト公式サイトの会社概要",
+   "basisUrl": "https://news.microsoft.com/ja-jp/cp/outline/"
+  }
+ },
+ {
+  "code": "amazon",
+  "name": "アマゾンジャパン",
+  "short": "Amazon",
+  "industry": "it",
+  "description": "米Amazon.comの日本法人（通販「Amazon.co.jp」など）",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（米国上場のAmazon.comの日本法人）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "アマゾンジャパン",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930510/",
+    "top": [
+     [
+      "慶應義塾大",
+      18
+     ],
+     [
+      "早稲田大",
+      17
+     ],
+     [
+      "上智大",
+      8
+     ],
+     [
+      "青山学院大",
+      6
+     ],
+     [
+      "明治大",
+      6
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "ジャスパー・チャン／島谷 恒平",
+   "title": "社長（2026年6月から2人体制）",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "報道（ネットショップ担当者フォーラム、2026年6月）",
+   "basisUrl": "https://netshop.impress.co.jp/n/2026/06/05/16191"
+  }
+ },
+ {
+  "code": "salesforce",
+  "name": "セールスフォース・ジャパン",
+  "short": "セールスフォース",
+  "industry": "it",
+  "description": "米Salesforceの日本法人（顧客管理などの法人向けクラウド）",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（米国上場のSalesforceの日本法人）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [],
+  "ceo": {
+   "name": "小出 伸一",
+   "title": "代表取締役会長 兼 社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "セールスフォース・ジャパン公式サイト（2026年9月）",
+   "basisUrl": "https://www.salesforce.com/jp/news/stories/stakeholdermpact-report2026/"
   }
  },
  {
@@ -953,7 +1470,7 @@
   "revenueApprox": false,
   "netIncome": 800460,
   "equity": 9440567,
-  "marketCap": 19317049,
+  "marketCap": 16654108,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1034,7 +1551,9 @@
    "src": "東洋経済オンライン",
    "url": "https://toyokeizai.net/articles/-/843260",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "三菱商事",
@@ -1047,7 +1566,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8031",
@@ -1061,7 +1584,7 @@
   "revenueApprox": false,
   "netIncome": 833971,
   "equity": 8767744,
-  "marketCap": 14291266,
+  "marketCap": 12654576,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1134,7 +1657,9 @@
    "src": "三井物産 社長人事資料（2020年12月23日）",
    "url": "https://www.mitsui.com/jp/ja/release/2020/pdf/ja_201223.pdf",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "三井物産",
@@ -1147,7 +1672,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8001",
@@ -1161,7 +1690,7 @@
   "revenueApprox": false,
   "netIncome": 900283,
   "equity": 6589966,
-  "marketCap": 16542645,
+  "marketCap": 15507262,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1238,7 +1767,9 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "高校は早稲田大学高等学院と報道されているが、大学は確認できず"
+   "note": "高校は早稲田大学高等学院と報道されているが、大学は確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "伊藤忠商事",
@@ -1251,7 +1782,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": "リクナビ27卒でも同額"
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8053",
@@ -1265,7 +1800,7 @@
   "revenueApprox": false,
   "netIncome": 600334,
   "equity": 4628555,
-  "marketCap": 8198828,
+  "marketCap": 7097775,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1346,7 +1881,9 @@
    "src": "住友商事 公式サイト（役員紹介）",
    "url": "https://www.sumitomocorp.com/ja/jp/about/company/officer/43",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "住友商事",
@@ -1359,7 +1896,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8002",
@@ -1373,7 +1914,7 @@
   "revenueApprox": false,
   "netIncome": 543852,
   "equity": 4363719,
-  "marketCap": 8283973,
+  "marketCap": 7233069,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1454,7 +1995,9 @@
    "src": "ニュースイッチ",
    "url": "https://newswitch.jp/p/43807",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "丸紅",
@@ -1467,7 +2010,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8015",
@@ -1481,7 +2028,7 @@
   "revenueApprox": false,
   "netIncome": 370516,
   "equity": 3157521,
-  "marketCap": 6339658,
+  "marketCap": 5410905,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1541,7 +2088,9 @@
    "src": "FASHIONSNAP",
    "url": "https://www.fashionsnap.com/article/2025-01-31/toyota-tsusho-ceo/",
    "weak": true,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "豊田通商",
@@ -1554,7 +2103,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "2768",
@@ -1568,7 +2121,7 @@
   "revenueApprox": false,
   "netIncome": 103612,
   "equity": 1090370,
-  "marketCap": 1070470,
+  "marketCap": 983975,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1641,7 +2194,9 @@
    "src": "ニュースイッチ",
    "url": "https://newswitch.jp/p/39463",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "双日",
@@ -1654,7 +2209,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": "リクナビ27卒は月給30.5万〜34万円"
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "7203",
@@ -1668,7 +2227,7 @@
   "revenueApprox": false,
   "netIncome": 3848097,
   "equity": 39918854,
-  "marketCap": 41837243,
+  "marketCap": 39009597,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1753,7 +2312,9 @@
    "src": "東北大学経済学部 公式資料",
    "url": "https://www.econ.tohoku.ac.jp/wp/wp-content/uploads/2022/11/c6155683fd3c5fa42a9321e0729b84ad.pdf",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "トヨタ自動車",
@@ -1766,7 +2327,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "7267",
@@ -1780,7 +2345,7 @@
   "revenueApprox": false,
   "netIncome": -423941,
   "equity": 11817512,
-  "marketCap": 7558292,
+  "marketCap": 6760224,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1867,7 +2432,9 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "出身大学は公開情報で確認できず"
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "本田技研工業",
@@ -1880,7 +2447,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": "リクナビ27卒でも同額"
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "7201",
@@ -1894,7 +2465,7 @@
   "revenueApprox": false,
   "netIncome": -533095,
   "equity": 4798981,
-  "marketCap": 1023391,
+  "marketCap": 932072,
   "history": [
    {
     "fy": "2022年3月期",
@@ -1973,7 +2544,9 @@
    "src": "日産 公式プロフィール",
    "url": "https://global.nissannews.com/ja-JP/releases/ivan_espinosa_ja",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "日産自動車",
@@ -1986,7 +2559,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "7269",
@@ -2000,7 +2577,7 @@
   "revenueApprox": false,
   "netIncome": 439267,
   "equity": 3382083,
-  "marketCap": 4386204,
+  "marketCap": 4252361,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2089,7 +2666,9 @@
    "src": "東洋経済オンライン",
    "url": "https://toyokeizai.net/articles/-/561543",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "スズキ",
@@ -2102,7 +2681,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "7270",
@@ -2116,7 +2699,7 @@
   "revenueApprox": false,
   "netIncome": 90842,
   "equity": 2780407,
-  "marketCap": 2031291,
+  "marketCap": 1859639,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2189,7 +2772,9 @@
    "src": "SUBARU 社長人事発表資料（2023年3月）",
    "url": "https://www.subaru.co.jp/pdf/news/2023_0303_1_2023-03-02-211831.pdf",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "SUBARU",
@@ -2202,7 +2787,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "7261",
@@ -2216,7 +2805,7 @@
   "revenueApprox": false,
   "netIncome": 35086,
   "equity": 1905899,
-  "marketCap": 750345,
+  "marketCap": 666732,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2289,7 +2878,9 @@
    "src": "ニュースイッチ・投資情報サイト",
    "url": "https://newswitch.jp/p/36302",
    "weak": true,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "マツダ",
@@ -2302,7 +2893,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "7211",
@@ -2316,7 +2911,7 @@
   "revenueApprox": false,
   "netIncome": 10015,
   "equity": 919469,
-  "marketCap": 510448,
+  "marketCap": 401249,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2393,7 +2988,9 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "出身大学は公開情報で確認できず（CEOは加藤隆雄氏）"
+   "note": "出身大学は公開情報で確認できず（CEOは加藤隆雄氏）",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "三菱自動車工業",
@@ -2406,7 +3003,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": "リクナビ27卒（事務系総合職）でも26万円"
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8306",
@@ -2420,7 +3021,7 @@
   "revenueApprox": false,
   "netIncome": 2427229,
   "equity": 22274041,
-  "marketCap": 38821133,
+  "marketCap": 34045806,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2501,7 +3102,9 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "出身大学は公開情報で確認できず"
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "三菱UFJ銀行",
@@ -2514,7 +3117,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": "リクナビ27卒でも大卒30万円"
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8316",
@@ -2528,7 +3135,7 @@
   "revenueApprox": false,
   "netIncome": 1582974,
   "equity": 15786052,
-  "marketCap": 24017622,
+  "marketCap": 22251435,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2609,7 +3216,9 @@
    "src": "東洋経済オンライン",
    "url": "https://toyokeizai.net/articles/-/737794",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "三井住友銀行",
@@ -2622,7 +3231,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8411",
@@ -2636,7 +3249,7 @@
   "revenueApprox": false,
   "netIncome": 1248632,
   "equity": 11316529,
-  "marketCap": 18690488,
+  "marketCap": 17662699,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2723,7 +3336,9 @@
    "src": "東洋経済オンライン・マネーポスト",
    "url": "https://toyokeizai.net/articles/-/576578",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "みずほ銀行",
@@ -2736,7 +3351,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8308",
@@ -2750,7 +3369,7 @@
   "revenueApprox": true,
   "netIncome": 258718,
   "equity": 2905270,
-  "marketCap": 5044010,
+  "marketCap": 4403625,
   "history": [
    {
     "fy": "2022年3月期",
@@ -2835,7 +3454,9 @@
    "src": "東洋経済オンライン",
    "url": "https://toyokeizai.net/articles/-/328408",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "りそな銀行",
@@ -2848,7 +3469,11 @@
    "weak": true,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8309",
@@ -2951,7 +3576,9 @@
    "src": "時事通信（2021年の人事記事）",
    "url": "https://www.sbbit.jp/article/refers/52169",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "三井住友信託銀行",
@@ -2964,7 +3591,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8604",
@@ -2978,7 +3609,7 @@
   "revenueApprox": true,
   "netIncome": 362129,
   "equity": 3707868,
-  "marketCap": 4614767,
+  "marketCap": 4077011,
   "history": [
    {
     "fy": "2022年3月期",
@@ -3063,7 +3694,9 @@
    "src": "野村ホールディングス プレスリリース",
    "url": "https://www.nomuraholdings.com/jp/news/nr/news20210302102959.html",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "野村證券",
@@ -3076,7 +3709,11 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
-  }
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
  },
  {
   "code": "8766",
@@ -3090,7 +3727,7 @@
   "revenueApprox": true,
   "netIncome": 980428,
   "equity": 5420348,
-  "marketCap": 17270947,
+  "marketCap": 16294788,
   "history": [
    {
     "fy": "2022年3月期",
@@ -3152,7 +3789,9 @@
    "src": "東洋経済オンライン",
    "url": "https://toyokeizai.net/articles/-/898657",
    "weak": null,
-   "note": null
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   },
   "startPay": {
    "entity": "東京海上日動火災保険",
@@ -3165,6 +3804,1568 @@
    "weak": null,
    "fixedOvertime": null,
    "check": null
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
+ },
+ {
+  "code": "4689",
+  "name": "LINEヤフー",
+  "short": "LINEヤフー",
+  "industry": "venture",
+  "description": "「LINE」「Yahoo! JAPAN」を運営",
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 2036366,
+  "revenueApprox": false,
+  "netIncome": 193693,
+  "equity": 2998805,
+  "marketCap": 3430931,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 1567421,
+    "netIncome": 77317
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 1672377,
+    "netIncome": 178868
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 1814663,
+    "netIncome": 113200
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 1917478,
+    "netIncome": 153465
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 2036366,
+    "netIncome": 193693
+   }
+  ],
+  "notes": [],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 10577,
+   "avgAge": 39.0,
+   "avgTenure": 9.6,
+   "avgSalary": 9023870,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YBXD"
+  },
+  "hiring": [
+   {
+    "entity": "LINEヤフー",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930418/",
+    "top": [
+     [
+      "東京大",
+      12
+     ],
+     [
+      "早稲田大",
+      11
+     ],
+     [
+      "大阪大",
+      7
+     ],
+     [
+      "明治大",
+      6
+     ],
+     [
+      "筑波大",
+      5
+     ],
+     [
+      "東京科学大",
+      5
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "出澤 剛",
+   "title": "代表取締役社長 CEO",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  },
+  "startPay": null,
+  "startPayNote": "就職サイトで本体の初任給を確認できず",
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null
+ },
+ {
+  "code": "4755",
+  "name": "楽天グループ",
+  "short": "楽天",
+  "industry": "venture",
+  "description": "「楽天市場」・フィンテック・モバイル",
+  "fiscalPeriod": "2025年12月期",
+  "revenueLabel": "売上収益",
+  "revenue": 2496575,
+  "revenueApprox": false,
+  "netIncome": -177886,
+  "equity": 992402,
+  "marketCap": 1210347,
+  "history": [
+   {
+    "fy": "2021年12月期",
+    "revenue": 1681757,
+    "netIncome": -133828
+   },
+   {
+    "fy": "2022年12月期",
+    "revenue": 1920894,
+    "netIncome": -377217
+   },
+   {
+    "fy": "2023年12月期",
+    "revenue": 2071315,
+    "netIncome": -339473
+   },
+   {
+    "fy": "2024年12月期",
+    "revenue": 2279233,
+    "netIncome": -162442
+   },
+   {
+    "fy": "2025年12月期",
+    "revenue": 2496575,
+    "netIncome": -177886
+   }
+  ],
+  "notes": [
+   "12月決算のため、最新期は2025年12月期"
+  ],
+  "workforce": {
+   "asOf": "2025-12-31",
+   "employees": 9989,
+   "avgAge": 36.0,
+   "avgTenure": 6.3,
+   "avgSalary": 8508495,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100XTNW"
+  },
+  "hiring": [
+   {
+    "entity": "楽天グループ",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930419/",
+    "top": [
+     [
+      "早稲田大",
+      46
+     ],
+     [
+      "慶應義塾大",
+      38
+     ],
+     [
+      "上智大",
+      29
+     ],
+     [
+      "立教大",
+      27
+     ],
+     [
+      "東京大",
+      21
+     ],
+     [
+      "明治大",
+      20
+     ],
+     [
+      "同志社大",
+      18
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "三木谷 浩史",
+   "title": "代表取締役会長兼社長 最高執行役員",
+   "univ": "一橋大学",
+   "detail": "一橋大学商学部（1988年卒）、ハーバード大学経営大学院MBA",
+   "src": "一橋大学 令和3年度入学式 祝辞",
+   "url": "https://www.hit-u.ac.jp/1284wp/wp-content/uploads/2021/04/Nyugaku-shukuji_Mikitani.pdf",
+   "weak": null,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  },
+  "startPay": {
+   "entity": "楽天グループ",
+   "amount": 350000,
+   "amountMax": null,
+   "grad": 360000,
+   "year": "2025年4月実績（据え置き）",
+   "course": "ビジネス職 大卒（基本給265,823円＋40時間分の固定残業代84,177円）",
+   "url": "https://job.mynavi.jp/27/pc/search/corp70317/recruiting_course27049929/recruiting_course.html",
+   "weak": null,
+   "fixedOvertime": true,
+   "check": null
+  },
+  "listing": "listed",
+  "listingNote": null,
+  "jpEmployees": null,
+  "startPayNote": null
+ },
+ {
+  "code": "4751",
+  "name": "サイバーエージェント",
+  "short": "サイバーエージェント",
+  "industry": "venture",
+  "description": "「ABEMA」・ネット広告・ゲーム（Cygamesなど）",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年9月期",
+  "revenueLabel": "売上高",
+  "revenue": 970618,
+  "revenueApprox": false,
+  "netIncome": 43001,
+  "equity": 213293,
+  "marketCap": 666582,
+  "history": [
+   {
+    "fy": "2022年9月期",
+    "revenue": 709923,
+    "netIncome": 22901
+   },
+   {
+    "fy": "2023年9月期",
+    "revenue": 719451,
+    "netIncome": 3540
+   },
+   {
+    "fy": "2024年9月期",
+    "revenue": 801236,
+    "netIncome": 15977
+   },
+   {
+    "fy": "2025年9月期",
+    "revenue": 874030,
+    "netIncome": 31667
+   },
+   {
+    "fy": "2026年9月期",
+    "revenue": 970618,
+    "netIncome": 43001
+   }
+  ],
+  "notes": [
+   "9月決算のため、最新期は2026年9月期（2026年11月発表の決算短信と一致）。平均年収などは2025年9月期の有価証券報告書の値"
+  ],
+  "workforce": {
+   "asOf": "2025-09-30",
+   "employees": 2588,
+   "avgAge": 33.8,
+   "avgTenure": 6.5,
+   "avgSalary": 9138000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100XCU9"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "サイバーエージェント",
+   "amount": 420000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2027年卒",
+   "course": "ビジネスコース（年俸504万円）",
+   "url": "https://www.cyberagent.co.jp/careers/about/",
+   "weak": null,
+   "fixedOvertime": true,
+   "check": "リクナビ27卒：固定残業代161,538円（80時間/月）を含む"
+  },
+  "startPayNote": null,
+  "hiring": [
+   {
+    "entity": "サイバーエージェント",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930394/",
+    "top": [
+     [
+      "早稲田大",
+      21
+     ],
+     [
+      "慶應義塾大",
+      19
+     ],
+     [
+      "明治大",
+      15
+     ],
+     [
+      "法政大",
+      14
+     ],
+     [
+      "中央大",
+      12
+     ],
+     [
+      "上智大",
+      10
+     ],
+     [
+      "立教大",
+      10
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "山内 隆裕",
+   "title": "代表取締役 社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
   }
+ },
+ {
+  "code": "2432",
+  "name": "ディー・エヌ・エー",
+  "short": "DeNA",
+  "industry": "venture",
+  "description": "ゲーム・ライブ配信「Pococha」・プロ野球の横浜DeNAベイスターズ",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 147700,
+  "revenueApprox": false,
+  "netIncome": 19048,
+  "equity": 232622,
+  "marketCap": 236278,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 130868,
+    "netIncome": 30532
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 134914,
+    "netIncome": 8858
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 136733,
+    "netIncome": -28682
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 163997,
+    "netIncome": 24193
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 147700,
+    "netIncome": 19048
+   }
+  ],
+  "notes": [],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 1400,
+   "avgAge": 38.6,
+   "avgTenure": 7.1,
+   "avgSalary": 11179000,
+   "ageText": null,
+   "tenureText": "7年1か月",
+   "holding": false,
+   "note": "2025年3月期の事業成果に大きく寄与した社員へ特別報奨金を支給（2026年3月期）したことなどにより、前年比26.6%増",
+   "sub": null,
+   "edinetDoc": "S100YLDV"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "ディー・エヌ・エー",
+   "amount": 465000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2027年度新卒",
+   "course": "AIジェネラリストコース（標準年収600万円〜、基本給32.55万円〜を含む）",
+   "url": "https://student.dena.com/recruit/",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "AIスペシャリストコースは月給54万円〜"
+  },
+  "startPayNote": null,
+  "hiring": [],
+  "ceo": {
+   "name": "岡村 信悟",
+   "title": "代表取締役社長兼CEO",
+   "univ": "東京大学",
+   "detail": "東京大学大学院人文科学研究科修士課程修了（学部は未確認）",
+   "src": "ニュースイッチ（日刊工業新聞）",
+   "url": "https://newswitch.jp/p/25891",
+   "weak": true,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "4385",
+  "name": "メルカリ",
+  "short": "メルカリ",
+  "industry": "venture",
+  "description": "フリマアプリ「メルカリ」とスマホ決済「メルペイ」",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年6月期",
+  "revenueLabel": "売上収益",
+  "revenue": 229293,
+  "revenueApprox": false,
+  "netIncome": 35401,
+  "equity": 137069,
+  "marketCap": 512797,
+  "history": [
+   {
+    "fy": "2022年6月期",
+    "revenue": 147049,
+    "netIncome": -7570
+   },
+   {
+    "fy": "2023年6月期",
+    "revenue": 171967,
+    "netIncome": 13112
+   },
+   {
+    "fy": "2024年6月期",
+    "revenue": 187407,
+    "netIncome": 13461
+   },
+   {
+    "fy": "2025年6月期",
+    "revenue": 192633,
+    "netIncome": 26114
+   },
+   {
+    "fy": "2026年6月期",
+    "revenue": 229293,
+    "netIncome": 35401
+   }
+  ],
+  "notes": [
+   "6月決算のため、最新期は2026年6月期"
+  ],
+  "workforce": {
+   "asOf": "2026-06-30",
+   "employees": 1345,
+   "avgAge": 37.2,
+   "avgTenure": 4.5,
+   "avgSalary": 12325000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100Z2BE"
+  },
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "個別オファー制で一律の初任給はない（公式FAQ）",
+  "hiring": [],
+  "ceo": {
+   "name": "山田 進太郎",
+   "title": "取締役 兼 代表執行役 CEO（社長）",
+   "univ": "早稲田大学",
+   "detail": "早稲田大学卒業",
+   "src": "早稲田ウィークリー（早稲田大学）",
+   "url": "https://www.waseda.jp/inst/weekly/?p=83539",
+   "weak": null,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "6098",
+  "name": "リクルートホールディングス",
+  "short": "リクルート",
+  "industry": "venture",
+  "description": "求人検索「Indeed」・「SUUMO」・「ホットペッパー」など",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 3697351,
+  "revenueApprox": false,
+  "netIncome": 496911,
+  "equity": 1583321,
+  "marketCap": 23336239,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 2871705,
+    "netIncome": 296833
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 3429519,
+    "netIncome": 269799
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 3416492,
+    "netIncome": 353654
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 3557478,
+    "netIncome": 408503
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 3697351,
+    "netIncome": 496911
+   }
+  ],
+  "notes": [],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 130,
+   "avgAge": 40.2,
+   "avgTenure": 9.3,
+   "avgSalary": 11624997,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値。グループ全体の従業員は45,586人",
+   "sub": null,
+   "edinetDoc": "S100YDHL"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "リクルート",
+   "amount": 333334,
+   "amountMax": null,
+   "grad": null,
+   "year": "2026年度見込み",
+   "course": "ビジネスグロースコース（基準給258,065円＋グレード手当75,269円）",
+   "url": "https://www.recruit.co.jp/employment/students/business/",
+   "weak": null,
+   "fixedOvertime": null,
+   "check": "エンジニアコースも同額"
+  },
+  "startPayNote": null,
+  "hiring": [
+   {
+    "entity": "リクルート",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930361/",
+    "top": [
+     [
+      "慶應義塾大",
+      20
+     ],
+     [
+      "早稲田大",
+      18
+     ],
+     [
+      "筑波大",
+      9
+     ],
+     [
+      "東京大",
+      8
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "出木場 久征",
+   "title": "代表取締役社長 兼 CEO",
+   "univ": "早稲田大学",
+   "detail": "1999年早稲田大学卒業",
+   "src": "テレビ東京「カンブリア宮殿」",
+   "url": "https://www.tv-tokyo.co.jp/cambria/smp/backnumber/2022/0922/",
+   "weak": true,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "2413",
+  "name": "エムスリー",
+  "short": "エムスリー",
+  "industry": "venture",
+  "description": "医師向けサイト「m3.com」など医療×ネットのサービス",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上収益",
+  "revenue": 351363,
+  "revenueApprox": false,
+  "netIncome": 49100,
+  "equity": 408217,
+  "marketCap": 1118633,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 208159,
+    "netIncome": 63845
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 230818,
+    "netIncome": 49028
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 238883,
+    "netIncome": 45271
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 284900,
+    "netIncome": 40484
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 351363,
+    "netIncome": 49100
+   }
+  ],
+  "notes": [],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 750,
+   "avgAge": 34.8,
+   "avgTenure": 4.5,
+   "avgSalary": 9759000,
+   "ageText": null,
+   "tenureText": "4年6か月",
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100YJ25"
+  },
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "本体の初任給は公開情報で確認できず",
+  "hiring": [],
+  "ceo": {
+   "name": "谷村 格",
+   "title": "代表取締役",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "4194",
+  "name": "ビジョナル",
+  "short": "ビジョナル",
+  "industry": "venture",
+  "description": "転職サイト「ビズリーチ」を運営するグループの持株会社",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年7月期",
+  "revenueLabel": "売上高",
+  "revenue": 99300,
+  "revenueApprox": false,
+  "netIncome": 18566,
+  "equity": 86352,
+  "marketCap": 394930,
+  "history": [
+   {
+    "fy": "2022年7月期",
+    "revenue": 43954,
+    "netIncome": 5852
+   },
+   {
+    "fy": "2023年7月期",
+    "revenue": 56273,
+    "netIncome": 9928
+   },
+   {
+    "fy": "2024年7月期",
+    "revenue": 66146,
+    "netIncome": 12990
+   },
+   {
+    "fy": "2025年7月期",
+    "revenue": 80161,
+    "netIncome": 15951
+   },
+   {
+    "fy": "2026年7月期",
+    "revenue": 99300,
+    "netIncome": 18566
+   }
+  ],
+  "notes": [
+   "7月決算のため、最新期は2026年7月期"
+  ],
+  "workforce": {
+   "asOf": "2026-07-31",
+   "employees": 126,
+   "avgAge": 38.5,
+   "avgTenure": 5.3,
+   "avgSalary": 8951000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": true,
+   "note": "持株会社（提出会社）の数値",
+   "sub": {
+    "name": "ビズリーチ",
+    "employees": 2236,
+    "age": 32.2,
+    "tenure": 3.5,
+    "salary": 7230000
+   },
+   "edinetDoc": "S100Z8ZJ"
+  },
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "新卒の初任給は公開情報で確認できず",
+  "hiring": [],
+  "ceo": {
+   "name": "南 壮一郎",
+   "title": "代表取締役社長",
+   "univ": "タフツ大学（米国）",
+   "detail": "1999年米タフツ大学卒業",
+   "src": "ニュースイッチ（日刊工業新聞）・プレジデントオンライン",
+   "url": "https://newswitch.jp/p/2007",
+   "weak": null,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "3092",
+  "name": "ZOZO",
+  "short": "ZOZO",
+  "industry": "venture",
+  "description": "ファッション通販サイト「ZOZOTOWN」を運営",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年3月期",
+  "revenueLabel": "売上高",
+  "revenue": 228373,
+  "revenueApprox": false,
+  "netIncome": 47926,
+  "equity": 106789,
+  "marketCap": 1040914,
+  "history": [
+   {
+    "fy": "2022年3月期",
+    "revenue": 166199,
+    "netIncome": 34492
+   },
+   {
+    "fy": "2023年3月期",
+    "revenue": 183423,
+    "netIncome": 39526
+   },
+   {
+    "fy": "2024年3月期",
+    "revenue": 197016,
+    "netIncome": 44341
+   },
+   {
+    "fy": "2025年3月期",
+    "revenue": 213131,
+    "netIncome": 45346
+   },
+   {
+    "fy": "2026年3月期",
+    "revenue": 228373,
+    "netIncome": 47926
+   }
+  ],
+  "notes": [],
+  "workforce": {
+   "asOf": "2026-03-31",
+   "employees": 1662,
+   "avgAge": 34.7,
+   "avgTenure": 7.5,
+   "avgSalary": 8558000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100Y951"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "ZOZO",
+   "amount": 320000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2027年度卒",
+   "course": "ビジネス部門（基本給一律32万円＋職能給）",
+   "url": "https://corp.zozo.com/recruit/newgraduate/business-newgraduate2027/",
+   "weak": null,
+   "fixedOvertime": false,
+   "check": null
+  },
+  "startPayNote": null,
+  "hiring": [],
+  "ceo": {
+   "name": "澤田 宏太郎",
+   "title": "代表取締役社長兼CEO",
+   "univ": "早稲田大学",
+   "detail": "早稲田大学理工学部卒業",
+   "src": "ZOZO 公式リリース",
+   "url": "https://corp.zozo.com/news/files/pdf/Release_ZOZONEXT_20220831.pdf",
+   "weak": null,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "4443",
+  "name": "Sansan",
+  "short": "Sansan",
+  "industry": "venture",
+  "description": "名刺管理「Sansan」・請求書管理「Bill One」などの法人向けクラウド",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年5月期",
+  "revenueLabel": "売上高",
+  "revenue": 53761,
+  "revenueApprox": false,
+  "netIncome": 6778,
+  "equity": 21012,
+  "marketCap": 241850,
+  "history": [
+   {
+    "fy": "2022年5月期",
+    "revenue": 20420,
+    "netIncome": 857
+   },
+   {
+    "fy": "2023年5月期",
+    "revenue": 25510,
+    "netIncome": -141
+   },
+   {
+    "fy": "2024年5月期",
+    "revenue": 33878,
+    "netIncome": 952
+   },
+   {
+    "fy": "2025年5月期",
+    "revenue": 43202,
+    "netIncome": 423
+   },
+   {
+    "fy": "2026年5月期",
+    "revenue": 53761,
+    "netIncome": 6778
+   }
+  ],
+  "notes": [
+   "5月決算のため、最新期は2026年5月期"
+  ],
+  "workforce": {
+   "asOf": "2026-05-31",
+   "employees": 2077,
+   "avgAge": 32.1,
+   "avgTenure": 3.4,
+   "avgSalary": 8100000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": "平均年間給与は有報で百万円単位（8.1百万円）の表示",
+   "sub": null,
+   "edinetDoc": "S100YXFQ"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "Sansan",
+   "amount": 413000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2027年卒",
+   "course": "ビジネス職（基本給324,000円＋時間外手当89,000円）",
+   "url": "https://jp.corp-sansan.com/recruit/newgrads/jobs/business-2027/",
+   "weak": null,
+   "fixedOvertime": true,
+   "check": "時間外手当は月35時間相当分"
+  },
+  "startPayNote": null,
+  "hiring": [],
+  "ceo": {
+   "name": "寺田 親弘",
+   "title": "代表取締役社長",
+   "univ": "慶應義塾大学",
+   "detail": "1999年慶應義塾大学環境情報学部卒業",
+   "src": "慶應義塾 公式サイト",
+   "url": "https://www.keio.ac.jp/ja/about/public-relations/mita-hyoron/crossroads/201807-2/",
+   "weak": null,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "3994",
+  "name": "マネーフォワード",
+  "short": "マネーフォワード",
+  "industry": "venture",
+  "description": "家計簿アプリと、会計・経費精算などの法人向けクラウド",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2025年11月期",
+  "revenueLabel": "売上高",
+  "revenue": 50349,
+  "revenueApprox": false,
+  "netIncome": 1587,
+  "equity": 43844,
+  "marketCap": 350206,
+  "history": [
+   {
+    "fy": "2021年11月期",
+    "revenue": 15632,
+    "netIncome": -1482
+   },
+   {
+    "fy": "2022年11月期",
+    "revenue": 21477,
+    "netIncome": -9449
+   },
+   {
+    "fy": "2023年11月期",
+    "revenue": 30380,
+    "netIncome": -6315
+   },
+   {
+    "fy": "2024年11月期",
+    "revenue": 40363,
+    "netIncome": -6330
+   },
+   {
+    "fy": "2025年11月期",
+    "revenue": 50349,
+    "netIncome": 1587
+   }
+  ],
+  "notes": [
+   "11月決算のため、最新期は2025年11月期"
+  ],
+  "workforce": {
+   "asOf": "2025-11-30",
+   "employees": 1707,
+   "avgAge": 34.3,
+   "avgTenure": 2.9,
+   "avgSalary": 7233561,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": null,
+   "sub": null,
+   "edinetDoc": "S100XM4Q"
+  },
+  "jpEmployees": null,
+  "startPay": {
+   "entity": "マネーフォワード",
+   "amount": 375000,
+   "amountMax": null,
+   "grad": null,
+   "year": "2028年卒",
+   "course": "ビジネス職（固定残業代を含む）",
+   "url": "https://recruit.moneyforward.com/students/event/2028biz",
+   "weak": true,
+   "fixedOvertime": true,
+   "check": "2027年卒の掲載値は確認できず、2028年卒の募集要項の値"
+  },
+  "startPayNote": null,
+  "hiring": [],
+  "ceo": {
+   "name": "辻 庸介",
+   "title": "代表取締役社長グループCEO",
+   "univ": "京都大学",
+   "detail": "京都大学農学部卒業",
+   "src": "本人インタビュー（外資就活ドットコムほか）",
+   "url": "https://gaishishukatsu.com/archives/45603",
+   "weak": null,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "4478",
+  "name": "freee",
+  "short": "freee",
+  "industry": "venture",
+  "description": "会計・人事労務などの中小企業向けクラウド",
+  "listing": "listed",
+  "listingNote": null,
+  "fiscalPeriod": "2026年6月期",
+  "revenueLabel": "売上高",
+  "revenue": 42442,
+  "revenueApprox": false,
+  "netIncome": 1078,
+  "equity": 21187,
+  "marketCap": 179318,
+  "history": [
+   {
+    "fy": "2022年6月期",
+    "revenue": 14380,
+    "netIncome": -11609
+   },
+   {
+    "fy": "2023年6月期",
+    "revenue": 19220,
+    "netIncome": -12338
+   },
+   {
+    "fy": "2024年6月期",
+    "revenue": 25431,
+    "netIncome": -10151
+   },
+   {
+    "fy": "2025年6月期",
+    "revenue": 33271,
+    "netIncome": 1370
+   },
+   {
+    "fy": "2026年6月期",
+    "revenue": 42442,
+    "netIncome": 1078
+   }
+  ],
+  "notes": [
+   "6月決算のため、最新期は2026年6月期"
+  ],
+  "workforce": {
+   "asOf": "2026-06-30",
+   "employees": 2268,
+   "avgAge": 33.2,
+   "avgTenure": 2.2,
+   "avgSalary": 8056000,
+   "ageText": null,
+   "tenureText": null,
+   "holding": false,
+   "note": "当期から平均年間給与に株式報酬費用を含める算定方法に変更",
+   "sub": null,
+   "edinetDoc": "S100Z4LO"
+  },
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "新卒の初任給は公開情報で確認できず",
+  "hiring": [],
+  "ceo": {
+   "name": "佐々木 大輔",
+   "title": "代表取締役CEO",
+   "univ": "一橋大学",
+   "detail": "一橋大学商学部卒業",
+   "src": "一橋大学 講演案内ほか",
+   "url": "https://www.hit-u.ac.jp/extramural/bussi_con/8th/pdf/kouenkai0511.pdf",
+   "weak": null,
+   "note": null,
+   "basis": "有価証券報告書の役員の状況",
+   "basisUrl": null
+  }
+ },
+ {
+  "code": "mckinsey",
+  "name": "マッキンゼー・アンド・カンパニー",
+  "short": "マッキンゼー",
+  "industry": "consulting",
+  "description": "戦略コンサルティングファーム（米国発祥）",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（世界的なファームの日本オフィス）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "マッキンゼー・アンド・カンパニー",
+    "year": 2025,
+    "url": "https://univ-online.com/article/ranking/36523/",
+    "top": [
+     [
+      "東京大",
+      26
+     ],
+     [
+      "慶應義塾大",
+      12
+     ],
+     [
+      "早稲田大",
+      8
+     ],
+     [
+      "京都大",
+      3
+     ]
+    ],
+    "note": "大学通信の記事「新卒就職者の出身大学から測る企業入社難易度ランキング2025」で紹介された主な大学（判明した就職者51人のうち）",
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "岩谷 直幸",
+   "title": "日本代表（シニアパートナー）",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "報道（EE Times Japan、2026年10月）",
+   "basisUrl": "https://eetimes.itmedia.co.jp/ee/articles/2610/05/news030.html"
+  }
+ },
+ {
+  "code": "bcg",
+  "name": "ボストン コンサルティング グループ",
+  "short": "BCG",
+  "industry": "consulting",
+  "description": "戦略コンサルティングファーム（米国ボストン発祥）",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（世界的なファームの日本オフィス）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "ボストン コンサルティング グループ",
+    "year": 2025,
+    "url": "https://univ-online.com/article/ranking/36523/",
+    "top": [
+     [
+      "東京大",
+      20
+     ],
+     [
+      "京都大",
+      10
+     ],
+     [
+      "早稲田大",
+      8
+     ],
+     [
+      "慶應義塾大",
+      6
+     ],
+     [
+      "一橋大",
+      4
+     ]
+    ],
+    "note": "大学通信の記事「新卒就職者の出身大学から測る企業入社難易度ランキング2025」で紹介された主な大学（判明した就職者53人のうち）",
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "内田 有希昌／秋池 玲子",
+   "title": "日本共同代表",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "BCG公式サイトのリーダーシップ",
+   "basisUrl": "https://www.bcg.com/ja-jp/leadership"
+  }
+ },
+ {
+  "code": "bain",
+  "name": "ベイン・アンド・カンパニー",
+  "short": "ベイン",
+  "industry": "consulting",
+  "description": "戦略コンサルティングファーム（米国ボストン発祥）",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（世界的なファームの日本オフィス）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [],
+  "ceo": null
+ },
+ {
+  "code": "accenture",
+  "name": "アクセンチュア",
+  "short": "アクセンチュア",
+  "industry": "consulting",
+  "description": "戦略からIT・業務の運用まで手がける総合コンサルティング会社",
+  "listing": "unlisted",
+  "listingNote": "日本では非上場（ニューヨーク証券取引所に上場するAccenture plcの日本法人）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": {
+   "count": 31000,
+   "approx": true,
+   "asOf": "2026年9月1日",
+   "src": "アクセンチュア公式サイト（会社概要）",
+   "url": "https://www.accenture.com/jp-ja/about/company"
+  },
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "アクセンチュア",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930382/",
+    "top": [
+     [
+      "慶應義塾大",
+      101
+     ],
+     [
+      "早稲田大",
+      88
+     ],
+     [
+      "東京大",
+      45
+     ],
+     [
+      "明治大",
+      31
+     ],
+     [
+      "京都大",
+      29
+     ],
+     [
+      "上智大",
+      27
+     ],
+     [
+      "大阪大",
+      25
+     ],
+     [
+      "九州大",
+      19
+     ],
+     [
+      "中央大",
+      19
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "濱岡 大",
+   "title": "代表取締役社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "アクセンチュア公式サイトの会社概要",
+   "basisUrl": "https://www.accenture.com/jp-ja/about/company"
+  }
+ },
+ {
+  "code": "deloitte",
+  "name": "デロイト トーマツ コンサルティング",
+  "short": "デロイト",
+  "industry": "consulting",
+  "description": "デロイト トーマツ グループのコンサルティング会社",
+  "listing": "unlisted",
+  "listingNote": "非上場（デロイト トーマツ グループの一員）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "デロイト トーマツ コンサルティング",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930503/",
+    "top": [
+     [
+      "慶應義塾大",
+      45
+     ],
+     [
+      "早稲田大",
+      16
+     ],
+     [
+      "東京大",
+      11
+     ],
+     [
+      "明治大",
+      7
+     ],
+     [
+      "大阪大",
+      5
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": null
+ },
+ {
+  "code": "pwc",
+  "name": "PwCコンサルティング",
+  "short": "PwC",
+  "industry": "consulting",
+  "description": "PwC Japanグループのコンサルティング会社",
+  "listing": "unlisted",
+  "listingNote": "非上場（PwC Japanグループの一員）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "PwCコンサルティング",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930504/",
+    "top": [
+     [
+      "慶應義塾大",
+      43
+     ],
+     [
+      "早稲田大",
+      35
+     ],
+     [
+      "東京大",
+      30
+     ],
+     [
+      "上智大",
+      15
+     ],
+     [
+      "大阪大",
+      11
+     ],
+     [
+      "京都大",
+      10
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "樋崎 充",
+   "title": "代表執行役社長（2026年7月就任）",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "PwC Japanの発表（2026年6月）",
+   "basisUrl": "https://www.pwc.com/jp/ja/press-room/2026/consulting-new-executive.html"
+  }
+ },
+ {
+  "code": "ey",
+  "name": "EYストラテジー・アンド・コンサルティング",
+  "short": "EY",
+  "industry": "consulting",
+  "description": "EY Japanのコンサルティング会社",
+  "listing": "unlisted",
+  "listingNote": "非上場（EY Japanの一員）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "初任給は公開情報で確認できず",
+  "hiring": [
+   {
+    "entity": "EYストラテジー・アンド・コンサルティング",
+    "year": 2025,
+    "url": "https://univ-online.com/rank3/y2025/service/r1930522/",
+    "top": [
+     [
+      "慶應義塾大",
+      72
+     ],
+     [
+      "早稲田大",
+      46
+     ],
+     [
+      "東京大",
+      36
+     ],
+     [
+      "一橋大",
+      20
+     ],
+     [
+      "大阪大",
+      10
+     ]
+    ],
+    "note": null,
+    "univSide": null
+   }
+  ],
+  "ceo": {
+   "name": "近藤 聡",
+   "title": "代表取締役社長",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "EY Japanの発表（2026年9月）",
+   "basisUrl": "https://www.ey.com/ja_jp/newsroom/2026/09/ey-japan-news-release-2026-09-17"
+  }
+ },
+ {
+  "code": "kpmg",
+  "name": "KPMGコンサルティング",
+  "short": "KPMG",
+  "industry": "consulting",
+  "description": "KPMGジャパンのコンサルティング会社",
+  "listing": "unlisted",
+  "listingNote": "非上場（KPMGジャパンの一員）のため、有価証券報告書がなく平均年収などは非公開",
+  "fiscalPeriod": null,
+  "revenueLabel": null,
+  "revenue": null,
+  "revenueApprox": false,
+  "netIncome": null,
+  "equity": null,
+  "marketCap": null,
+  "history": [],
+  "notes": [],
+  "workforce": null,
+  "jpEmployees": null,
+  "startPay": null,
+  "startPayNote": "月給の初任給は非公表。新卒の標準年収は学士で約570万円（月50時間分の固定残業代を含む）と紹介されています（外資就活ドットコム、公式の募集要項にもとづく紹介）",
+  "hiring": [],
+  "ceo": null
  }
 ]

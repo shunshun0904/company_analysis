@@ -8,8 +8,11 @@ export default function IndustryCard({ id }: { id: IndustryId }) {
   const ind = t.industry;
   const list = companiesOf(id);
   const salMed = median(list.map((c) => c.avgSalary));
-  const startMed = median(list.map((c) => c.startingSalary).filter((x): x is number => x !== null));
-  const topSal = [...list].sort((a, b) => b.avgSalary - a.avgSalary)[0];
+  const startMed = median(list.map((c) => c.startingSalary));
+  const withSal = list.filter((c) => c.avgSalary !== null);
+  const topSal = [...withSal].sort((a, b) => (b.avgSalary as number) - (a.avgSalary as number))[0];
+  const noData = withSal.length === 0;
+  const partial = !noData && withSal.length < list.length;
   return (
     <Link
       href={`/industry/${id}/`}
@@ -33,36 +36,62 @@ export default function IndustryCard({ id }: { id: IndustryId }) {
         <span className="chip shrink-0">{t.count}社</span>
       </div>
 
-      <div className="relative mt-5 grid grid-cols-2 gap-3">
-        <div>
-          <p className="text-xs text-ink-3">平均年収（中央値）</p>
-          <p className="text-3xl font-bold tracking-tight">{fmtMan(salMed)}</p>
+      {noData ? (
+        <div className="relative mt-5">
+          <p className="text-xs text-ink-3">平均年収・業績</p>
+          <p className="text-3xl font-bold tracking-tight text-ink-2">非公開</p>
+          <p className="mt-2 text-xs leading-relaxed text-ink-3">
+            日本で上場していないため有価証券報告書がなく、年収・業績は公開されていません。大学別の就職者数・世間ウケ・代表者を比べられます。
+          </p>
+          <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="掲載している会社">
+            {list.map((c) => (
+              <li key={c.code} className="chip">
+                {c.short}
+              </li>
+            ))}
+          </ul>
         </div>
-        <div>
-          <p className="text-xs text-ink-3">大卒初任給（中央値）</p>
-          <p className="text-3xl font-bold tracking-tight">{fmtMonthly(startMed)}</p>
-        </div>
-      </div>
+      ) : (
+        <>
+          <div className="relative mt-5 grid grid-cols-2 gap-3">
+            <div>
+              <p className="text-xs text-ink-3">平均年収（中央値）</p>
+              <p className="text-3xl font-bold tracking-tight">{fmtMan(salMed)}</p>
+            </div>
+            <div>
+              <p className="text-xs text-ink-3">大卒初任給（中央値）</p>
+              <p className="text-3xl font-bold tracking-tight">{fmtMonthly(startMed)}</p>
+            </div>
+          </div>
+          {partial && <p className="relative mt-1 text-[11px] text-ink-3">年収は有価証券報告書がある{withSal.length}社の中央値（外資の日本法人などは非公開）</p>}
 
-      <dl className="relative mt-4 grid grid-cols-2 gap-3 text-sm">
-        <div>
-          <dt className="text-xs text-ink-3">業界規模（売上合計）</dt>
-          <dd className="font-semibold">{fmtYen(t.revenue)}</dd>
-        </div>
-        <div>
-          <dt className="text-xs text-ink-3">時価総額合計</dt>
-          <dd className="font-semibold">{fmtYen(t.marketCap)}</dd>
-        </div>
-      </dl>
+          <dl className="relative mt-4 grid grid-cols-2 gap-3 text-sm">
+            <div>
+              <dt className="text-xs text-ink-3">業界規模（売上合計）</dt>
+              <dd className="font-semibold">{fmtYen(t.revenue)}</dd>
+            </div>
+            <div>
+              <dt className="text-xs text-ink-3">時価総額合計</dt>
+              <dd className="font-semibold">{fmtYen(t.marketCap)}</dd>
+            </div>
+          </dl>
 
-      <div className="relative mt-4">
-        <p className="mb-1 text-[11px] text-ink-3">純利益合計の推移（直近5期）</p>
-        <Sparkline values={t.netIncomeHistory} color={ind.color} />
-      </div>
+          <div className="relative mt-4">
+            <p className="mb-1 text-[11px] text-ink-3">純利益合計の推移（直近5期）</p>
+            <Sparkline values={t.netIncomeHistory} color={ind.color} />
+          </div>
+        </>
+      )}
 
       <div className="relative mt-4 flex items-center justify-between border-t border-white/10 pt-3 text-xs">
         <span className="text-ink-3">
-          平均年収トップ <span className="ml-1 font-semibold text-ink">{topSal.short}</span>
+          {topSal ? (
+            <>
+              平均年収トップ <span className="ml-1 font-semibold text-ink">{topSal.short}</span>
+            </>
+          ) : (
+            <>就職者数・世間ウケ・代表者を比較</>
+          )}
         </span>
         <span className="text-ink-2 transition group-hover:translate-x-1 group-hover:text-ink">業界を見る →</span>
       </div>

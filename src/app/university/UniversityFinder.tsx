@@ -23,7 +23,7 @@ export default function UniversityFinder() {
   );
   const selected = params.get("u") && index.has(params.get("u")!) ? params.get("u")! : DEFAULT_UNIV;
   const rows = useMemo(() => [...(index.get(selected) ?? [])].sort((a, b) => b.count - a.count), [index, selected]);
-  const ceos = ALL.filter((c) => c.ceo.univ === selected);
+  const ceos = ALL.filter((c): c is typeof c & { ceo: NonNullable<typeof c.ceo> } => c.ceo?.univ === selected);
   const total = rows.reduce((s, r) => s + r.count, 0);
 
   return (
@@ -74,7 +74,7 @@ export default function UniversityFinder() {
         <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-lg font-bold">{selected}からの就職者数</h2>
           <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-2" aria-label="凡例">
-            {INDUSTRIES.map((i) => (
+            {INDUSTRIES.filter((i) => rows.some((r) => getCompany(r.code)?.industry === i.id)).map((i) => (
               <li key={i.id} className="flex items-center gap-1.5">
                 <IndustryDot color={i.color} />
                 {i.name}
@@ -99,7 +99,7 @@ export default function UniversityFinder() {
         )}
         <p className="mt-2 text-xs leading-relaxed text-ink-3">
           出典：大学通信「企業ごとの大学別就職者数」（2025年春）。各社のページで<strong className="font-semibold text-ink-2">上位に掲載された大学のみ</strong>を集計しているため、
-          ここに出ない会社にも就職者がいる可能性があります。グループ会社を含む場合があります。棒を押すと企業ページへ。
+          ここに出ない会社にも就職者がいる可能性があります。グループ会社を含む場合があります。マッキンゼー・BCGは同社の記事（入社難易度ランキング2025）で紹介された人数です。棒を押すと企業ページへ。
         </p>
       </div>
 

@@ -33,8 +33,8 @@ export default function IndustryRanking({ industry }: { industry: IndustryId }) 
       color: ind.color,
       sub:
         key === "startingSalary" && c.startPay
-          ? `${c.startPay.entity}／${c.startPay.year}`
-          : (key === "avgSalary" || key === "avgAge" || key === "avgTenure" || key === "employees") && c.workforce.holding
+          ? `${c.startPay.entity}／${c.startPay.year}${c.startPay.fixedOvertime ? "／固定残業代を含む" : ""}`
+          : (key === "avgSalary" || key === "avgAge" || key === "avgTenure" || key === "employees") && c.workforce?.holding
             ? "持株会社（提出会社）の数値"
             : undefined,
     }));
@@ -50,7 +50,7 @@ export default function IndustryRanking({ industry }: { industry: IndustryId }) 
       <RankingBars items={items} format={tab.format} ariaLabel={`${ind.name}の${tab.label}ランキング`} />
       <p className="mt-2 text-xs leading-relaxed text-ink-3">
         {tab.note ?? "棒をクリックすると企業ページへ移動します。"}
-        {missing.length > 0 && ` 掲載なし：${missing.map((c) => c.short).join("、")}（確認できず）。`}
+        {missing.length > 0 && ` 掲載なし：${missing.map((c) => c.short).join("、")}（非上場で非公開・確認できずなど。理由は企業ページに記載）。`}
         {industry === "finance" && key === "revenue" && " 金融は経常収益等を売上として扱っています。"}
       </p>
     </div>

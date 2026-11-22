@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { INDUSTRIES } from "@/lib/data";
 
 const NAV = [
-  { href: "/", label: "ホーム" },
   ...INDUSTRIES.map((i) => ({ href: `/industry/${i.id}/`, label: i.name, color: i.color, glow: i.glow })),
   { href: "/university/", label: "大学から探す" },
   { href: "/compare/", label: "企業を比較" },
@@ -34,7 +33,8 @@ export default function SiteHeader() {
             <span className="block text-[10px] tracking-[0.2em] text-ink-3">SHUKATSU DATA</span>
           </span>
         </Link>
-        <nav className="scrollbar-none -mr-4 flex flex-1 items-center gap-1 overflow-x-auto pr-4 sm:mr-0 sm:justify-end sm:pr-0" aria-label="メインメニュー">
+        {/* 右寄せは先頭要素の ml-auto で行う（justify-end だと、はみ出した時に左端がスクロールできず切れるため） */}
+        <nav className="scrollbar-none -mr-4 flex flex-1 items-center gap-0.5 overflow-x-auto pr-4 sm:mr-0 sm:pr-0" aria-label="メインメニュー">
           {NAV.map((n) => {
             const active = isActive(n.href);
             return (
@@ -42,7 +42,7 @@ export default function SiteHeader() {
                 key={n.href}
                 href={n.href}
                 aria-current={active ? "page" : undefined}
-                className={`flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] transition ${
+                className={`flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[13px] transition first:ml-auto ${
                   active ? "bg-white/10 text-ink" : "text-ink-2 hover:bg-white/5 hover:text-ink"
                 }`}
               >

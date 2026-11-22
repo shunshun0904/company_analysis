@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { ALL, INDUSTRIES, getCompany, getIndustry, radarScores, RADAR_AXES, type CompanyWithMetrics } from "@/lib/data";
+import { ALL, INDUSTRIES, codeShort, getCompany, getIndustry, hasRadar, isListed, radarScores, RADAR_AXES, type CompanyWithMetrics } from "@/lib/data";
 import { COMPARE_COLORS } from "@/lib/chartTheme";
 import { fmtYen, fmtPct, fmtMan, fmtMonthly, fmtAge, fmtYears, fmtPeople } from "@/lib/format";
 import RadarScore from "@/components/charts/RadarScore";
@@ -44,6 +44,8 @@ export default function CompareClient() {
   const picked = slots
     .map((code, i) => (code ? { c: getCompany(code)!, color: COMPARE_COLORS[i], slot: i } : null))
     .filter((x): x is { c: CompanyWithMetrics; color: string; slot: number } => !!x);
+  // 5軸スコアは業績がある会社だけ（外資コンサルなどは描かない）
+  const radarPicked = picked.filter((p) => hasRadar(p.c));
 
   return (
     <div>
@@ -76,7 +78,7 @@ export default function CompareClient() {
                   <optgroup key={ind.id} label={ind.name}>
                     {ALL.filter((x) => x.industry === ind.id).map((x) => (
                       <option key={x.code} value={x.code} disabled={slots.includes(x.code) && x.code !== code}>
-                        {x.short}（{x.code}）
+                        {x.short}（{codeShort(x)}）
                       </option>
                     ))}
                   </optgroup>
@@ -87,13 +89,13 @@ export default function CompareClient() {
                   <Link href={`/company/${c.code}/`} className="text-lg font-bold hover:underline">{c.name}</Link>
                   <p className="mt-0.5 flex items-center gap-1.5 text-xs text-ink-3">
                     <span className="h-1.5 w-1.5 rounded-full" style={{ background: ind.color }} aria-hidden />
-                    {ind.name} ／ {c.fiscalPeriod}
+                    {ind.name} ／ {c.fiscalPeriod ?? (isListed(c) ? "—" : c.listing === "delisted" ? "上場廃止" : "日本では非上場")}
                   </p>
                   <p className="mt-2 text-xs text-ink-3">平均年収 ／ 初任給</p>
                   <p className="text-2xl font-bold">
-                    {fmtMan(c.avgSalary)}
+                    {c.avgSalary === null ? <span className="text-ink-3">非公開</span> : fmtMan(c.avgSalary)}
                     <span className="mx-1 text-base text-ink-3">／</span>
-                    {fmtMonthly(c.startingSalary)}
+                    {c.startingSalary === null ? <span className="text-ink-3">{c.workforce === null ? "非公開" : "—"}</span> : fmtMonthly(c.startingSalary)}
                   </p>
                 </div>
               )}
@@ -109,22 +111,33 @@ export default function CompareClient() {
           <div className="mt-6 grid gap-4 lg:grid-cols-5">
             <div className="card p-4 sm:p-5 lg:col-span-2">
               <h2 className="text-lg font-bold">5軸スコア</h2>
-              <p className="mt-1 text-xs text-ink-2">掲載{ALL.length}社の中での位置（0〜100）。</p>
-              <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-2" aria-label="凡例">
-                {picked.map((p) => (
-                  <li key={p.c.code} className="flex items-center gap-1.5">
-                    <span className="h-0.5 w-4 rounded" style={{ background: p.color }} aria-hidden />
-                    {p.c.short}
-                  </li>
-                ))}
-              </ul>
-              <RadarScore
-                series={picked.map((p) => ({ name: p.c.short, color: p.color, values: radarScores(p.c) }))}
-                ariaLabel={`選んだ企業の5軸スコアの比較`}
-              />
-              <p className="text-[11px] leading-relaxed text-ink-3">
-                {RADAR_AXES.map((a) => `${a.name}＝${a.hint}`).join("／")}
-              </p>
+              <p className="mt-1 text-xs text-ink-2">業績・時価総額・成長率がそろう掲載{ALL.filter(hasRadar).length}社の中での位置（0〜100）。</p>
+              {radarPicked.length > 0 ? (
+                <>
+                  <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-2" aria-label="凡例">
+                    {radarPicked.map((p) => (
+                      <li key={p.c.code} className="flex items-center gap-1.5">
+                        <span className="h-0.5 w-4 rounded" style={{ background: p.color }} aria-hidden />
+                        {p.c.short}
+                      </li>
+                    ))}
+                  </ul>
+                  <RadarScore
+                    series={radarPicked.map((p) => ({ name: p.c.short, color: p.color, values: radarScores(p.c) }))}
+                    ariaLabel={`選んだ企業の5軸スコアの比較`}
+                  />
+                  <p className="text-[11px] leading-relaxed text-ink-3">
+                    {RADAR_AXES.map((a) => `${a.name}＝${a.hint}`).join("／")}
+                  </p>
+                </>
+              ) : (
+                <p className="mt-6 text-sm text-ink-3">選んだ会社は業績・時価総額がそろっていない（非上場・上場廃止など）ため、スコアを出せません。</p>
+              )}
+              {radarPicked.length > 0 && radarPicked.length < picked.length && (
+                <p className="mt-2 text-[11px] text-ink-3">
+                  {picked.filter((p) => !hasRadar(p.c)).map((p) => p.c.short).join("、")}は業績・時価総額がそろっていないため表示していません。
+                </p>
+              )}
             </div>
             <div className="card overflow-x-auto p-4 sm:p-5 lg:col-span-3">
               <h2 className="text-lg font-bold">数字で比べる</h2>
@@ -145,12 +158,12 @@ export default function CompareClient() {
                 </thead>
                 <tbody className="tabular">
                   {[
-                    { label: "平均年収", f: (c: CompanyWithMetrics) => fmtMan(c.avgSalary) + (c.workforce.holding ? "†" : ""), v: (c: CompanyWithMetrics) => c.avgSalary },
+                    { label: "平均年収", f: (c: CompanyWithMetrics) => (c.avgSalary === null ? "非公開" : fmtMan(c.avgSalary) + (c.workforce?.holding ? "†" : "")), v: (c: CompanyWithMetrics) => c.avgSalary },
                     { label: "大卒初任給", f: (c: CompanyWithMetrics) => fmtMonthly(c.startingSalary), v: (c: CompanyWithMetrics) => c.startingSalary },
                     { label: "平均年齢", f: (c: CompanyWithMetrics) => fmtAge(c.avgAge), v: () => null },
                     { label: "平均勤続年数", f: (c: CompanyWithMetrics) => fmtYears(c.avgTenure), v: (c: CompanyWithMetrics) => c.avgTenure },
                     { label: "従業員数（単体）", f: (c: CompanyWithMetrics) => fmtPeople(c.employees), v: (c: CompanyWithMetrics) => c.employees },
-                    { label: "社長の出身大学", f: (c: CompanyWithMetrics) => c.ceo.univ ?? "未確認", v: () => null },
+                    { label: "社長の出身大学", f: (c: CompanyWithMetrics) => c.ceo?.univ ?? "未確認", v: () => null },
                     ...[...SURVEYS, ...MOTE_SURVEYS].map((s) => ({
                       label: `${s.group === "mote" ? "モテ" : "世間ウケ"}：${s.tab}`,
                       f: (c: CompanyWithMetrics) => {
@@ -185,7 +198,10 @@ export default function CompareClient() {
                   })}
                 </tbody>
               </table>
-              <p className="mt-2 text-[11px] text-ink-3">★は選んだ企業の中で最も大きい値。†は持株会社（本社の少人数の社員）の値。決算期：{picked.map((p) => `${p.c.short} ${p.c.fiscalPeriod}`).join("、")}</p>
+              <p className="mt-2 text-[11px] text-ink-3">
+                ★は選んだ企業の中で最も大きい値。†は持株会社（本社の少人数の社員）の値。「非公開」「—」は、日本で上場していない・公開されていないなどで値がないことを表します。決算期：
+                {picked.map((p) => `${p.c.short} ${p.c.fiscalPeriod ?? "なし"}`).join("、")}
+              </p>
             </div>
           </div>
 
@@ -193,13 +209,22 @@ export default function CompareClient() {
             {METRICS.map((m) => (
               <div key={String(m.key)} className="card p-4">
                 <h3 className="text-sm font-bold">{m.label}</h3>
-                <RankingBars
-                  items={picked.map((p) => ({ code: p.c.code, label: p.c.short, value: p.c[m.key] as number, color: p.color }))}
-                  format={m.format}
-                  ariaLabel={`選んだ企業の${m.label}`}
-                  rowHeight={44}
-                  compact
-                />
+                {picked.some((p) => p.c[m.key] !== null) ? (
+                  <RankingBars
+                    items={picked
+                      .filter((p) => p.c[m.key] !== null)
+                      .map((p) => ({ code: p.c.code, label: p.c.short, value: p.c[m.key] as number, color: p.color }))}
+                    format={m.format}
+                    ariaLabel={`選んだ企業の${m.label}`}
+                    rowHeight={44}
+                    compact
+                  />
+                ) : (
+                  <p className="py-6 text-sm text-ink-3">選んだ会社はいずれも値がありません。</p>
+                )}
+                {picked.some((p) => p.c[m.key] === null) && picked.some((p) => p.c[m.key] !== null) && (
+                  <p className="text-[11px] text-ink-3">値なし：{picked.filter((p) => p.c[m.key] === null).map((p) => p.c.short).join("、")}</p>
+                )}
               </div>
             ))}
           </div>

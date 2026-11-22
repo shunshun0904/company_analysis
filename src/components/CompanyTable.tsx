@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { companiesOf, getIndustry, type CompanyWithMetrics, type IndustryId } from "@/lib/data";
+import { companiesOf, getIndustry, isListed, type CompanyWithMetrics, type IndustryId } from "@/lib/data";
 import { fmtYen, fmtPct, fmtMan, fmtMonthly, fmtAge, fmtYears, fmtPeople } from "@/lib/format";
 
 type Col = { key: keyof CompanyWithMetrics; label: string; fmt: (c: CompanyWithMetrics) => string; asc?: boolean };
 
 const COLS: Col[] = [
-  { key: "avgSalary", label: "平均年収", fmt: (c) => fmtMan(c.avgSalary) + (c.workforce.holding ? "†" : "") },
+  { key: "avgSalary", label: "平均年収", fmt: (c) => fmtMan(c.avgSalary) + (c.workforce?.holding ? "†" : "") },
   { key: "startingSalary", label: "初任給", fmt: (c) => fmtMonthly(c.startingSalary) },
   { key: "avgAge", label: "平均年齢", fmt: (c) => fmtAge(c.avgAge), asc: true },
   { key: "avgTenure", label: "勤続年数", fmt: (c) => fmtYears(c.avgTenure) },
@@ -18,6 +18,20 @@ const COLS: Col[] = [
   { key: "netIncome", label: "純利益", fmt: (c) => fmtYen(c.netIncome) },
   { key: "roe", label: "ROE", fmt: (c) => fmtPct(c.roe) },
 ];
+
+const WORKFORCE_KEYS: (keyof CompanyWithMetrics)[] = ["avgSalary", "avgAge", "avgTenure", "employees"];
+const BIZ_KEYS: (keyof CompanyWithMetrics)[] = ["revenue", "netIncome", "roe"];
+
+/**
+ * 値が無いときの表示。
+ * 非公開＝日本で上場しておらず有価証券報告書がない／上場廃止・非上場＝株価がない／—＝確認できなかった・載せていない
+ */
+function emptyLabel(c: CompanyWithMetrics, key: keyof CompanyWithMetrics): string {
+  if (key === "marketCap") return c.listing === "delisted" ? "上場廃止" : c.listing === "unlisted" ? "非上場" : "—";
+  if (WORKFORCE_KEYS.includes(key) && c.workforce === null) return "非公開";
+  if (BIZ_KEYS.includes(key) && c.listing === "unlisted") return "非公開";
+  return "—";
+}
 
 /** チャートと同じ数値を表でも読めるようにする（並べ替え可） */
 export default function CompanyTable({ industry }: { industry: IndustryId }) {
@@ -71,8 +85,13 @@ export default function CompanyTable({ industry }: { industry: IndustryId }) {
                 </Link>
               </th>
               {COLS.map((col) => (
-                <td key={String(col.key)} className={`whitespace-nowrap py-2.5 pl-3 text-right ${col.key === "netIncome" && c.netIncome < 0 ? "text-[#e66767]" : "text-ink-2"}`}>
-                  {col.fmt(c)}
+                <td
+                  key={String(col.key)}
+                  className={`whitespace-nowrap py-2.5 pl-3 text-right ${
+                    c[col.key] === null ? "text-ink-3" : col.key === "netIncome" && (c.netIncome ?? 0) < 0 ? "text-[#e66767]" : "text-ink-2"
+                  }`}
+                >
+                  {c[col.key] === null ? emptyLabel(c, col.key) : col.fmt(c)}
                 </td>
               ))}
             </tr>
@@ -81,7 +100,9 @@ export default function CompanyTable({ industry }: { industry: IndustryId }) {
       </table>
       <p className="mt-2 text-xs leading-relaxed text-ink-3">
         平均年収・平均年齢・勤続年数・従業員数は有価証券報告書の提出会社（単体）の値。
-        {list.some((c) => c.workforce.holding) && " † は持株会社の値（本社の少人数の社員）。"}
+        {list.some((c) => c.workforce?.holding) && " † は持株会社の値（本社の少人数の社員）。"}
+        {list.some((c) => !isListed(c)) && " 「非公開」は日本で上場しておらず有価証券報告書がないため公開されていない値、「上場廃止」「非上場」は株価がないため時価総額がないことを表します。"}
+        {" 「—」は確認できなかった値、またはこのサイトで載せていない値です。"}
         {list.some((c) => c.revenueApprox) && " * は億円単位の報道値から換算。"}
         初任給は就職サイトの掲載値で、年度・コースは企業ページに記載。
       </p>

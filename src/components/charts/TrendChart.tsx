@@ -15,16 +15,22 @@ type Key = "revenue" | "netIncome";
  */
 export default function TrendChart({ industry, height = 380 }: { industry: IndustryId; height?: number }) {
   const ind = getIndustry(industry)!;
-  const list = useMemo(() => [...companiesOf(industry)].sort((a, b) => b.marketCap - a.marketCap), [industry]);
+  // 推移を描けるのは2期以上の業績がある会社だけ（上場廃止・非上場の会社は除く）
+  const list = useMemo(
+    () => [...companiesOf(industry)].filter((c) => c.history.length >= 2).sort((a, b) => (b.marketCap ?? -1) - (a.marketCap ?? -1)),
+    [industry],
+  );
+  const excluded = companiesOf(industry).filter((c) => c.history.length < 2);
   const isFinance = industry === "finance";
   const [key, setKey] = useState<Key>(isFinance ? "netIncome" : "revenue");
-  const [focus, setFocus] = useState(list[0].code);
+  const [focus, setFocus] = useState(list[0]?.code ?? "");
 
   const marchLabels = useMemo(() => {
-    const ref = list.find((c) => c.fiscalPeriod.includes("3月期")) ?? list[0];
-    return ref.history.map((h) => h.fy.replace(/^20(\d\d)年(\d+)月期$/, "$1/$2期"));
+    const ref = list.find((c) => c.fiscalPeriod?.includes("3月期")) ?? list[0];
+    return (ref?.history ?? []).map((h) => h.fy.replace(/^20(\d\d)年(\d+)月期$/, "$1/$2期"));
   }, [list]);
-  const hasDec = list.some((c) => c.fiscalPeriod.includes("12月期"));
+  // 3月決算でない会社（決算月の違いは揃えず、各社の直近5期を同じ並び順で表示する）
+  const offCycle = list.filter((c) => c.fiscalPeriod && !c.fiscalPeriod.includes("3月期"));
 
   const option = useMemo(() => {
     const series = list.map((c) => {
@@ -97,6 +103,8 @@ export default function TrendChart({ industry, height = 380 }: { industry: Indus
     };
   }, [list, key, focus, ind, marchLabels]);
 
+  if (list.length === 0) return <p className="text-sm text-ink-3">業績の推移を比べられる会社がありません。</p>;
+
   return (
     <div>
       <div className="mb-3 flex flex-col gap-2">
@@ -133,7 +141,9 @@ export default function TrendChart({ industry, height = 380 }: { industry: Indus
       <EChart option={option} height={height} ariaLabel={`${ind.name}各社の${key === "revenue" ? "売上" : "純利益"}の5期推移`} />
       <p className="mt-2 text-xs text-ink-3">
         {isFinance ? "金融は純利益（親会社株主に帰属）の推移を表示しています。" : "連結・各社の直近5期。"}
-        {hasDec && " 楽天グループは12月決算のため、同じ並び順の各期（2021年12月期〜2025年12月期）を表示しています。"}
+        {offCycle.length > 0 &&
+          ` 3月決算でない会社（${offCycle.map((c) => `${c.short}＝${c.fiscalPeriod!.replace(/^\d+年(\d+)月期$/, "$1月")}`).join("、")}）は、各社の直近5期を同じ並び順で表示しています。`}
+        {excluded.length > 0 && ` 業績の推移がない会社（${excluded.map((c) => c.short).join("、")}）は表示していません。`}
       </p>
     </div>
   );

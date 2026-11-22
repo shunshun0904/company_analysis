@@ -13,7 +13,7 @@ export interface RadarSeries {
   reference?: boolean;
 }
 
-/** 5軸の偏差値的スコア（全掲載企業29社の中でのパーセンタイル。100＝最上位） */
+/** 5軸の偏差値的スコア（5軸がそろう掲載企業の中でのパーセンタイル。100＝最上位） */
 export default function RadarScore({ series, height = 360, ariaLabel }: { series: RadarSeries[]; height?: number; ariaLabel: string }) {
   const option = useMemo(
     () => ({

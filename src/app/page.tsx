@@ -14,9 +14,10 @@ import PopularityRanking from "@/components/charts/PopularityRanking";
 import { LATEST_BY_GENDER, LATEST_MARRY, MOTE_SURVEYS } from "@/lib/popularity";
 
 export default function Home() {
-  const topSalary = [...ALL].sort((a, b) => b.avgSalary - a.avgSalary)[0];
+  const withPay = ALL.filter((c) => c.avgSalary !== null && c.avgAge !== null);
+  const topSalary = [...withPay].sort((a, b) => b.avgSalary! - a.avgSalary!)[0];
   const topStart = [...ALL].filter((c) => c.startingSalary !== null).sort((a, b) => b.startingSalary! - a.startingSalary!)[0];
-  const youngest = [...ALL].sort((a, b) => a.avgAge - b.avgAge)[0];
+  const youngest = [...withPay].sort((a, b) => a.avgAge! - b.avgAge!)[0];
   const topUniv = univTotals()[0];
 
   return (
@@ -26,7 +27,7 @@ export default function Home() {
         <div className="rise">
           <span className="chip" style={{ whiteSpace: "normal" }}>
             <span className="pulse-glow h-1.5 w-1.5 shrink-0 rounded-full bg-[#3dff8a]" aria-hidden />
-            就活生のための企業研究 ／ 有価証券報告書（2026年3月期）・2027年卒の採用情報ほか
+            就活生のための企業研究 ／ 有価証券報告書（最新期）・2027年卒の採用情報ほか
           </span>
           <h1 className="mt-5 text-[40px] font-black leading-[1.1] tracking-tight sm:text-6xl">
             数字で見る、
@@ -35,7 +36,7 @@ export default function Home() {
           </h1>
           <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-ink-2">
             年収・初任給・大学別の就職者数・社長の出身大学・世間ウケ・モテる会社から、業績や会社の規模まで。
-            IT・通信、総合商社、自動車、メガバンク・金融の{ALL.length}社を、グラフでひと目で比べられます。
+            {INDUSTRIES.map((i) => i.name).join("、")}の{ALL.length}社を、グラフでひと目で比べられます。
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
@@ -67,11 +68,11 @@ export default function Home() {
           >
             <p className="text-xs text-ink-3">平均年収が最も高い会社 ／ {topSalary.short}</p>
             <p className="mt-1 flex items-baseline gap-2">
-              <CountUp value={Math.round(topSalary.avgSalary / 10000)} className="text-6xl font-bold tracking-tight sm:text-7xl" />
+              <CountUp value={Math.round(topSalary.avgSalary! / 10000)} className="text-6xl font-bold tracking-tight sm:text-7xl" />
               <span className="text-xl text-ink-2">万円</span>
             </p>
             <p className="mt-2 text-xs text-ink-3">
-              平均年齢{fmtAge(topSalary.avgAge)}・有価証券報告書（{topSalary.fiscalPeriod}）の平均年間給与（賞与込み）
+              平均年齢{fmtAge(topSalary.avgAge)}・有価証券報告書の平均年間給与（賞与込み）。外資コンサルなど非上場の会社は非公開のため含みません
             </p>
           </Link>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-1">
@@ -79,7 +80,7 @@ export default function Home() {
               <p className="text-xs text-ink-3">初任給トップ</p>
               <p className="mt-1 text-2xl font-bold">{fmtMonthly(topStart.startingSalary)}</p>
               <p className="text-[11px] text-ink-3">
-                {topStart.short}（{topStart.startPay ? topStart.startPay.year : ""}）
+                {topStart.short}（{topStart.startPay ? topStart.startPay.year : ""}・コースや手当の条件は企業ページ）
               </p>
             </Link>
             <Link href={`/company/${youngest.code}/`} className="card block p-4 hover:border-white/20">
@@ -214,8 +215,8 @@ export default function Home() {
 
       {/* INDUSTRIES */}
       <section id="industries" className="scroll-mt-24 py-8">
-        <SectionTitle eyebrow="INDUSTRIES" title="4つの業界をのぞいてみる" lead="カードを選ぶと、業界内の年収・初任給・大学別の就職者数・業績を詳しく見られます。" />
-        <div className="grid gap-4 sm:grid-cols-2">
+        <SectionTitle eyebrow="INDUSTRIES" title={`${INDUSTRIES.length}つの業界をのぞいてみる`} lead="カードを選ぶと、業界内の年収・初任給・大学別の就職者数・業績を詳しく見られます。" />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {INDUSTRIES.map((i) => (
             <IndustryCard key={i.id} id={i.id} />
           ))}
@@ -227,7 +228,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="SALARY × AGE"
           title="平均年収 × 平均年齢マップ"
-          lead="右に行くほど社員の平均年齢が高く、上に行くほど平均年収が高い会社です。同じ年収でも、左にある会社ほど若い社員が多いことになります。金融の持株会社は本社の少人数の社員の値なので注意。"
+          lead="右に行くほど社員の平均年齢が高く、上に行くほど平均年収が高い会社です。同じ年収でも、左にある会社ほど若い社員が多いことになります。金融の持株会社は本社の少人数の社員の値なので注意。外資の日本法人・外資コンサルは非公開のため載っていません。"
         />
         <div className="card p-4 sm:p-5">
           <SalaryAgeScatter />
@@ -239,7 +240,7 @@ export default function Home() {
         <SectionTitle
           eyebrow="COMPANY SCALE"
           title="会社の規模マップ"
-          lead="タイルの大きさが時価総額（株式市場がつけた会社の値段）。会社の大きさ・注目度の目安です。タイルを押すと企業ページへ。"
+          lead="タイルの大きさが時価総額（株式市場がつけた会社の値段）。会社の大きさ・注目度の目安です。タイルを押すと企業ページへ。日本で上場している会社のみです。"
         />
         <div className="card p-3 sm:p-4">
           <MarketCapTreemap height={480} />
@@ -249,7 +250,7 @@ export default function Home() {
           <IndustryScale metric="netIncome" title="純利益合計" />
           <IndustryScale metric="marketCap" title="時価総額合計" />
         </div>
-        <p className="mt-2 text-xs text-ink-3">※ 業界規模は掲載企業の合計で、業界全体の市場規模ではありません。金融の売上は経常収益等の合計です。</p>
+        <p className="mt-2 text-xs text-ink-3">※ 業界規模は掲載企業のうち業績がわかる会社の合計で、業界全体の市場規模ではありません。金融の売上は経常収益等の合計です。外資コンサルは業績が公開されていないため含みません。</p>
       </section>
 
       {/* CTA */}

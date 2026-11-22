@@ -19,7 +19,7 @@ export default function CeoUnivChart() {
           const d = data[p.dataIndex];
           return `<b>${d.univ}</b>（${d.codes.length}人）<br/>` + d.codes.map((code) => {
             const c = getCompany(code)!;
-            return `${c.short}：${c.ceo.name}${c.ceo.weak ? "（報道1件）" : ""}`;
+            return `${c.short}：${c.ceo!.name}${c.ceo!.weak ? "（報道1件）" : ""}`;
           }).join("<br/>");
         },
       },
@@ -52,13 +52,13 @@ export default function CeoUnivChart() {
     }),
     [data],
   );
-  const unknown = ALL.filter((c) => !c.ceo.univ);
+  const unknown = ALL.filter((c) => !c.ceo?.univ);
   return (
     <div>
       <EChart option={option} height={data.length * 30 + 20} ariaLabel="掲載企業の社長の出身大学（確認できた人のみ）" />
       <p className="mt-2 text-xs leading-relaxed text-ink-3">
-        確認できた{ALL.length - unknown.length}人の内訳（大学院のみ判明の人は大学院の大学で集計）。
-        未確認：{unknown.map((c) => c.short).join("、")}。
+        確認できた{ALL.length - unknown.length}人の内訳（大学院のみ判明の人は大学院の大学で集計）。外資の日本法人・外資コンサルは日本の代表者。
+        未確認（{unknown.length}社）：{unknown.map((c) => c.short).join("、")}。
       </p>
     </div>
   );

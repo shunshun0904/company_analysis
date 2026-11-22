@@ -10,10 +10,11 @@ type Key = "revenue" | "marketCap" | "netIncome";
 export default function IndustryScale({ metric, title }: { metric: Key; title: string }) {
   const items = useMemo(
     () =>
-      INDUSTRIES.map((i) => {
-        const t = industryTotals(i.id);
-        return { code: i.id, label: i.name, value: t[metric], color: i.color };
-      }).sort((a, b) => b.value - a.value),
+      INDUSTRIES.map((i) => industryTotals(i.id))
+        // 業績・時価総額がない業界（外資コンサル）は除く
+        .filter((t) => t.finCount > 0 && t[metric] !== 0)
+        .map((t) => ({ code: t.industry.id, label: t.industry.name, value: t[metric], color: t.industry.color }))
+        .sort((a, b) => b.value - a.value),
     [metric],
   );
   return (

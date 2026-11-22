@@ -17,6 +17,7 @@ interface Row {
   rank: number;
   value: number;
   color: string;
+  industry?: string;
   reference?: boolean;
 }
 
@@ -38,6 +39,7 @@ export default function PopularityRanking({ surveys = SURVEYS, accent = "#ff7fb5
       rank: r.rank,
       value: r.value,
       color: getIndustry(c.industry)!.color,
+      industry: c.industry,
     }));
     const ref: Row = {
       code: null,
@@ -121,7 +123,7 @@ export default function PopularityRanking({ surveys = SURVEYS, accent = "#ff7fb5
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <MetricTabs tabs={surveys.map((x) => ({ key: x.id, label: x.tab }))} value={id} onChange={setId} accent={accent} label="調査の切り替え" />
         <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-2" aria-label="凡例">
-          {INDUSTRIES.map((i) => (
+          {INDUSTRIES.filter((i) => rows.some((r) => r.industry === i.id)).map((i) => (
             <li key={i.id} className="flex items-center gap-1.5">
               <IndustryDot color={i.color} />
               {i.name}

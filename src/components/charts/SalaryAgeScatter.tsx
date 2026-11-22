@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import EChart from "@/components/EChart";
-import { ALL, INDUSTRIES, companiesOf, getIndustry, type IndustryId } from "@/lib/data";
+import { ALL, INDUSTRIES, companiesOf, getIndustry, type CompanyWithMetrics, type IndustryId } from "@/lib/data";
 import { T, tooltipBase, axisLabel, splitLine, hexA, dot } from "@/lib/chartTheme";
 import { fmtMan, fmtAge, fmtYears, fmtPeople } from "@/lib/format";
 
@@ -23,9 +23,11 @@ export default function SalaryAgeScatter({ industry, height = 440 }: { industry?
   }, []);
 
   const option = useMemo(() => {
-    const inds = industry ? INDUSTRIES.filter((i) => i.id === industry) : INDUSTRIES;
-    const pool = industry ? companiesOf(industry) : ALL;
-    const maxEmp = Math.max(...pool.map((c) => c.employees));
+    // 有価証券報告書の値がある会社だけ（外資の日本法人・外資コンサルは非公開のため除く）
+    const has = (c: CompanyWithMetrics) => c.workforce !== null;
+    const inds = (industry ? INDUSTRIES.filter((i) => i.id === industry) : INDUSTRIES).filter((i) => companiesOf(i.id).some(has));
+    const pool = (industry ? companiesOf(industry) : ALL).filter(has);
+    const maxEmp = Math.max(1, ...pool.map((c) => c.employees ?? 0));
     return {
       grid: { left: 8, right: 28, top: industry ? 30 : 48, bottom: 30, containLabel: true },
       legend: industry
@@ -44,7 +46,7 @@ export default function SalaryAgeScatter({ industry, height = 440 }: { industry?
         trigger: "item",
         formatter: (p: { data: { code: string }; color: string }) => {
           const c = ALL.find((x) => x.code === p.data.code)!;
-          const w = c.workforce;
+          const w = c.workforce!;
           return `${dot(getIndustry(c.industry)!.color)}<b>${c.short}</b>${w.holding ? `<br/><span style="color:${T.textMuted}">持株会社（提出会社）の数値</span>` : ""}<br/>平均年収 ${fmtMan(w.avgSalary)}<br/>平均年齢 ${fmtAge(w.avgAge)}<br/>平均勤続 ${fmtYears(w.avgTenure)}<br/>従業員数 ${fmtPeople(w.employees)}`;
         },
       },
@@ -71,12 +73,14 @@ export default function SalaryAgeScatter({ industry, height = 440 }: { industry?
       series: inds.map((ind) => ({
         name: ind.name,
         type: "scatter",
-        data: companiesOf(ind.id).map((c) => ({
-          name: c.short,
-          code: c.code,
-          value: [c.avgAge, Math.round(c.avgSalary / 10000)],
-          symbolSize: industry ? (narrow ? 10 : 14) + Math.sqrt(c.employees / maxEmp) * (narrow ? 34 : 50) : 13,
-        })),
+        data: companiesOf(ind.id)
+          .filter(has)
+          .map((c) => ({
+            name: c.short,
+            code: c.code,
+            value: [c.avgAge, Math.round((c.avgSalary as number) / 10000)],
+            symbolSize: industry ? (narrow ? 10 : 14) + Math.sqrt((c.employees as number) / maxEmp) * (narrow ? 34 : 50) : 13,
+          })),
         itemStyle: {
           color: industry ? hexA(ind.color, 0.72) : ind.color,
           borderColor: T.surface,

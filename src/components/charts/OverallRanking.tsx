@@ -7,8 +7,8 @@ import { ALL, ASCENDING, INDUSTRIES, getIndustry, type MetricKey } from "@/lib/d
 import { IndustryDot } from "@/components/ui";
 
 const TABS: { key: MetricKey; label: string; format: ValueFormat; note: string }[] = [
-  { key: "avgSalary", label: "平均年収", format: "man", note: "有価証券報告書の平均年間給与（提出会社）。金融の持株会社は本社社員の値で、銀行など主要子会社より高めに出ます。" },
-  { key: "startingSalary", label: "初任給", format: "monthly", note: "就職サイト掲載の大卒初任給（月給）。年度・コース・手当の含み方が会社ごとに異なります。" },
+  { key: "avgSalary", label: "平均年収", format: "man", note: "有価証券報告書の平均年間給与（提出会社）。金融の持株会社は本社社員の値で、銀行など主要子会社より高めに出ます。日本で上場していない外資の日本法人・外資コンサルは非公開のため含みません。" },
+  { key: "startingSalary", label: "初任給", format: "monthly", note: "就職サイト・各社の採用ページに掲載された大卒初任給（月給）。年度・コース・固定残業代など手当の含み方が会社ごとに異なるため、企業ページで条件を確認してください。" },
   { key: "avgAge", label: "平均年齢が若い", format: "age", note: "有価証券報告書の平均年齢（提出会社）。" },
   { key: "marketCap", label: "時価総額", format: "yen", note: "株式市場がつけた会社の値段（会社の規模・注目度の目安）。" },
   { key: "netIncome", label: "純利益", format: "yen", note: "直近期の純利益（親会社株主に帰属）。" },
@@ -24,16 +24,19 @@ export default function OverallRanking({ top = 10 }: { top?: number }) {
       .slice(0, top)
       .map((c) => {
         const ind = getIndustry(c.industry)!;
-        return { code: c.code, label: c.short, value: c[key] as number, color: ind.color, sub: ind.name };
+        const extra = key === "startingSalary" && c.startPay ? `・${c.startPay.year}${c.startPay.fixedOvertime ? "・固定残業代を含む" : ""}` : "";
+        return { code: c.code, label: c.short, value: c[key] as number, color: ind.color, sub: ind.name + extra, industry: c.industry };
       });
   }, [key, top]);
+  // 凡例は、いま表示している棒に出てくる業界だけ
+  const shown = INDUSTRIES.filter((i) => items.some((it) => it.industry === i.id));
 
   return (
     <div>
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <MetricTabs tabs={TABS} value={key} onChange={setKey} label="ランキングの指標" />
         <ul className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-2" aria-label="凡例">
-          {INDUSTRIES.map((i) => (
+          {shown.map((i) => (
             <li key={i.id} className="flex items-center gap-1.5">
               <IndustryDot color={i.color} />
               {i.name}

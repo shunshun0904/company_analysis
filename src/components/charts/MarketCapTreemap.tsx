@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { useRouter } from "next/navigation";
 import EChart from "@/components/EChart";
-import { ALL, INDUSTRIES, companiesOf, type IndustryId } from "@/lib/data";
+import { ALL, INDUSTRIES, companiesOf, type CompanyWithMetrics, type IndustryId } from "@/lib/data";
 import { T, tooltipBase, dot } from "@/lib/chartTheme";
 import { fmtYen } from "@/lib/format";
 
@@ -23,19 +23,21 @@ interface Node {
  */
 export default function MarketCapTreemap({ industry, height = 460 }: { industry?: IndustryId; height?: number }) {
   const router = useRouter();
+  // 時価総額があるのは日本で上場している会社だけ
+  const listedOf = (id: IndustryId) => companiesOf(id).filter((c): c is CompanyWithMetrics & { marketCap: number } => c.marketCap !== null);
   const total = useMemo(
-    () => (industry ? companiesOf(industry) : ALL).reduce((s, c) => s + c.marketCap, 0),
+    () => (industry ? companiesOf(industry) : ALL).reduce((s, c) => s + (c.marketCap ?? 0), 0),
     [industry],
   );
 
   const option = useMemo(() => {
-    const inds = industry ? INDUSTRIES.filter((i) => i.id === industry) : INDUSTRIES;
+    const inds = (industry ? INDUSTRIES.filter((i) => i.id === industry) : INDUSTRIES).filter((i) => listedOf(i.id).length > 0);
     const data: Node[] = inds.map((ind) => ({
       name: ind.name,
-      value: companiesOf(ind.id).reduce((s, c) => s + c.marketCap, 0),
+      value: listedOf(ind.id).reduce((s, c) => s + c.marketCap, 0),
       color: ind.color,
       itemStyle: { color: ind.color },
-      children: companiesOf(ind.id)
+      children: listedOf(ind.id)
         .sort((a, b) => b.marketCap - a.marketCap)
         .map((c) => ({
           name: c.short,

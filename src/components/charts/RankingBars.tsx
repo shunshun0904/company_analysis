@@ -29,6 +29,8 @@ export interface BarItem {
   sub?: string;
   /** 強調しない（同業比較で自社以外をグレーにする時など） */
   dim?: boolean;
+  /** 凡例の絞り込み用（全業界ランキング） */
+  industry?: string;
 }
 
 export function formatValue(v: number, f: ValueFormat): string {
@@ -85,6 +87,8 @@ export default function RankingBars({
         axisLabel: {
           show: !compact,
           ...axisLabel,
+          // スマホ幅で目盛りの文字が重なる時は間引く
+          hideOverlap: true,
           formatter: (v: number) => SCALE[format].tick(v),
         },
         axisLine: { show: hasNeg, lineStyle: { color: T.axis } },

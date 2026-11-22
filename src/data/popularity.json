@@ -145,7 +145,7 @@
       "url": "https://www.riskmonster.co.jp/study/research/pdf/201912.pdf",
       "pressUrl": "https://www.atpress.ne.jp/news/201756",
       "depth": "トップ100",
-      "note": "合コンをテーマにした大規模な調査はこれが最新です（2019年調査）。社名は調査当時のもので、「楽天」は現在の楽天グループ、「ヤフー」は2023年の合併で現在のLINEヤフーです。"
+      "note": "合コンをテーマにした大規模な調査はこれが最新です（2019年調査）。社名は調査当時のもので、「楽天」は現在の楽天グループ、「ヤフー」は2023年の合併で現在のLINEヤフーです。公表資料の表では、46〜60位付近で順位の数字と同率の社数が合わない箇所があります（表に書かれた順位をそのまま掲載）。"
     }
   ],
   "latestMarry": {
@@ -189,7 +189,7 @@
         "rank": 6,
         "name": "グーグル（Google）",
         "value": 4.3,
-        "code": null
+        "code": "google"
       },
       {
         "rank": 7,
@@ -211,25 +211,21 @@
         "rank": 82,
         "value": 1.0,
         "entity": "日本電信電話（NTT）",
-        "group": "グループのNTTドコモは16位、NTTデータは17位"
+        "group": "グループのNTTドコモは16位（NTTデータは別掲）"
       },
       "parent": {
         "rank": 39,
         "value": 1.6,
         "entity": "日本電信電話（NTT）",
-        "group": "グループのNTTドコモは16位、NTTデータは62位"
-      },
-      "bun": {
-        "rank": null,
-        "group": "グループのNTTデータは78位"
+        "group": "グループのNTTドコモは16位（NTTデータは別掲）"
       },
       "ri": {
         "rank": null,
-        "group": "グループのNTTデータは11位、NTTドコモは45位"
+        "group": "グループのNTTドコモは45位（NTTデータは別掲）"
       },
       "male": {
         "rank": null,
-        "group": "グループのNTTドコモとNTTデータはともに10位"
+        "group": "グループのNTTドコモは10位（NTTデータは別掲）"
       },
       "gokon": {
         "rank": null,
@@ -671,6 +667,145 @@
       "gokon": {
         "rank": 81,
         "value": 0.7
+      }
+    },
+    "9613": {
+      "marry": {
+        "rank": 17,
+        "value": 2.8
+      },
+      "parent": {
+        "rank": 62,
+        "value": 1.3
+      },
+      "bun": {
+        "rank": 78,
+        "value": 132
+      },
+      "ri": {
+        "rank": 11,
+        "value": 173
+      },
+      "male": {
+        "rank": 10,
+        "value": 4.0
+      }
+    },
+    "6501": {
+      "marry": {
+        "rank": 19,
+        "value": 2.5
+      },
+      "parent": {
+        "rank": 34,
+        "value": 1.9
+      },
+      "ri": {
+        "rank": 35,
+        "value": 78
+      },
+      "female": {
+        "rank": 12,
+        "value": 3.8
+      },
+      "gokon": {
+        "rank": 81,
+        "value": 0.7
+      }
+    },
+    "6098": {
+      "marry": {
+        "rank": 59,
+        "value": 1.4,
+        "entity": "リクルート"
+      }
+    },
+    "9719": {
+      "ri": {
+        "rank": 47,
+        "value": 64
+      }
+    },
+    "4751": {
+      "ri": {
+        "rank": null,
+        "group": "グループのCygamesは62位"
+      }
+    },
+    "google": {
+      "marry": {
+        "rank": 5,
+        "value": 5.3,
+        "entity": "グーグル（Google）"
+      },
+      "parent": {
+        "rank": 6,
+        "value": 3.9,
+        "entity": "グーグル（Google）"
+      },
+      "female": {
+        "rank": 8,
+        "value": 5.8,
+        "entity": "グーグル（Google）"
+      },
+      "male": {
+        "rank": 5,
+        "value": 4.8,
+        "entity": "グーグル（Google）"
+      },
+      "gokon": {
+        "rank": 5,
+        "value": 4.7,
+        "entity": "グーグル（Google）"
+      }
+    },
+    "amazon": {
+      "marry": {
+        "rank": 22,
+        "value": 2.1,
+        "entity": "アマゾン"
+      },
+      "parent": {
+        "rank": 52,
+        "value": 1.4,
+        "entity": "アマゾン"
+      },
+      "female": {
+        "rank": 12,
+        "value": 3.8,
+        "entity": "アマゾン"
+      },
+      "gokon": {
+        "rank": 22,
+        "value": 1.8,
+        "entity": "アマゾン"
+      }
+    },
+    "microsoft": {
+      "marry": {
+        "rank": 39,
+        "value": 1.6
+      },
+      "parent": {
+        "rank": 39,
+        "value": 1.6
+      },
+      "gokon": {
+        "rank": 51,
+        "value": 1.1
+      }
+    },
+    "ibm": {
+      "parent": {
+        "rank": 89,
+        "value": 0.9,
+        "entity": "日本ＩＢＭ"
+      }
+    },
+    "mckinsey": {
+      "gokon": {
+        "rank": 46,
+        "value": 1.2
       }
     }
   },
