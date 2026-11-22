@@ -341,7 +341,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ code: 
         <SectionTitle
           eyebrow="REPUTATION"
           title="世間ウケ"
-          lead="結婚相手・親世代・就活生が選んだ人気ランキングでの順位です。公開されている調査の順位をそのまま載せています。"
+          lead="結婚相手・親世代・就活生（全国の大学生と、東大・京大生）が選んだ人気ランキングでの順位です。公開されている調査の順位をそのまま載せています。"
           accent={ind.color}
         />
         <SurveyTiles code={c.code} surveys={SURVEYS} color={ind.color}>

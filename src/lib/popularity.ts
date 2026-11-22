@@ -2,7 +2,7 @@ import popJson from "@/data/popularity.json";
 import { ALL, type CompanyWithMetrics } from "@/lib/data";
 
 /** 世間ウケ・モテる会社：公開されている調査の順位（サイト独自の点数ではない） */
-export type SurveyId = "marry" | "parent" | "bun" | "ri" | "female" | "male" | "gokon";
+export type SurveyId = "marry" | "parent" | "bun" | "ri" | "todai" | "female" | "male" | "gokon";
 
 export interface Survey {
   id: SurveyId;
@@ -20,9 +20,9 @@ export interface Survey {
   period: string;
   target: string;
   sample: string;
-  /** rate=回答率（％）、votes=得票数 */
-  metric: "rate" | "votes";
-  top1: { name: string; value: number };
+  /** rate=回答率（％）、votes=得票数、rank=順位のみ公表（数値は非公表） */
+  metric: "rate" | "votes" | "rank";
+  top1: { name: string; value: number | null };
   url: string;
   pressUrl: string;
   note: string | null;
@@ -85,13 +85,15 @@ export function popOf(code: string): Record<SurveyId, PopRank> {
 }
 
 export function fmtPopValue(v: number, metric: Survey["metric"]): string {
+  if (metric === "rank") return "";
   return metric === "rate" ? `${v.toFixed(1)}%` : `${v.toLocaleString("ja-JP")}票`;
 }
 
-/** 調査ごとに、上位100位に入った掲載企業を順位順に */
+/** 調査ごとに、公表された順位に入った掲載企業を順位順に（順位のみの調査は値なし） */
 export function surveyRanking(id: SurveyId, list: CompanyWithMetrics[] = ALL) {
+  const rankOnly = getSurvey(id).metric === "rank";
   return list
     .map((c) => ({ c, r: popOf(c.code)[id] }))
-    .filter((x): x is { c: CompanyWithMetrics; r: PopRank & { rank: number; value: number } } => x.r.rank !== null && x.r.value !== undefined)
+    .filter((x): x is { c: CompanyWithMetrics; r: PopRank & { rank: number } } => x.r.rank !== null && (rankOnly || x.r.value !== undefined))
     .sort((a, b) => a.r.rank - b.r.rank || a.c.code.localeCompare(b.c.code));
 }

@@ -100,12 +100,12 @@
   "ceo": {
    "name": "島田 明",
    "title": "代表取締役社長 社長執行役員 CEO",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "一橋大学",
+   "detail": "1981年一橋大学商学部卒業",
+   "src": "ダイヤモンド・オンライン・東洋経済オンライン",
+   "url": "https://diamond.jp/articles/-/320283",
+   "weak": false,
+   "note": null,
    "basis": "有価証券報告書の役員の状況",
    "basisUrl": null
   },
@@ -578,12 +578,12 @@
   "ceo": {
    "name": "時田 隆仁",
    "title": "代表取締役社長 CEO",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "東京工業大学",
+   "detail": "1988年東京工業大学工学部卒業（現・東京科学大学）",
+   "src": "ニュースイッチ（日刊工業新聞）",
+   "url": "https://newswitch.jp/p/17077",
+   "weak": true,
+   "note": null,
    "basis": "有価証券報告書の役員の状況",
    "basisUrl": null
   },
@@ -1217,12 +1217,12 @@
   "ceo": {
    "name": "鈴木 正範",
    "title": "代表取締役社長",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "東北大学",
+   "detail": "東北大学法学部卒業",
+   "src": "NTT DATA 公式サイト（役員紹介）",
+   "url": "https://www.nttdata.com/global/en/about-us/leaders/masanori-suzuki",
+   "weak": false,
+   "note": null,
    "basis": "株式会社NTTデータの役員人事の発表（2026年6月）",
    "basisUrl": null
   }
@@ -1313,12 +1313,12 @@
   "ceo": {
    "name": "奥山 真司",
    "title": "日本法人 代表",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "早稲田大学",
+   "detail": "1989年早稲田大学教育学部卒業",
+   "src": "@DIME・AdverTimes（宣伝会議）",
+   "url": "https://dime.jp/genre/1294263",
+   "weak": false,
+   "note": null,
    "basis": "報道（Web担当者Forum、2026年2月）",
    "basisUrl": "https://webtan.impress.co.jp/n/2026/02/17/52167"
   }
@@ -1348,12 +1348,12 @@
   "ceo": {
    "name": "津坂 美樹",
    "title": "代表取締役 社長",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "ハーバード大学（米国）",
+   "detail": "ハーバード大学政治学部・東アジア研究学部卒業、同大学でMBA取得",
+   "src": "日本マイクロソフトの発表（2023年2月）",
+   "url": "https://news.microsoft.com/ja-jp/2023/02/01/230201-microsoft-japan-announces-new-management-structure/",
+   "weak": false,
+   "note": null,
    "basis": "日本マイクロソフト公式サイトの会社概要",
    "basisUrl": "https://news.microsoft.com/ja-jp/cp/outline/"
   }
@@ -1418,7 +1418,7 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "note": "ジャスパー・チャン氏は1986年香港大学卒業（東洋経済オンライン）。島谷氏の出身大学は公開情報で確認できず",
    "basis": "報道（ネットショップ担当者フォーラム、2026年6月）",
    "basisUrl": "https://netshop.impress.co.jp/n/2026/06/05/16191"
   }
@@ -1762,12 +1762,12 @@
   "ceo": {
    "name": "石井 敬太",
    "title": "代表取締役社長 COO",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "高校は早稲田大学高等学院と報道されているが、大学は確認できず",
+   "univ": "早稲田大学",
+   "detail": "1983年早稲田大学法学部卒業",
+   "src": "ニュースイッチ（日刊工業新聞）",
+   "url": "https://newswitch.jp/p/25522",
+   "weak": true,
+   "note": null,
    "basis": "有価証券報告書の役員の状況",
    "basisUrl": null
   },
@@ -2427,12 +2427,12 @@
   "ceo": {
    "name": "三部 敏宏",
    "title": "取締役 代表執行役社長",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "広島大学",
+   "detail": "1987年広島大学大学院工学研究科修了（学部は未確認）",
+   "src": "東洋経済オンラインほか",
+   "url": "https://toyokeizai.net/articles/photo/455602",
+   "weak": false,
+   "note": null,
    "basis": "有価証券報告書の役員の状況",
    "basisUrl": null
   },
@@ -3097,12 +3097,12 @@
   "ceo": {
    "name": "半沢 淳一",
    "title": "取締役 代表執行役社長 グループCEO",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "東京大学",
+   "detail": "1988年東京大学経済学部卒業",
+   "src": "ニュースイッチ（日刊工業新聞）・文春オンラインほか",
+   "url": "https://newswitch.jp/p/25250",
+   "weak": false,
+   "note": null,
    "basis": "有価証券報告書の役員の状況",
    "basisUrl": null
   },
@@ -4155,12 +4155,12 @@
   "ceo": {
    "name": "山内 隆裕",
    "title": "代表取締役 社長",
-   "univ": null,
-   "detail": null,
-   "src": null,
-   "url": null,
-   "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "univ": "立教大学",
+   "detail": "2006年立教大学経済学部卒業",
+   "src": "サイバーエージェント公式サイト",
+   "url": "https://www.cyberagent.co.jp/way/list/detail/id=32915",
+   "weak": false,
+   "note": null,
    "basis": "有価証券報告書の役員の状況",
    "basisUrl": null
   }
@@ -5040,7 +5040,7 @@
    "src": null,
    "url": null,
    "weak": null,
-   "note": "出身大学は公開情報で確認できず",
+   "note": "内田氏は東京大学文学部卒業（BCG公式プロフィール・著者紹介）、秋池氏は1990年早稲田大学大学院理工学研究科修士課程修了（早稲田大学公式サイト）",
    "basis": "BCG公式サイトのリーダーシップ",
    "basisUrl": "https://www.bcg.com/ja-jp/leadership"
   }
@@ -5067,7 +5067,18 @@
   "startPay": null,
   "startPayNote": "初任給は公開情報で確認できず",
   "hiring": [],
-  "ceo": null
+  "ceo": {
+   "name": "デイヴ・マイケルズ",
+   "title": "日本代表（マネージング・パートナー）",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "ベイン公式サイト（2022年1月就任の発表・プロフィール）",
+   "basisUrl": "https://www.bain.com/our-team/david-michels/"
+  }
  },
  {
   "code": "accenture",
@@ -5158,10 +5169,10 @@
  },
  {
   "code": "deloitte",
-  "name": "デロイト トーマツ コンサルティング",
+  "name": "デロイト トーマツ（旧デロイト トーマツ コンサルティング）",
   "short": "デロイト",
   "industry": "consulting",
-  "description": "デロイト トーマツ グループのコンサルティング会社",
+  "description": "デロイト トーマツ グループのコンサルティング会社。2025年12月にリスク・財務アドバイザリーの2社と合併し「合同会社デロイト トーマツ」に",
   "listing": "unlisted",
   "listingNote": "非上場（デロイト トーマツ グループの一員）のため、有価証券報告書がなく平均年収などは非公開",
   "fiscalPeriod": null,
@@ -5174,7 +5185,13 @@
   "history": [],
   "notes": [],
   "workforce": null,
-  "jpEmployees": null,
+  "jpEmployees": {
+   "count": 11000,
+   "approx": true,
+   "asOf": "2025年12月1日",
+   "src": "デロイト トーマツ グループの発表（合併で発足した時点の人数）",
+   "url": "https://www.deloitte.com/jp/ja/about/press-room/nr20260427.html"
+  },
   "startPay": null,
   "startPayNote": "初任給は公開情報で確認できず",
   "hiring": [
@@ -5204,11 +5221,22 @@
       5
      ]
     ],
-    "note": null,
+    "note": "合併前（2025年春）の就職者数",
     "univSide": null
    }
   ],
-  "ceo": null
+  "ceo": {
+   "name": "鹿山 真吾",
+   "title": "代表執行役（2026年6月就任予定と発表）",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "デロイト トーマツ グループの発表（2026年4月）",
+   "basisUrl": "https://www.deloitte.com/jp/ja/about/press-room/nr20260427.html"
+  }
  },
  {
   "code": "pwc",
@@ -5362,10 +5390,27 @@
   "history": [],
   "notes": [],
   "workforce": null,
-  "jpEmployees": null,
+  "jpEmployees": {
+   "count": 2447,
+   "approx": false,
+   "asOf": "2026年7月1日",
+   "src": "KPMGコンサルティング 会社概要",
+   "url": "https://kpmg.com/jp/ja/about/kc/corporate-profile.html"
+  },
   "startPay": null,
   "startPayNote": "月給の初任給は非公表。新卒の標準年収は学士で約570万円（月50時間分の固定残業代を含む）と紹介されています（外資就活ドットコム、公式の募集要項にもとづく紹介）",
   "hiring": [],
-  "ceo": null
+  "ceo": {
+   "name": "関 穣／田口 篤／佐渡 誠",
+   "title": "代表取締役（3人。佐渡氏は2026年7月就任）",
+   "univ": null,
+   "detail": null,
+   "src": null,
+   "url": null,
+   "weak": null,
+   "note": "出身大学は公開情報で確認できず",
+   "basis": "KPMGコンサルティングの会社概要・発表（2026年）",
+   "basisUrl": "https://kpmg.com/jp/ja/about/kc/corporate-profile.html"
+  }
  }
 ]

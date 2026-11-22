@@ -175,7 +175,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
         <SectionTitle
           eyebrow="REPUTATION"
           title="世間ウケ"
-          lead="結婚相手（20〜59歳）・親世代・就活生（文系／理系）が選んだ人気ランキングでの順位。公開されている調査の順位で、サイト独自の点数ではありません。"
+          lead="結婚相手（20〜59歳）・親世代・就活生（文系／理系、東大・京大生）が選んだ人気ランキングでの順位。公開されている調査の順位で、サイト独自の点数ではありません。"
           accent={ind.color}
         />
         <div className="card p-4 sm:p-5">

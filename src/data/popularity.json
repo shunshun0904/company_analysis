@@ -85,6 +85,27 @@
       "depth": "トップ100"
     },
     {
+      "id": "todai",
+      "group": "reputation",
+      "tab": "東大・京大生",
+      "who": "東大・京大の就活生（27卒）",
+      "name": "ワンキャリア 就活人気企業ランキング【東大・京大編】（27卒本選考期速報）",
+      "publisher": "ワンキャリア",
+      "published": "2026年3月23日",
+      "period": "2026年2月6日時点",
+      "target": "就活サイト「ワンキャリア」のユーザーで、東京大学・京都大学に在籍する2027年3月卒業見込みの大学3年生・大学院1年生（企業ページの「お気に入り数」を集計）",
+      "sample": "4,019人",
+      "metric": "rank",
+      "top1": {
+        "name": "ボストン コンサルティング グループ",
+        "value": null
+      },
+      "url": "https://www.onecareer.jp/articles/5248",
+      "pressUrl": "https://onecareer.co.jp/news/press-release/260323/",
+      "note": "就活サイト「ワンキャリア」で企業ページを「お気に入り」に登録した数の順位で、お気に入り数そのものは公表されていません。東大・京大の学生に限った調査です。最新の28卒春期速報（2026年6月29日発表、東大・京大生2,299人）でも、1位はボストン コンサルティング グループ、2位は野村総合研究所でした。",
+      "depth": "上位50社"
+    },
+    {
       "id": "female",
       "group": "mote",
       "tab": "女性が選んだ",
@@ -230,6 +251,10 @@
       "gokon": {
         "rank": null,
         "group": "グループのNTTドコモは13位"
+      },
+      "todai": {
+        "rank": null,
+        "group": "グループのNTT DATAは25位（NTTデータのページに掲載）"
       }
     },
     "9433": {
@@ -318,6 +343,9 @@
         "rank": 91,
         "value": 0.6,
         "entity": "野村総研"
+      },
+      "todai": {
+        "rank": 2
       }
     },
     "4755": {
@@ -345,6 +373,10 @@
         "rank": 9,
         "value": 3.4,
         "entity": "楽天（調査当時）"
+      },
+      "todai": {
+        "rank": 45,
+        "entity": "楽天グループ"
       }
     },
     "8058": {
@@ -367,6 +399,9 @@
       "gokon": {
         "rank": 40,
         "value": 1.4
+      },
+      "todai": {
+        "rank": 4
       }
     },
     "8031": {
@@ -389,6 +424,9 @@
       "gokon": {
         "rank": 91,
         "value": 0.6
+      },
+      "todai": {
+        "rank": 18
       }
     },
     "8001": {
@@ -419,6 +457,9 @@
       "gokon": {
         "rank": 11,
         "value": 2.9
+      },
+      "todai": {
+        "rank": 23
       }
     },
     "8053": {
@@ -433,6 +474,9 @@
       "gokon": {
         "rank": 55,
         "value": 1.0
+      },
+      "todai": {
+        "rank": 14
       }
     },
     "8002": {
@@ -443,6 +487,9 @@
       "parent": {
         "rank": 34,
         "value": 1.9
+      },
+      "todai": {
+        "rank": 17
       }
     },
     "7203": {
@@ -541,6 +588,12 @@
         "value": 1.7,
         "entity": "三菱UFJ銀行",
         "sub": true
+      },
+      "todai": {
+        "rank": 34,
+        "entity": "三菱UFJ銀行",
+        "sub": true,
+        "group": "三菱UFJ信託銀行は36位、三菱UFJリサーチ&コンサルティングは37位"
       }
     },
     "8316": {
@@ -571,6 +624,11 @@
       "gokon": {
         "rank": 61,
         "value": 0.9,
+        "entity": "三井住友銀行",
+        "sub": true
+      },
+      "todai": {
+        "rank": 7,
         "entity": "三井住友銀行",
         "sub": true
       }
@@ -635,6 +693,11 @@
         "value": 0.8,
         "entity": "野村證券",
         "sub": true
+      },
+      "todai": {
+        "rank": 44,
+        "entity": "野村證券",
+        "sub": true
       }
     },
     "8766": {
@@ -660,6 +723,11 @@
         "rank": 71,
         "value": 0.8,
         "entity": "東京海上日動",
+        "sub": true
+      },
+      "todai": {
+        "rank": 22,
+        "entity": "東京海上日動火災保険",
         "sub": true
       }
     },
@@ -689,6 +757,10 @@
       "male": {
         "rank": 10,
         "value": 4.0
+      },
+      "todai": {
+        "rank": 25,
+        "entity": "NTT DATA（NTTデータグループ・NTTデータ・NTT DATA, Inc.）"
       }
     },
     "6501": {
@@ -711,6 +783,9 @@
       "gokon": {
         "rank": 81,
         "value": 0.7
+      },
+      "todai": {
+        "rank": 37
       }
     },
     "6098": {
@@ -730,6 +805,9 @@
       "ri": {
         "rank": null,
         "group": "グループのCygamesは62位"
+      },
+      "todai": {
+        "rank": 12
       }
     },
     "google": {
@@ -806,6 +884,40 @@
       "gokon": {
         "rank": 46,
         "value": 1.2
+      },
+      "todai": {
+        "rank": 27
+      }
+    },
+    "bcg": {
+      "todai": {
+        "rank": 1
+      }
+    },
+    "kpmg": {
+      "todai": {
+        "rank": 3
+      }
+    },
+    "accenture": {
+      "todai": {
+        "rank": 6
+      }
+    },
+    "deloitte": {
+      "todai": {
+        "rank": 14,
+        "entity": "デロイト トーマツ／コンサルティング"
+      }
+    },
+    "pwc": {
+      "todai": {
+        "rank": 16
+      }
+    },
+    "ey": {
+      "todai": {
+        "rank": 28
       }
     }
   },

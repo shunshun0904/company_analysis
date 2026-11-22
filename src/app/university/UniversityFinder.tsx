@@ -14,14 +14,15 @@ export default function UniversityFinder() {
   const router = useRouter();
   const pathname = usePathname();
   const index = useMemo(() => univIndex(), []);
-  const options = useMemo(
-    () =>
-      [...index.entries()]
-        .map(([u, rows]) => ({ u, total: rows.reduce((s, r) => s + r.count, 0), n: new Set(rows.map((r) => r.code)).size }))
-        .sort((a, b) => b.n - a.n || b.total - a.total),
-    [index],
-  );
-  const selected = params.get("u") && index.has(params.get("u")!) ? params.get("u")! : DEFAULT_UNIV;
+  // 社長の出身大学だけに出てくる大学も選べるようにする（企業ページの出身大学リンクから来ても表示できるように）
+  const ceoUnivs = useMemo(() => new Set(ALL.map((c) => c.ceo?.univ).filter((u): u is string => !!u)), []);
+  const options = useMemo(() => {
+    const fromHiring = [...index.entries()].map(([u, rows]) => ({ u, total: rows.reduce((s, r) => s + r.count, 0), n: new Set(rows.map((r) => r.code)).size }));
+    const onlyCeo = [...ceoUnivs].filter((u) => !index.has(u)).map((u) => ({ u, total: 0, n: 0 }));
+    return [...fromHiring.sort((a, b) => b.n - a.n || b.total - a.total), ...onlyCeo.sort((a, b) => a.u.localeCompare(b.u, "ja"))];
+  }, [index, ceoUnivs]);
+  const requested = params.get("u");
+  const selected = requested && (index.has(requested) || ceoUnivs.has(requested)) ? requested : DEFAULT_UNIV;
   const rows = useMemo(() => [...(index.get(selected) ?? [])].sort((a, b) => b.count - a.count), [index, selected]);
   const ceos = ALL.filter((c): c is typeof c & { ceo: NonNullable<typeof c.ceo> } => c.ceo?.univ === selected);
   const total = rows.reduce((s, r) => s + r.count, 0);
@@ -30,7 +31,7 @@ export default function UniversityFinder() {
     <div>
       <div className="card card-accent p-4 sm:p-5" style={{ ["--accent" as string]: "#5ce1ff", ["--glow" as string]: "#5ce1ff" }}>
         <label htmlFor="univ" className="text-xs text-ink-3">
-          あなたの大学を選んでください（掲載{ALL.length}社の大学別データに登場する{options.length}校）
+          あなたの大学を選んでください（掲載{ALL.length}社の大学別データ・社長の出身大学に登場する{options.length}校）
         </label>
         <select
           id="univ"
@@ -40,7 +41,7 @@ export default function UniversityFinder() {
         >
           {options.map((o) => (
             <option key={o.u} value={o.u}>
-              {o.u}（{o.n}社に登場）
+              {o.u}（{o.n > 0 ? `${o.n}社に登場` : "社長の出身大学"}）
             </option>
           ))}
         </select>

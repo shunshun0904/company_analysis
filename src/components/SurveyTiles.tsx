@@ -17,7 +17,7 @@ export default function SurveyTiles({
   const pop = popOf(code);
   return (
     <>
-      <div className={`grid grid-cols-2 gap-3 ${surveys.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
+      <div className={`grid grid-cols-2 gap-3 ${surveys.length === 3 ? "lg:grid-cols-3" : surveys.length === 5 ? "sm:grid-cols-3 lg:grid-cols-5" : "lg:grid-cols-4"}`}>
         {surveys.map((s) => {
           const r = pop[s.id];
           return (
@@ -25,9 +25,11 @@ export default function SurveyTiles({
               <p className="text-xs text-ink-3">{s.tab}</p>
               <p className={`mt-1 text-2xl font-bold ${r.rank === null ? "text-ink-3" : ""}`}>{r.rank !== null ? `${r.rank}位` : "圏外"}</p>
               <p className="mt-0.5 text-[11px] leading-relaxed text-ink-3">
-                {r.rank !== null && r.value !== undefined
-                  ? `${s.metric === "rate" ? "回答率" : "得票"} ${fmtPopValue(r.value, s.metric)}`
-                  : `公表された${s.depth}に入っていない`}
+                {r.rank === null
+                  ? `公表された${s.depth}に入っていない`
+                  : r.value !== undefined && s.metric !== "rank"
+                    ? `${s.metric === "rate" ? "回答率" : "得票"} ${fmtPopValue(r.value, s.metric)}`
+                    : "お気に入り登録数の順位（数は非公表）"}
                 {r.entity && <span className="block">調査上の名前：{r.entity}</span>}
                 {r.group && <span className="block">{r.group}</span>}
               </p>

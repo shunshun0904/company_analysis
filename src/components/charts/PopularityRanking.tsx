@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import EChart from "@/components/EChart";
@@ -30,6 +31,7 @@ export default function PopularityRanking({ surveys = SURVEYS, accent = "#ff7fb5
   const [id, setId] = useState<SurveyId>(surveys[0].id);
   const s = getSurvey(id);
 
+  const rankOnly = s.metric === "rank";
   const rows = useMemo<Row[]>(() => {
     const list = surveyRanking(id).map(({ c, r }) => ({
       code: c.code,
@@ -37,10 +39,12 @@ export default function PopularityRanking({ surveys = SURVEYS, accent = "#ff7fb5
       name: c.name,
       entity: r.entity,
       rank: r.rank,
-      value: r.value,
+      value: r.value ?? 0,
       color: getIndustry(c.industry)!.color,
       industry: c.industry,
     }));
+    // 調査全体の1位が掲載企業でない時は、点線の棒で参考表示（順位だけの調査では出さない）
+    if (list[0]?.rank === 1 || s.top1.value === null) return list;
     const ref: Row = {
       code: null,
       label: `1位  ${s.top1.name}`,
@@ -50,8 +54,9 @@ export default function PopularityRanking({ surveys = SURVEYS, accent = "#ff7fb5
       color: T.muted,
       reference: true,
     };
-    return list[0]?.rank === 1 ? list : [ref, ...list];
+    return [ref, ...list];
   }, [id, s]);
+  const hasRef = rows.some((r) => r.reference);
 
   const option = useMemo(
     () => ({
@@ -129,25 +134,49 @@ export default function PopularityRanking({ surveys = SURVEYS, accent = "#ff7fb5
               {i.name}
             </li>
           ))}
-          <li className="flex items-center gap-1.5">
-            <span className="h-2.5 w-3 rounded-sm border border-dashed border-[#8b8a99]" aria-hidden />
-            調査全体の1位（参考）
-          </li>
+          {hasRef && (
+            <li className="flex items-center gap-1.5">
+              <span className="h-2.5 w-3 rounded-sm border border-dashed border-[#8b8a99]" aria-hidden />
+              調査全体の1位（参考）
+            </li>
+          )}
         </ul>
       </div>
       <p className="mb-2 text-xs text-ink-2">
-        <b className="text-ink">{s.who}</b>が選んだ順位（{s.publisher}・{s.published}発表、調査{s.period}、{s.sample}）。棒は{s.metric === "rate" ? "回答率" : "得票数"}。掲載{ALL.length}社のうち公表された{s.depth}に入った{rows.filter((r) => !r.reference).length}社を表示。
+        <b className="text-ink">{s.who}</b>が選んだ順位（{s.publisher}・{s.published}発表、調査{s.period}、{s.sample}）。
+        {rankOnly ? "お気に入り登録数の順位で、数そのものは公表されていないため順位だけを並べています。" : `棒は${s.metric === "rate" ? "回答率" : "得票数"}。`}
+        掲載{ALL.length}社のうち公表された{s.depth}に入った{rows.filter((r) => !r.reference).length}社を表示。
       </p>
-      <EChart
-        option={option}
-        height={Math.max(180, rows.length * 34 + 24)}
-        ariaLabel={`${s.name}での掲載企業の順位`}
-        notMerge
-        onItemClick={(p) => {
-          const r = rows.find((x) => x.label === p.name);
-          if (r?.code) router.push(`/company/${r.code}/`);
-        }}
-      />
+      {rankOnly ? (
+        <ol className="grid gap-1.5 sm:grid-cols-2" aria-label={`${s.name}での掲載企業の順位`}>
+          {rows.map((r) => (
+            <li key={r.code ?? r.name}>
+              <Link
+                href={`/company/${r.code}/`}
+                className="flex items-center gap-3 rounded-lg border border-white/10 px-3 py-2 text-sm transition hover:border-white/25 hover:bg-white/5"
+              >
+                <span className="tabular w-9 shrink-0 text-right font-bold text-ink">{r.rank}位</span>
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: r.color }} aria-hidden />
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate font-semibold text-ink">{r.label.replace(/^\d+位\s+/, "")}</span>
+                  {r.entity && <span className="block truncate text-[11px] text-ink-3">調査上の名前：{r.entity}</span>}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <EChart
+          option={option}
+          height={Math.max(180, rows.length * 34 + 24)}
+          ariaLabel={`${s.name}での掲載企業の順位`}
+          notMerge
+          onItemClick={(p) => {
+            const r = rows.find((x) => x.label === p.name);
+            if (r?.code) router.push(`/company/${r.code}/`);
+          }}
+        />
+      )}
       <p className="mt-2 text-xs leading-relaxed text-ink-3">
         ※ 出典：
         <a href={s.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
