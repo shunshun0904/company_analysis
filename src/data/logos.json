@@ -1,0 +1,418 @@
+{
+ "2413": {
+  "missing": true,
+  "qid": "Q11290802",
+  "title": "ja:エムスリー",
+  "reason": "Wikidataにロゴ画像(P154)なし"
+ },
+ "2432": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/5/5a/DeNA_Co_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "2768": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/7/70/Sojitz.corporation.logor.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "3092": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/9/99/Zozo_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "3626": {
+  "missing": true,
+  "qid": "Q11249434",
+  "title": "ja:TISI",
+  "reason": "Wikidataにロゴ画像(P154)なし"
+ },
+ "3994": {
+  "missing": true,
+  "reason": "retry limit https://en.wikipedia.org/w/api.php?action=query&prop=pageprops&ppprop=wikibase_item&redirects=1&format=json&formatversion=2&titles=Money%20Forward"
+ },
+ "4194": {
+  "missing": true,
+  "qid": "Q17224554",
+  "title": "ja:ビズリーチ",
+  "reason": "Wikidataにロゴ画像(P154)なし"
+ },
+ "4307": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/2/27/Nomura_Research_Institute_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+ },
+ "4385": {
+  "missing": true,
+  "reason": "retry limit https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=512&titles=File%3AMercari%20logo%202018.svg"
+ },
+ "4443": {
+  "missing": true,
+  "qid": "Q61056801",
+  "title": "ja:Sansan",
+  "reason": "Wikidataにロゴ画像(P154)なし"
+ },
+ "4478": {
+  "missing": true,
+  "qid": "Q18455557",
+  "title": "ja:Freee",
+  "reason": "Wikidataにロゴ画像(P154)なし"
+ },
+ "4689": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/6/68/LY_Corp_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "4751": {
+  "missing": true,
+  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q11304138&property=P154&format=json"
+ },
+ "4755": {
+  "missing": true,
+  "reason": "retry limit https://ja.wikipedia.org/w/api.php?action=query&prop=pageprops&ppprop=wikibase_item&redirects=1&format=json&formatversion=2&titles=%E6%A5%BD%E5%A4%A9%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97"
+ },
+ "6098": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/8/82/Recruit_Holdings_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "6501": {
+  "src": "/logos/6501.svg",
+  "width": 784,
+  "height": 122,
+  "file": "Hitachi 2025 logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Hitachi_2025_logo.svg",
+  "license": "Public domain",
+  "artist": "Hitachi, Ltd.",
+  "restrictions": null,
+  "qid": "Q53238",
+  "title": "ja:日立製作所"
+ },
+ "6701": {
+  "src": "/logos/6701.svg",
+  "width": 302,
+  "height": 82,
+  "file": "NEC logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:NEC_logo.svg",
+  "license": "Public domain",
+  "artist": "NEC Corporation",
+  "restrictions": "trademarked",
+  "qid": "Q219203",
+  "title": "ja:日本電気"
+ },
+ "6702": {
+  "missing": true,
+  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q186394&property=P154&format=json"
+ },
+ "7201": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/e/e2/Nissan_brand_wordmark.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "7203": {
+  "src": "/logos/7203.svg",
+  "width": 950,
+  "height": 157,
+  "file": "Toyota.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Toyota.svg",
+  "license": "Public domain",
+  "artist": "Toyota Motor Corporation",
+  "restrictions": "trademarked",
+  "qid": "Q53268",
+  "title": "ja:トヨタ自動車",
+  "candidates": [
+   "Toyota.svg",
+   "Registered trademark img 06.png",
+   "Toyota Symbol.svg",
+   "Toyota logo.svg"
+  ]
+ },
+ "7211": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/9/9a/Mitsubishi_motors_new_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "7261": {
+  "missing": true,
+  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q35996&property=P154&format=json"
+ },
+ "7267": {
+  "src": "/logos/7267.svg",
+  "width": 300,
+  "height": 38,
+  "file": "Honda logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Honda_logo.svg",
+  "license": "Public domain",
+  "artist": "TTTNIS",
+  "restrictions": "trademarked",
+  "qid": "Q9584",
+  "title": "ja:本田技研工業",
+  "candidates": [
+   "Honda logo.svg",
+   "Honda.svg",
+   "Honda Logo.svg",
+   "Honda Canada.webp"
+  ]
+ },
+ "7269": {
+  "src": "/logos/7269.svg",
+  "width": 512,
+  "height": 100,
+  "file": "Suzuki logo 2025.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Suzuki_logo_2025.svg",
+  "license": "Public domain",
+  "artist": "Suzuki Motor Corporation",
+  "restrictions": "trademarked",
+  "qid": "Q181642",
+  "title": "ja:スズキ (企業)"
+ },
+ "7270": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/f/f3/Subaru_Logo_2024.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "8001": {
+  "missing": true,
+  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q717093&property=P154&format=json"
+ },
+ "8002": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/3/31/Marubeni_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "8015": {
+  "missing": true,
+  "qid": "Q716457",
+  "title": "ja:豊田通商",
+  "reason": "Wikidataにロゴ画像(P154)なし"
+ },
+ "8031": {
+  "src": "/logos/8031.svg",
+  "width": 1024,
+  "height": 163,
+  "file": "Mitsui Bussan logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mitsui_Bussan_logo.svg",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "restrictions": "trademarked",
+  "qid": "Q904240",
+  "title": "ja:三井物産"
+ },
+ "8053": {
+  "missing": true,
+  "reason": "retry limit https://ja.wikipedia.org/w/api.php?action=query&prop=pageprops&ppprop=wikibase_item&redirects=1&format=json&formatversion=2&titles=%E4%BD%8F%E5%8F%8B%E5%95%86%E4%BA%8B"
+ },
+ "8056": {
+  "missing": true,
+  "reason": "retry limit https://ja.wikipedia.org/w/api.php?action=query&prop=pageprops&ppprop=wikibase_item&redirects=1&format=json&formatversion=2&titles=BIPROGY"
+ },
+ "8058": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/6/69/Mitsubishi-Corporation-Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "8306": {
+  "src": "/logos/8306.svg",
+  "width": 500,
+  "height": 118,
+  "file": "Mitsubishi UFJ Financial Group.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mitsubishi_UFJ_Financial_Group.svg",
+  "license": "Public domain",
+  "artist": "Mitsubishi UFJ Financial Group",
+  "restrictions": "trademarked",
+  "qid": "Q1542175",
+  "title": "ja:三菱UFJフィナンシャル・グループ"
+ },
+ "8308": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/c/c1/Resona_Group_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "8309": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/b/bd/Sumitomo_Mitsui_Trust_Group_Logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+ },
+ "8316": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/d/d3/SMFG_logo_2018.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "8411": {
+  "src": "/logos/8411.svg",
+  "width": 502,
+  "height": 151,
+  "file": "Mizuho logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mizuho_logo.svg",
+  "license": "Public domain",
+  "artist": "Mizuho",
+  "restrictions": "trademarked",
+  "qid": "Q166621",
+  "title": "ja:みずほフィナンシャルグループ"
+ },
+ "8604": {
+  "missing": true,
+  "reason": "retry limit https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=512&titles=File%3ANomura%20Holdings%20logo.svg"
+ },
+ "8766": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/f/f5/Tokio_Marine_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "9432": {
+  "src": "/logos/9432.svg",
+  "width": 512,
+  "height": 186,
+  "file": "NTT 2025.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:NTT_2025.svg",
+  "license": "Public domain",
+  "artist": "日本電信電話株式会社",
+  "restrictions": "trademarked",
+  "qid": "Q1054787",
+  "title": "ja:NTT"
+ },
+ "9433": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/4/45/KDDI_logos.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "9434": {
+  "missing": true,
+  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q2214105&property=P154&format=json"
+ },
+ "9613": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/0/09/NTT-Data-Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "9719": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/f/fc/SCSK_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "ibm": {
+  "src": "/logos/ibm.svg",
+  "width": 1075,
+  "height": 401,
+  "file": "IBM logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:IBM_logo.svg",
+  "license": "Public domain",
+  "artist": "Paul Rand",
+  "restrictions": "trademarked",
+  "qid": "Q37156",
+  "title": "en:IBM",
+  "candidates": [
+   "IBM logo.svg",
+   "IBM Logo 1956 1972.svg",
+   "IBM Logo 1947 1956.svg"
+  ]
+ },
+ "google": {
+  "src": "/logos/google.svg",
+  "width": 270,
+  "height": 82,
+  "file": "Google 2026 logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Google_2026_logo.svg",
+  "license": "Public domain",
+  "artist": "Google LLC",
+  "restrictions": "trademarked",
+  "qid": "Q95",
+  "title": "en:Google",
+  "candidates": [
+   "Google 2026 logo.svg",
+   "Google 2015 logo.svg",
+   "Google2013logo.svg",
+   "Google logo (2010-2013).svg",
+   "Google.png",
+   "Google logo (1998-1999).svg"
+  ]
+ },
+ "microsoft": {
+  "src": "/logos/microsoft.svg",
+  "width": 512,
+  "height": 109,
+  "file": "Microsoft logo (2012).svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Microsoft_logo_(2012).svg",
+  "license": "Public domain",
+  "artist": "Microsoft Corporation — Jason Wells",
+  "restrictions": "trademarked",
+  "qid": "Q2283",
+  "title": "en:Microsoft",
+  "candidates": [
+   "Microsoft logo (2012).svg",
+   "Microsoft logo (1987).svg",
+   "Microsoft logo (1982).svg",
+   "Microsoft logo (1980).svg"
+  ]
+ },
+ "amazon": {
+  "src": "/logos/amazon.svg",
+  "width": 1507,
+  "height": 505,
+  "file": "Amazon 2024.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Amazon_2024.svg",
+  "license": "Public domain",
+  "artist": "Amazon.com, Inc., Koto, and NaN (typeface creator)",
+  "restrictions": "trademarked",
+  "qid": "Q3884",
+  "title": "en:Amazon (company)",
+  "candidates": [
+   "Amazon 2024.svg",
+   "Amazon shopping smile logo-app.svg",
+   "Amazon logo.svg"
+  ]
+ },
+ "salesforce": {
+  "missing": true,
+  "reason": "retry limit https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=512&titles=File%3ASalesforce.com%20logo.svg"
+ },
+ "mckinsey": {
+  "missing": true,
+  "reason": "retry limit https://en.wikipedia.org/w/api.php?action=query&prop=pageprops&ppprop=wikibase_item&redirects=1&format=json&formatversion=2&titles=McKinsey%20%26%20Company"
+ },
+ "bcg": {
+  "missing": true,
+  "reason": "retry limit https://en.wikipedia.org/w/api.php?action=query&prop=pageprops&ppprop=wikibase_item&redirects=1&format=json&formatversion=2&titles=Boston%20Consulting%20Group"
+ },
+ "bain": {
+  "missing": true,
+  "reason": "retry limit https://upload.wikimedia.org/wikipedia/commons/c/c4/Bain_logo_stacked.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original"
+ },
+ "accenture": {
+  "src": "/logos/accenture.svg",
+  "width": 163,
+  "height": 43,
+  "file": "Accenture.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Accenture.svg",
+  "license": "Public domain",
+  "artist": "Accenture",
+  "restrictions": "trademarked",
+  "qid": "Q338825",
+  "title": "en:Accenture"
+ },
+ "deloitte": {
+  "src": "/logos/deloitte.svg",
+  "width": 892,
+  "height": 171,
+  "file": "Logo of Deloitte.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Logo_of_Deloitte.svg",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "restrictions": "trademarked",
+  "qid": "Q491748",
+  "title": "en:Deloitte"
+ },
+ "pwc": {
+  "missing": true,
+  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q488048&property=P154&format=json"
+ },
+ "ey": {
+  "src": "/logos/ey.svg",
+  "width": 69,
+  "height": 69,
+  "file": "EY logo 2019.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:EY_logo_2019.svg",
+  "license": "Public domain",
+  "artist": "Ernst & Young",
+  "restrictions": "trademarked",
+  "qid": "Q489097",
+  "title": "en:Ernst & Young"
+ },
+ "kpmg": {
+  "src": "/logos/kpmg.svg",
+  "width": 512,
+  "height": 204,
+  "file": "KPMG blue logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:KPMG_blue_logo.svg",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "restrictions": "trademarked",
+  "qid": "Q493751",
+  "title": "en:KPMG",
+  "candidates": [
+   "KPMG blue logo.svg",
+   "KPMG.svg"
+  ]
+ }
+}
