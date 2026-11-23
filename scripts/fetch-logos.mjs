@@ -5,6 +5,7 @@
 // 入力：src/data/logo-sources.json
 //   { "7203": { "wiki": ["ja:トヨタ自動車", "en:Toyota"] }, "xxx": { "file": "Example logo.svg" } }
 //   wiki は上から順に試し、ロゴ画像が見つかった最初の記事を使う。file を書くとそのファイルに固定する。
+//   none に理由を書くと、その会社はロゴを取得しない（例：社名変更後の新しいロゴがコモンズにない）。
 //
 // ウィキメディアに負担をかけないよう、記事・ファイル情報はまとめて問い合わせ、画像は1枚ずつ間隔を空けて取得する。
 // 取得済みのロゴは残し、足りない会社だけを取りに行く（REFRESH=1 で全社を取り直す）。
@@ -188,6 +189,7 @@ async function download(url, dest, opts = QUICK) {
 /** コモンズのサムネイル URL の幅を変える（…/500px-Name.svg.png → …/250px-Name.svg.png） */
 const thumbAt = (thumb, w) => thumb?.split("?")[0].replace(/\/(\d+)px-([^/]+)$/, `/${w}px-$2`);
 const THUMB_WIDTHS = [500, 330, 250, 220];
+const RASTER_THUMB_WIDTHS = [330, 250, 120];
 
 async function removeLogoFiles(code) {
   for (const f of await fs.readdir(LOGO_DIR)) if (f.startsWith(`${code}.`)) await fs.rm(path.join(LOGO_DIR, f));
@@ -212,7 +214,10 @@ const knownMissing = (code) =>
 const out = {};
 const todo = [];
 for (const code of Object.keys(sources)) {
-  if (isDone(code) || knownMissing(code)) out[code] = prev[code];
+  if (sources[code].none) {
+    await removeLogoFiles(code);
+    out[code] = { missing: true, reason: sources[code].none };
+  } else if (isDone(code) || knownMissing(code)) out[code] = prev[code];
   else todo.push(code);
 }
 
@@ -290,6 +295,15 @@ async function fetchImage(code, info, opts) {
     if (!info.thumb || (!isSvg && w >= info.width)) continue;
     const url = thumbAt(info.thumb, w);
     candidates.push({ url, ext: extOf(url), ...scale(w) });
+  }
+  // 小さいラスター画像（PNG・GIF）は原本しか候補がないため、原本より小さい標準サイズのサムネイルも候補にする
+  if (!isSvg && !(info.thumb && info.width > 500)) {
+    const name = original.split("/").pop();
+    for (const w of RASTER_THUMB_WIDTHS) {
+      if (w >= info.width) continue;
+      const url = original.replace("/wikipedia/commons/", "/wikipedia/commons/thumb/") + `/${w}px-${name}`;
+      candidates.push({ url, ext: extOf(original), ...scale(w) });
+    }
   }
   // 小さい画像はサムネイルの URL が原本と同じになるので、同じ URL を続けて叩かない
   const unique = candidates.filter((c, i) => candidates.findIndex((d) => d.url === c.url) === i);
