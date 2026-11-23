@@ -205,7 +205,7 @@ const isDone = (code) => {
 
 // ロゴが登録されていないと分かっている会社は、毎回は問い合わせない（REFRESH=1 で再確認）
 const knownMissing = (code) =>
-  !REFRESH && prev[code]?.missing && /P154|記事が見つからない/.test(prev[code].reason ?? "") && !sources[code]?.file;
+  !REFRESH && prev[code]?.missing && /^(Wikidataにロゴ画像\(P154\)なし|記事が見つからない)$/.test(prev[code].reason ?? "") && !sources[code]?.file;
 
 const out = {};
 const todo = [];
