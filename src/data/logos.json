@@ -37,9 +37,7 @@
  },
  "3626": {
   "missing": true,
-  "qid": null,
-  "title": null,
-  "reason": "一時的に取得できず（次の実行で再試行）: HTTP 429（後回し）"
+  "reason": "2026年7月の社名変更（TIS→TISI）後のロゴがウィキメディア・コモンズにないため（旧TISのロゴは使わない）"
  },
  "3994": {
   "missing": true,
