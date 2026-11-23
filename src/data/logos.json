@@ -18,10 +18,16 @@
   "title": "ja:ディー・エヌ・エー"
  },
  "2768": {
-  "missing": true,
-  "qid": "Q586260",
-  "title": "ja:双日",
-  "reason": "一時的に取得できず（次の実行で再試行）: HTTP 429（後回し）"
+  "src": "/logos/2768.png",
+  "width": 500,
+  "height": 303,
+  "file": "Sojitz Corporation Logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Sojitz_Corporation_Logo.svg",
+  "license": "Public domain",
+  "artist": "Sojitz Corporation",
+  "restrictions": "trademarked",
+  "qid": null,
+  "title": null
  },
  "3092": {
   "src": "/logos/3092.png",
