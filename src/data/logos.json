@@ -504,18 +504,14 @@
  "9434": {
   "src": "/logos/9434.png",
   "width": 500,
-  "height": 123,
-  "file": "SoftBank Group logo.svg",
-  "page": "https://commons.wikimedia.org/wiki/File:SoftBank_Group_logo.svg",
+  "height": 77,
+  "file": "SoftBankmobile logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:SoftBankmobile_logo.svg",
   "license": "Public domain",
-  "artist": "Unknown authorUnknown author",
+  "artist": "SoftBank Corp.",
   "restrictions": "trademarked",
-  "qid": "Q201653",
-  "title": "en:SoftBank Group",
-  "candidates": [
-   "SoftBank Group logo.svg",
-   "Softbank mobile logo.svg"
-  ]
+  "qid": null,
+  "title": null
  },
  "9613": {
   "src": "/logos/9613.png",
