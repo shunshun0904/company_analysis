@@ -98,10 +98,16 @@
   "title": null
  },
  "4478": {
-  "missing": true,
-  "qid": "Q18455557",
-  "title": "ja:Freee",
-  "reason": "Wikidataにロゴ画像(P154)なし"
+  "src": "/logos/4478.png",
+  "width": 500,
+  "height": 279,
+  "file": "Freee logo.png",
+  "page": "https://commons.wikimedia.org/wiki/File:Freee_logo.png",
+  "license": "Public domain",
+  "artist": "不明",
+  "restrictions": null,
+  "qid": null,
+  "title": null
  },
  "4689": {
   "src": "/logos/4689.png",
