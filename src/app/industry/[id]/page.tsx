@@ -11,6 +11,7 @@ import HiringHeatmap from "@/components/charts/HiringHeatmap";
 import TrendChart from "@/components/charts/TrendChart";
 import CompanyTable from "@/components/CompanyTable";
 import PopularityMatrix from "@/components/PopularityMatrix";
+import CompanyLogo from "@/components/CompanyLogo";
 import { MOTE_SURVEYS, SURVEYS } from "@/lib/popularity";
 
 export const dynamicParams = false;
@@ -259,10 +260,13 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((c) => (
             <Link key={c.code} href={`/company/${c.code}/`} className="card group flex items-start justify-between gap-3 p-3.5 transition hover:border-white/20">
-              <span className="min-w-0">
-                <span className="block text-[11px] text-ink-3">{c.short}</span>
-                <span className="block truncate font-bold group-hover:underline">{c.ceo?.name ?? "未確認"}</span>
-                {c.ceo && <span className="block truncate text-[11px] text-ink-3">{c.ceo.title}</span>}
+              <span className="flex min-w-0 items-start gap-2.5">
+                <CompanyLogo company={c} size="sm" className="mt-0.5" />
+                <span className="min-w-0">
+                  <span className="block text-[11px] text-ink-3">{c.short}</span>
+                  <span className="block truncate font-bold group-hover:underline">{c.ceo?.name ?? "未確認"}</span>
+                  {c.ceo && <span className="block truncate text-[11px] text-ink-3">{c.ceo.title}</span>}
+                </span>
               </span>
               <span className={`shrink-0 text-right text-xs ${c.ceo?.univ ? "font-semibold text-ink" : "text-ink-3"}`}>
                 {c.ceo?.univ ?? "出身大学 未確認"}
@@ -285,8 +289,13 @@ export default async function IndustryPage({ params }: { params: Promise<{ id: s
                 className="card card-accent group p-4 transition hover:-translate-y-0.5"
                 style={style}
               >
-                <p className="text-[11px] text-ink-3">{codeShort(c)}</p>
-                <p className="truncate font-bold group-hover:underline">{c.short}</p>
+                <div className="flex items-center gap-2.5">
+                  <CompanyLogo company={c} size="sm" />
+                  <div className="min-w-0">
+                    <p className="text-[11px] text-ink-3">{codeShort(c)}</p>
+                    <p className="truncate font-bold group-hover:underline">{c.short}</p>
+                  </div>
+                </div>
                 <p className="mt-2 text-xs text-ink-3">平均年収 ／ 初任給</p>
                 <p className="text-sm font-semibold">
                   {c.workforce === null ? <span className="text-ink-3">非公開</span> : fmtMan(c.avgSalary)} ／{" "}

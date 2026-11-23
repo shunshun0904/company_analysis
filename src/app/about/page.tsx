@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { DATA_META } from "@/lib/data";
+import { DATA_META, getCompany } from "@/lib/data";
+import { allLogos } from "@/components/CompanyLogo";
 import { SectionTitle } from "@/components/ui";
 
 export const metadata: Metadata = { title: "データについて" };
@@ -73,6 +74,38 @@ export default function AboutPage() {
             </div>
           ))}
         </dl>
+      </section>
+
+      <section className="card mt-4 p-5">
+        <h2 className="text-lg font-bold">ロゴについて</h2>
+        <p className="mt-1 text-sm text-ink-2">
+          会社のロゴは各社の商標です。会社を見分けるための表示として、ウィキメディア・コモンズで公開されているロゴ画像（各社の Wikipedia の記事にひも付くもの）を掲載しています。
+          画像の権利情報は下の各ファイルのページをご覧ください。ロゴが見つからない会社は、業界色の頭文字マーク（実際のロゴではありません）を表示しています。
+        </p>
+        <div className="-mx-1 mt-3 overflow-x-auto px-1">
+          <table className="w-full min-w-[520px] text-sm">
+            <thead>
+              <tr className="border-b border-white/10 text-left text-xs text-ink-3">
+                <th scope="col" className="py-2 pr-3 font-medium">会社</th>
+                <th scope="col" className="py-2 pr-3 font-medium">ファイル（ウィキメディア・コモンズ）</th>
+                <th scope="col" className="py-2 font-medium">ライセンス</th>
+              </tr>
+            </thead>
+            <tbody>
+              {allLogos().map(([code, l]) => (
+                <tr key={code} className="border-b border-white/5 align-top">
+                  <th scope="row" className="py-2 pr-3 text-left font-medium">{getCompany(code)?.short ?? code}</th>
+                  <td className="py-2 pr-3 text-ink-2">
+                    <a href={l.page} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
+                      {l.file} ↗
+                    </a>
+                  </td>
+                  <td className="py-2 text-ink-3">{l.license ?? "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section className="card mt-4 p-5 text-sm text-ink-2">

@@ -9,6 +9,7 @@ import { fmtYen, fmtPct, fmtMan, fmtMonthly, fmtAge, fmtYears, fmtPeople } from 
 import RadarScore from "@/components/charts/RadarScore";
 import RankingBars, { type ValueFormat } from "@/components/charts/RankingBars";
 import { MOTE_SURVEYS, SURVEYS, popOf } from "@/lib/popularity";
+import CompanyLogo from "@/components/CompanyLogo";
 
 const DEFAULT = ["7203", "8058", "8306"];
 const SLOTS = 3;
@@ -86,7 +87,12 @@ export default function CompareClient() {
               </select>
               {c && ind && (
                 <div className="mt-3">
-                  <Link href={`/company/${c.code}/`} className="text-lg font-bold hover:underline">{c.name}</Link>
+                  <div className="flex items-center gap-3">
+                    <CompanyLogo company={c} size="md" />
+                    <Link href={`/company/${c.code}/`} className="min-w-0 text-lg font-bold leading-snug hover:underline">
+                      {c.name}
+                    </Link>
+                  </div>
                   <p className="mt-0.5 flex items-center gap-1.5 text-xs text-ink-3">
                     <span className="h-1.5 w-1.5 rounded-full" style={{ background: ind.color }} aria-hidden />
                     {ind.name} ／ {c.fiscalPeriod ?? (isListed(c) ? "—" : c.listing === "delisted" ? "上場廃止" : "日本では非上場")}

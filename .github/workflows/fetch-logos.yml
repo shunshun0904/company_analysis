@@ -38,5 +38,7 @@ jobs:
             echo "ロゴに変更なし"
           else
             git commit -m "ロゴ画像を取得（ウィキメディア・コモンズ）"
+            # 実行中にブランチが進んでいても取り込んでから push する
+            git pull --rebase origin ${{ github.ref_name }}
             git push origin HEAD:${{ github.ref_name }}
           fi

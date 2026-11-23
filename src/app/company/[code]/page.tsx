@@ -24,6 +24,7 @@ import PeerBars from "@/components/charts/PeerBars";
 import UnivHiringBars from "@/components/charts/UnivHiringBars";
 import { LATEST_BY_GENDER, LATEST_MARRY, MOTE_SURVEYS, SURVEYS } from "@/lib/popularity";
 import SurveyTiles from "@/components/SurveyTiles";
+import CompanyLogo from "@/components/CompanyLogo";
 
 export const dynamicParams = false;
 
@@ -152,7 +153,10 @@ export default async function CompanyPage({ params }: { params: Promise<{ code: 
           </Link>
           <span className="chip">{codeLabel(c)}</span>
         </div>
-        <h1 className="relative mt-3 text-3xl font-black tracking-tight sm:text-5xl">{c.name}</h1>
+        <div className="relative mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
+          <CompanyLogo company={c} size="lg" />
+          <h1 className="text-3xl font-black tracking-tight sm:text-5xl">{c.name}</h1>
+        </div>
         <p className="relative mt-2 text-sm text-ink-2">{c.description}</p>
         {c.listingNote && (
           <p className="relative mt-3 max-w-3xl rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-xs leading-relaxed text-ink-2">

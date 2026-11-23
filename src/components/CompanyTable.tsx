@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { companiesOf, getIndustry, isListed, type CompanyWithMetrics, type IndustryId } from "@/lib/data";
 import { fmtYen, fmtPct, fmtMan, fmtMonthly, fmtAge, fmtYears, fmtPeople } from "@/lib/format";
+import CompanyLogo from "@/components/CompanyLogo";
 
 type Col = { key: keyof CompanyWithMetrics; label: string; fmt: (c: CompanyWithMetrics) => string; asc?: boolean };
 
@@ -79,8 +80,8 @@ export default function CompanyTable({ industry }: { industry: IndustryId }) {
           {rows.map((c) => (
             <tr key={c.code} className="border-b border-white/5 transition hover:bg-white/[0.03]">
               <th scope="row" className="sticky left-0 bg-[#181a2b] py-2.5 pr-3 text-left font-medium">
-                <Link href={`/company/${c.code}/`} className="flex items-center gap-2 whitespace-nowrap hover:underline">
-                  <span className="h-2 w-2 rounded-full" style={{ background: ind.color }} aria-hidden />
+                <Link href={`/company/${c.code}/`} className="flex items-center gap-2.5 whitespace-nowrap hover:underline">
+                  <CompanyLogo company={c} size="sm" />
                   {c.short}
                 </Link>
               </th>
