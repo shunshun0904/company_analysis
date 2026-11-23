@@ -5,6 +5,12 @@ import { SectionTitle } from "@/components/ui";
 
 export const metadata: Metadata = { title: "データについて" };
 
+/** 「CC BY-SA 4.0」のようなクリエイティブ・コモンズの表記 → ライセンス本文（日本語）の URL。それ以外は null */
+function ccDeed(license: string | null): string | null {
+  const m = license?.match(/^CC (BY(?:-SA|-NC|-ND)*) (\d\.\d)$/);
+  return m ? `https://creativecommons.org/licenses/${m[1].toLowerCase()}/${m[2]}/deed.ja` : null;
+}
+
 const DEFS = [
   { term: "平均年収", desc: "有価証券報告書の「平均年間給与」（提出会社、賞与・基準外賃金を含む）。総合職だけでなく一般職などを含む社員全体の平均で、新卒がすぐにもらえる金額ではありません。" },
   { term: "初任給", desc: "就職サイトに掲載された大卒の月給。固定残業代や一律の手当を含む会社があるため、比較するときは企業ページの条件欄を確認してください。" },
@@ -80,7 +86,7 @@ export default function AboutPage() {
         <h2 className="text-lg font-bold">ロゴについて</h2>
         <p className="mt-1 text-sm text-ink-2">
           会社のロゴは各社の商標です。会社を見分けるための表示として、ウィキメディア・コモンズで公開されているロゴ画像（各社の Wikipedia の記事にひも付くもの）を掲載しています。
-          画像の権利情報は下の各ファイルのページをご覧ください。ロゴが見つからない会社は、業界色の頭文字マーク（実際のロゴではありません）を表示しています。
+          画像の権利情報は下の各ファイルのページをご覧ください（クリエイティブ・コモンズの画像は作者とライセンスを併記しています）。ロゴが見つからない会社は、業界色の頭文字マーク（実際のロゴではありません）を表示しています。
         </p>
         <div className="-mx-1 mt-3 overflow-x-auto px-1">
           <table className="w-full min-w-[520px] text-sm">
@@ -100,7 +106,18 @@ export default function AboutPage() {
                       {l.file} ↗
                     </a>
                   </td>
-                  <td className="py-2 text-ink-3">{l.license ?? "—"}</td>
+                  <td className="py-2 text-ink-3">
+                    {ccDeed(l.license) ? (
+                      <>
+                        <a href={ccDeed(l.license)!} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
+                          {l.license} ↗
+                        </a>
+                        {l.artist && <span className="block text-xs">作者: {l.artist}</span>}
+                      </>
+                    ) : (
+                      (l.license ?? "—")
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
