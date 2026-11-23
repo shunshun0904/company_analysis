@@ -37,9 +37,9 @@
  },
  "3626": {
   "missing": true,
-  "qid": "Q11249434",
-  "title": "ja:TISI",
-  "reason": "Wikidataにロゴ画像(P154)なし"
+  "qid": null,
+  "title": null,
+  "reason": "一時的に取得できず（次の実行で再試行）: HTTP 429（後回し）"
  },
  "3994": {
   "missing": true,
@@ -82,10 +82,16 @@
   ]
  },
  "4443": {
-  "missing": true,
-  "qid": "Q61056801",
-  "title": "ja:Sansan",
-  "reason": "Wikidataにロゴ画像(P154)なし"
+  "src": "/logos/4443.png",
+  "width": 500,
+  "height": 185,
+  "file": "Sansan logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Sansan_logo.svg",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "restrictions": null,
+  "qid": null,
+  "title": null
  },
  "4478": {
   "missing": true,
@@ -110,8 +116,16 @@
   ]
  },
  "4751": {
-  "missing": true,
-  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q11304138&property=P154&format=json"
+  "src": "/logos/4751.png",
+  "width": 500,
+  "height": 86,
+  "file": "CyberAgent logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:CyberAgent_logo.svg",
+  "license": "Public domain",
+  "artist": "CyberAgent",
+  "restrictions": "trademarked",
+  "qid": "Q11304138",
+  "title": "ja:サイバーエージェント"
  },
  "4755": {
   "src": "/logos/4755.svg",
@@ -166,8 +180,16 @@
   "title": "ja:日本電気"
  },
  "6702": {
-  "missing": true,
-  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q186394&property=P154&format=json"
+  "src": "/logos/6702.svg",
+  "width": 512,
+  "height": 249,
+  "file": "Fujitsu-Logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Fujitsu-Logo.svg",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "restrictions": "trademarked",
+  "qid": "Q186394",
+  "title": "ja:富士通"
  },
  "7201": {
   "src": "/logos/7201.png",
@@ -216,8 +238,21 @@
   "title": "ja:三菱自動車工業"
  },
  "7261": {
-  "missing": true,
-  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q35996&property=P154&format=json"
+  "src": "/logos/7261.svg",
+  "width": 950,
+  "height": 843,
+  "file": "Mazda logo 2024 (vertical).svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mazda_logo_2024_(vertical).svg",
+  "license": "Public domain",
+  "artist": "Mazda",
+  "restrictions": "trademarked",
+  "qid": "Q35996",
+  "title": "ja:マツダ",
+  "candidates": [
+   "Mazda logo 2024 (vertical).svg",
+   "Mazda-Museum Augsburg 01.jpg",
+   "Mazda logo.svg"
+  ]
  },
  "7267": {
   "src": "/logos/7267.svg",
@@ -267,8 +302,16 @@
   ]
  },
  "8001": {
-  "missing": true,
-  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q717093&property=P154&format=json"
+  "src": "/logos/8001.png",
+  "width": 500,
+  "height": 205,
+  "file": "Itochu-Logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Itochu-Logo.svg",
+  "license": "Public domain",
+  "artist": "Itochu",
+  "restrictions": "trademarked",
+  "qid": "Q717093",
+  "title": "ja:伊藤忠商事"
  },
  "8002": {
   "src": "/logos/8002.png",
@@ -283,10 +326,16 @@
   "title": "ja:丸紅"
  },
  "8015": {
-  "missing": true,
-  "qid": "Q716457",
-  "title": "ja:豊田通商",
-  "reason": "Wikidataにロゴ画像(P154)なし"
+  "src": "/logos/8015.png",
+  "width": 500,
+  "height": 130,
+  "file": "Toyotsu logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:Toyotsu_logo.svg",
+  "license": "Public domain",
+  "artist": "Toyota Tsusho Corporation",
+  "restrictions": "trademarked",
+  "qid": null,
+  "title": null
  },
  "8031": {
   "src": "/logos/8031.svg",
@@ -453,8 +502,20 @@
   "title": "ja:KDDI"
  },
  "9434": {
-  "missing": true,
-  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q2214105&property=P154&format=json"
+  "src": "/logos/9434.png",
+  "width": 500,
+  "height": 123,
+  "file": "SoftBank Group logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:SoftBank_Group_logo.svg",
+  "license": "Public domain",
+  "artist": "Unknown authorUnknown author",
+  "restrictions": "trademarked",
+  "qid": "Q201653",
+  "title": "en:SoftBank Group",
+  "candidates": [
+   "SoftBank Group logo.svg",
+   "Softbank mobile logo.svg"
+  ]
  },
  "9613": {
   "src": "/logos/9613.png",
@@ -593,10 +654,20 @@
   "title": "en:Boston Consulting Group"
  },
  "bain": {
-  "missing": true,
+  "src": "/logos/bain.png",
+  "width": 180,
+  "height": 113,
+  "file": "Bain logo stacked.png",
+  "page": "https://commons.wikimedia.org/wiki/File:Bain_logo_stacked.png",
+  "license": "CC BY-SA 4.0",
+  "artist": "BainCoWebmaster",
+  "restrictions": null,
   "qid": "Q764850",
   "title": "en:Bain & Company",
-  "reason": "一時的に取得できず（次の実行で再試行）: HTTP 429（後回し）"
+  "candidates": [
+   "Bain logo stacked.png",
+   "Bain & Company logo.svg"
+  ]
  },
  "accenture": {
   "src": "/logos/accenture.svg",
@@ -623,8 +694,22 @@
   "title": "en:Deloitte"
  },
  "pwc": {
-  "missing": true,
-  "reason": "retry limit https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q488048&property=P154&format=json"
+  "src": "/logos/pwc.svg",
+  "width": 512,
+  "height": 248,
+  "file": "PwC Company Logo.svg",
+  "page": "https://commons.wikimedia.org/wiki/File:PwC_Company_Logo.svg",
+  "license": "Public domain",
+  "artist": "PricewaterhouseCoopers",
+  "restrictions": "trademarked",
+  "qid": "Q488048",
+  "title": "en:PwC",
+  "candidates": [
+   "PwC Company Logo.svg",
+   "PwC 2025 Logo.svg",
+   "PricewaterhouseCoopers.svg",
+   "PricewaterhouseCoopers Logo.svg"
+  ]
  },
  "ey": {
   "src": "/logos/ey.svg",
