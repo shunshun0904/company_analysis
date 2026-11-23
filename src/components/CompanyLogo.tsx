@@ -53,14 +53,22 @@ export default function CompanyLogo({
   const logo = logoOf(company.code);
   if (!logo) {
     const ind = getIndustry(company.industry)!;
-    return (
+    const badge = (
       <span
-        className={`inline-flex shrink-0 items-center justify-center rounded-lg font-bold text-ink ${s.text} ${className}`}
+        className={`inline-flex shrink-0 items-center justify-center rounded-lg font-bold text-ink ${s.text} ${size === "sm" ? "" : className}`}
         style={{ width: s.h, height: s.h, background: hexA(ind.color, 0.22), border: `1px solid ${hexA(ind.color, 0.6)}` }}
         aria-hidden
       >
         {Array.from(company.short)[0]}
       </span>
+    );
+    // 表や一覧（sm）では、ロゴの会社と社名の位置がそろうよう、ロゴと同じ幅の枠の中央に置く
+    return size === "sm" ? (
+      <span className={`inline-flex shrink-0 items-center justify-center ${className}`} style={{ width: s.w, height: s.h }} aria-hidden>
+        {badge}
+      </span>
+    ) : (
+      badge
     );
   }
   return (
