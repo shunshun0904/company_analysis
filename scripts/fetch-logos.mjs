@@ -174,9 +174,11 @@ async function fileInfos(files) {
   return out;
 }
 
-/** 画像のダウンロード。断られたら長くは待たず、次の候補（別の大きさ）へ */
-async function download(url, dest) {
-  const res = await request(url, "*/*", { maxWait: 30_000, attempts: 2 });
+/** 画像のダウンロード。1周目は断られたら長くは待たず次の候補へ。2周目（PATIENT）は指示どおり待ってから取り直す */
+const QUICK = { maxWait: 30_000, attempts: 2 };
+const PATIENT = { maxWait: 300_000, attempts: 3 };
+async function download(url, dest, opts = QUICK) {
+  const res = await request(url, "*/*", opts);
   const buf = Buffer.from(await res.arrayBuffer());
   await fs.writeFile(dest, buf);
   await sleep(DOWNLOAD_GAP_MS);
@@ -275,48 +277,50 @@ try {
   console.log(`ファイル情報の問い合わせに失敗：${e.message}`);
 }
 
-// 4) 画像を1枚ずつダウンロード（毎回順番をまぜ、取れない画像で止まらないようにする）
-const order = [...chosen.keys()].sort(() => Math.random() - 0.5);
-for (const code of order) {
+/** 1社分の画像を取得する。候補：SVG は原本 → PNG サムネイル（500/330/250/220px）。画像は原本（大きければサムネイル）→ 小さいサムネイル */
+async function fetchImage(code, info, opts) {
+  const isSvg = info.mime === "image/svg+xml";
+  const scale = (w) => ({ width: w, height: Math.round((info.height * w) / info.width) });
+  const extOf = (url) => (url.split(".").pop() || "png").toLowerCase();
+  const original = info.url.split("?")[0];
+  const candidates = [];
+  if (isSvg) candidates.push({ url: original, ext: "svg", width: info.width, height: info.height, svg: true });
+  else if (!(info.thumb && info.width > 500)) candidates.push({ url: original, ext: extOf(original), width: info.width, height: info.height });
+  for (const w of THUMB_WIDTHS) {
+    if (!info.thumb || (!isSvg && w >= info.width)) continue;
+    const url = thumbAt(info.thumb, w);
+    candidates.push({ url, ext: extOf(url), ...scale(w) });
+  }
+  // 小さい画像はサムネイルの URL が原本と同じになるので、同じ URL を続けて叩かない
+  const unique = candidates.filter((c, i) => candidates.findIndex((d) => d.url === c.url) === i);
+  let lastErr = null;
+  for (const cand of unique) {
+    try {
+      await removeLogoFiles(code);
+      const bytes = await download(cand.url, path.join(LOGO_DIR, `${code}.${cand.ext}`), opts);
+      if (cand.svg && bytes > MAX_SVG_BYTES) continue; // 大きすぎる SVG は PNG で取り直す
+      return cand;
+    } catch (e) {
+      if (e instanceof DeadlineError) throw e;
+      lastErr = e;
+      await sleep(3000);
+    }
+  }
+  await removeLogoFiles(code);
+  throw lastErr ?? new SkipError("画像を取得できず");
+}
+
+// 4) 画像を1枚ずつダウンロード（毎回順番をまぜ、取れない画像で止まらないようにする）。
+//    1周目で待つよう指示された会社は、最後に Retry-After の指示どおり待ってからもう一度だけ取りに行く
+async function fetchCompany(code, opts) {
   const c = chosen.get(code);
   const info = infos.get(c.file);
   if (!info) {
     out[code] = { missing: true, qid: c.qid, title: c.title, reason: `コモンズのファイル情報を取得できず: ${c.file}` };
-    continue;
+    return "ng";
   }
   try {
-    // 候補：SVG は原本 → PNG サムネイル（500/330/250/220px）。画像は原本（大きければサムネイル）→ 小さいサムネイル
-    const isSvg = info.mime === "image/svg+xml";
-    const scale = (w) => ({ width: w, height: Math.round((info.height * w) / info.width) });
-    const candidates = [];
-    if (isSvg) candidates.push({ url: info.url, ext: "svg", width: info.width, height: info.height, svg: true });
-    else if (!(info.thumb && info.width > 500))
-      candidates.push({ url: info.url, ext: (info.url.split("?")[0].split(".").pop() || "png").toLowerCase(), width: info.width, height: info.height });
-    for (const w of THUMB_WIDTHS) {
-      if (!info.thumb || (!isSvg && w >= info.width)) continue;
-      const url = thumbAt(info.thumb, w);
-      candidates.push({ url, ext: (url.split("?")[0].split(".").pop() || "png").toLowerCase(), ...scale(w) });
-    }
-    let got = null;
-    let lastErr = null;
-    for (const cand of candidates) {
-      try {
-        await removeLogoFiles(code);
-        const bytes = await download(cand.url, path.join(LOGO_DIR, `${code}.${cand.ext}`));
-        if (cand.svg && bytes > MAX_SVG_BYTES) continue; // 大きすぎる SVG は PNG で取り直す
-        got = cand;
-        break;
-      } catch (e) {
-        if (e instanceof DeadlineError) throw e;
-        lastErr = e;
-        await sleep(3000);
-      }
-    }
-    if (!got) {
-      await removeLogoFiles(code);
-      throw lastErr ?? new SkipError("画像を取得できず");
-    }
-    const { ext, width, height } = got;
+    const { ext, width, height } = await fetchImage(code, info, opts);
     out[code] = {
       src: `/logos/${code}.${ext}`,
       width,
@@ -332,6 +336,7 @@ for (const code of order) {
     };
     console.log(`OK ${code}\t${c.file}\t[${info.license}]`);
     await save();
+    return "ok";
   } catch (e) {
     // 前回取得できていた画像があれば残す
     out[code] = prev[code] && !prev[code].missing
@@ -339,8 +344,25 @@ for (const code of order) {
       : { missing: true, qid: c.qid, title: c.title, reason: `一時的に取得できず（次の実行で再試行）: ${String(e.message).slice(0, 150)}` };
     console.log(`NG ${code}\t${e.message.slice(0, 120)}`);
     await save();
-    if (e instanceof DeadlineError) break;
+    if (e instanceof DeadlineError) return "deadline";
+    return /HTTP (429|5\d\d)/.test(e.message) ? "throttled" : "ng";
   }
+}
+
+const order = [...chosen.keys()].sort(() => Math.random() - 0.5);
+const retryLater = [];
+let timeUp = false;
+for (const code of order) {
+  const r = await fetchCompany(code, QUICK);
+  if (r === "deadline") {
+    timeUp = true;
+    break;
+  }
+  if (r === "throttled") retryLater.push(code);
+}
+if (!timeUp && retryLater.length) {
+  console.log(`\n待つよう指示された ${retryLater.length} 社を、指示どおり待ってから取り直します`);
+  for (const code of retryLater) if ((await fetchCompany(code, PATIENT)) === "deadline") break;
 }
 
 // 対応表の順に並べて保存
