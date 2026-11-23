@@ -1,6 +1,7 @@
 # 各社のロゴをウィキメディア・コモンズから取得し、リポジトリにコミットする。
 # ロゴの対応表（src/data/logo-sources.json）や取得スクリプトを変えて main 以外のブランチに push すると動く。
-# Actions タブから手動実行（取り直し）もできる。公開（deploy-pages.yml）はコミット済みの画像をそのまま使う。
+# Actions タブから手動実行もできる（取得済みのロゴは残し、足りない分だけ取りに行く）。
+# 公開（deploy-pages.yml）はコミット済みの画像をそのまま使う。
 name: Fetch company logos
 
 on:
@@ -27,9 +28,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      # ウィキメディアに待たされても1回あたり約40分で打ち切り、取得できた分をコミットする（次の実行で続きを取る）
       - name: Fetch logos from Wikimedia Commons
         run: node scripts/fetch-logos.mjs
+        timeout-minutes: 50
+        continue-on-error: true
+        env:
+          DEADLINE_MINUTES: "40"
       - name: Commit logos
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
