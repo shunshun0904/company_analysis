@@ -22,25 +22,34 @@ const DOWNLOAD_GAP_MS = 2500;
 // 1回の実行で使う時間の上限。超えそうなら途中で打ち切り、取得できた分だけ保存する（次の実行で続きを取る）
 const DEADLINE = Date.now() + Number(process.env.DEADLINE_MINUTES ?? 40) * 60_000;
 class DeadlineError extends Error {}
+/** この URL はいま取れない（別の大きさの画像を試すか、次の実行に回す） */
+class SkipError extends Error {}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-/** 429/5xx は Retry-After（なければ段階的に長く）の分だけ待って再試行する。期限を越える待ちは打ち切る */
-async function request(url, accept) {
+/**
+ * 429/5xx は Retry-After（なければ段階的に長く）の分だけ待って再試行する。
+ * maxWait より長く待つよう言われたら、その URL はあきらめる（SkipError）。実行の期限を越える待ちは打ち切る。
+ */
+async function request(url, accept, { maxWait = Infinity, attempts = 6 } = {}) {
   let wait = 5000;
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < attempts; i++) {
     if (Date.now() > DEADLINE) throw new DeadlineError("この実行の時間上限に達しました");
     const res = await fetch(url, { headers: { "User-Agent": UA, Accept: accept, "Api-User-Agent": UA } });
     if (res.ok) return res;
     const retryAfter = Number(res.headers.get("retry-after"));
     const ms = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : wait;
-    console.log(`  HTTP ${res.status}（${Math.round(ms / 1000)}秒待って再試行） ${url.slice(0, 120)}`);
-    if (res.status !== 429 && res.status < 500) throw new Error(`HTTP ${res.status} ${url}`);
+    if (res.status !== 429 && res.status < 500) throw new SkipError(`HTTP ${res.status} ${url.slice(0, 120)}`);
+    if (ms > maxWait || i === attempts - 1) {
+      console.log(`  HTTP ${res.status}（${Math.round(ms / 1000)}秒待つよう指示。この画像は後回し） ${url.slice(0, 110)}`);
+      throw new SkipError(`HTTP ${res.status}（後回し）`);
+    }
+    console.log(`  HTTP ${res.status}（${Math.round(ms / 1000)}秒待って再試行） ${url.slice(0, 110)}`);
     if (Date.now() + ms > DEADLINE) throw new DeadlineError("待ち時間がこの実行の上限を越えるため打ち切り");
     await sleep(ms);
     wait = Math.min(wait * 2, 300_000);
   }
-  throw new Error(`retry limit ${url}`);
+  throw new SkipError(`retry limit ${url.slice(0, 120)}`);
 }
 
 const getJson = async (url) => {
@@ -165,13 +174,18 @@ async function fileInfos(files) {
   return out;
 }
 
+/** 画像のダウンロード。断られたら長くは待たず、次の候補（別の大きさ）へ */
 async function download(url, dest) {
-  const res = await request(url, "*/*");
+  const res = await request(url, "*/*", { maxWait: 30_000, attempts: 2 });
   const buf = Buffer.from(await res.arrayBuffer());
   await fs.writeFile(dest, buf);
   await sleep(DOWNLOAD_GAP_MS);
   return buf.length;
 }
+
+/** コモンズのサムネイル URL の幅を変える（…/500px-Name.svg.png → …/250px-Name.svg.png） */
+const thumbAt = (thumb, w) => thumb?.split("?")[0].replace(/\/(\d+)px-([^/]+)$/, `/${w}px-$2`);
+const THUMB_WIDTHS = [500, 330, 250, 220];
 
 async function removeLogoFiles(code) {
   for (const f of await fs.readdir(LOGO_DIR)) if (f.startsWith(`${code}.`)) await fs.rm(path.join(LOGO_DIR, f));
@@ -261,38 +275,48 @@ try {
   console.log(`ファイル情報の問い合わせに失敗：${e.message}`);
 }
 
-// 4) 画像を1枚ずつダウンロード
-for (const [code, c] of chosen) {
+// 4) 画像を1枚ずつダウンロード（毎回順番をまぜ、取れない画像で止まらないようにする）
+const order = [...chosen.keys()].sort(() => Math.random() - 0.5);
+for (const code of order) {
+  const c = chosen.get(code);
   const info = infos.get(c.file);
   if (!info) {
     out[code] = { missing: true, qid: c.qid, title: c.title, reason: `コモンズのファイル情報を取得できず: ${c.file}` };
     continue;
   }
   try {
-    let ext;
-    let width = info.width;
-    let height = info.height;
-    await removeLogoFiles(code);
-    if (info.mime === "image/svg+xml") {
-      const bytes = await download(info.url, path.join(LOGO_DIR, `${code}.svg`));
-      ext = "svg";
-      if (bytes > MAX_SVG_BYTES && info.thumb) {
+    // 候補：SVG は原本 → PNG サムネイル（500/330/250/220px）。画像は原本（大きければサムネイル）→ 小さいサムネイル
+    const isSvg = info.mime === "image/svg+xml";
+    const scale = (w) => ({ width: w, height: Math.round((info.height * w) / info.width) });
+    const candidates = [];
+    if (isSvg) candidates.push({ url: info.url, ext: "svg", width: info.width, height: info.height, svg: true });
+    else if (!(info.thumb && info.width > 500))
+      candidates.push({ url: info.url, ext: (info.url.split("?")[0].split(".").pop() || "png").toLowerCase(), width: info.width, height: info.height });
+    for (const w of THUMB_WIDTHS) {
+      if (!info.thumb || (!isSvg && w >= info.width)) continue;
+      const url = thumbAt(info.thumb, w);
+      candidates.push({ url, ext: (url.split("?")[0].split(".").pop() || "png").toLowerCase(), ...scale(w) });
+    }
+    let got = null;
+    let lastErr = null;
+    for (const cand of candidates) {
+      try {
         await removeLogoFiles(code);
-        await download(info.thumb, path.join(LOGO_DIR, `${code}.png`));
-        ext = "png";
-        width = info.thumbWidth;
-        height = info.thumbHeight;
-      }
-    } else {
-      const useThumb = info.thumb && info.width > 500;
-      const url = useThumb ? info.thumb : info.url;
-      ext = (url.split("?")[0].split(".").pop() || "png").toLowerCase();
-      await download(url, path.join(LOGO_DIR, `${code}.${ext}`));
-      if (useThumb) {
-        width = info.thumbWidth;
-        height = info.thumbHeight;
+        const bytes = await download(cand.url, path.join(LOGO_DIR, `${code}.${cand.ext}`));
+        if (cand.svg && bytes > MAX_SVG_BYTES) continue; // 大きすぎる SVG は PNG で取り直す
+        got = cand;
+        break;
+      } catch (e) {
+        if (e instanceof DeadlineError) throw e;
+        lastErr = e;
+        await sleep(3000);
       }
     }
+    if (!got) {
+      await removeLogoFiles(code);
+      throw lastErr ?? new SkipError("画像を取得できず");
+    }
+    const { ext, width, height } = got;
     out[code] = {
       src: `/logos/${code}.${ext}`,
       width,
@@ -310,8 +334,11 @@ for (const [code, c] of chosen) {
     await save();
   } catch (e) {
     // 前回取得できていた画像があれば残す
-    out[code] = prev[code] && !prev[code].missing ? prev[code] : { missing: true, qid: c.qid, title: c.title, reason: String(e.message).slice(0, 200) };
+    out[code] = prev[code] && !prev[code].missing
+      ? prev[code]
+      : { missing: true, qid: c.qid, title: c.title, reason: `一時的に取得できず（次の実行で再試行）: ${String(e.message).slice(0, 150)}` };
     console.log(`NG ${code}\t${e.message.slice(0, 120)}`);
+    await save();
     if (e instanceof DeadlineError) break;
   }
 }
